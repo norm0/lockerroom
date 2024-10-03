@@ -1,10 +1,8 @@
 name: Run Locker Room Monitor Script
 
 on:
-  # Triggers the workflow on a schedule (cron syntax)
   schedule:
     - cron: "0 0 * * 1"  # Runs every Monday at midnight UTC
-  # Trigger the workflow manually
   workflow_dispatch:
 
 jobs:
@@ -18,7 +16,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'  # Adjust the Ruby version if needed
+          ruby-version: '3.1'
 
       - name: Install Dependencies
         run: |
@@ -27,7 +25,7 @@ jobs:
 
       - name: Run Locker Room Monitor Script
         run: |
-          ruby locker_room_monitor.rb
+          ruby locker_room_monitor.rb  # Ensure this file exists at the root of the repo
 
       - name: Commit and Push Changes (if any)
         run: |
