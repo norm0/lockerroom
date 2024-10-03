@@ -25,11 +25,6 @@ filtered_events = calendar.events.select do |event|
     ['New Hope North', 'New Hope South', 'Breck'].include?(event.location)
 end
 
-# Helper method to format dates with abbreviated day and month names
-def format_friendly_date(datetime)
-  datetime.strftime('%a, %b %-d, %Y at %-I:%M %p')
-end
-
 # Initialize a new iCal feed for locker room monitor events
 lrm_calendar = Icalendar::Calendar.new
 
@@ -38,45 +33,38 @@ csv_data = filtered_events.each_with_index.map do |event, index|
   # Cycle through the family_names array
   locker_room_monitor = family_names[index % family_names.size]
 
-  # Create two new LRM events: one 30 minutes before and one 15 minutes after the event
-  lrm_before = event.dtstart - (30 * 60) # 30 minutes before
-  lrm_after = event.dtend + (15 * 60)    # 15 minutes after
+  # Create an all-day event with instructions for the locker room monitor
+  lrm_event = Icalendar::Event.new
+  lrm_event.dtstart = Icalendar::Values::Date.new(event.dtstart.to_date) # All-day event starts on the event date
+  lrm_event.dtend = Icalendar::Values::Date.new((event.dtstart + 1.day).to_date) # End date is the next day (to mark all-day event)
+  lrm_event.summary = "LRM #{locker_room_monitor}"
+  lrm_event.description = <<-DESC
+    Locker Room Monitor: #{locker_room_monitor}
 
-  # Add LRM events to the iCal feed
-  lrm_event_before = Icalendar::Event.new
-  lrm_event_before.dtstart = lrm_before
-  lrm_event_before.dtend = lrm_before + (15 * 60) # Duration of 15 minutes
-  lrm_event_before.summary = "LRM #{locker_room_monitor}"
-  lrm_calendar.add_event(lrm_event_before)
+    Instructions:
+    - Locker rooms should be opened 30 minutes before the scheduled practice/game.
+    - Locker rooms should be monitored and closed 15 minutes after the scheduled practice/game.
 
-  lrm_event_after = Icalendar::Event.new
-  lrm_event_after.dtstart = lrm_after
-  lrm_event_after.dtend = lrm_after + (15 * 60) # Duration of 15 minutes
-  lrm_event_after.summary = "LRM #{locker_room_monitor}"
-  lrm_calendar.add_event(lrm_event_after)
+    Event: #{event.summary}
+    Location: #{event.location}
+    Scheduled Event Time: #{event.dtstart.strftime('%a, %b %-d, %Y at %-I:%M %p')} to #{event.dtend.strftime('%a, %b %-d, %Y at %-I:%M %p')}
+  DESC
+
+  # Add the event to the iCal feed
+  lrm_calendar.add_event(lrm_event)
 
   # Return data for CSV export
   {
     'Event' => event.summary,
     'Location' => event.location,
-    'Start Date' => format_friendly_date(event.dtstart),
-    'End Date' => format_friendly_date(event.dtend),
+    'Start Date' => event.dtstart.strftime('%a, %b %-d, %Y'),
+    'End Date' => event.dtend.strftime('%a, %b %-d, %Y'),
     'Locker Room Monitor' => locker_room_monitor
   }
 end
 
-# Print the events with the assigned locker room monitors and friendly dates
-csv_data.each do |row|
-  puts "Event: #{row['Event']}"
-  puts "Location: #{row['Location']}"
-  puts "Start Date: #{row['Start Date']}"
-  puts "End Date: #{row['End Date']}"
-  puts "Locker Room Monitor: #{row['Locker Room Monitor']}"
-  puts '-' * 40
-end
-
 # Save CSV file
-CSV.open('Locker_Room_Monitors.csv', 'w') do |csv|
+CSV.open('locker_room_monitors.csv', 'w') do |csv|
   csv << ['Event', 'Location', 'Start Date', 'End Date', 'Locker Room Monitor']
   csv_data.each do |row|
     csv << [row['Event'], row['Location'], row['Start Date'], row['End Date'], row['Locker Room Monitor']]
@@ -85,6 +73,6 @@ end
 
 # Finalize the iCal feed and save it
 lrm_calendar.publish
-File.open('Locker_Room_Monitor.ics', 'w') { |file| file.write(lrm_calendar.to_ical) }
+File.open('locker_room_monitor.ics', 'w') { |file| file.write(lrm_calendar.to_ical) }
 
-puts "Events with locker room monitors have been saved to 'Locker_Room_Monitors.csv' and the iCal feed has been saved to 'Locker_Room_Monitor.ics'."
+puts "Events with locker room monitors have been saved to 'locker_room_monitors.csv' and the iCal feed has been saved to 'Locker_Room_Monitor.ics'."
