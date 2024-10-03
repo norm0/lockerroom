@@ -75,4 +75,4 @@ end
 lrm_calendar.publish
 File.open('locker_room_monitor.ics', 'w') { |file| file.write(lrm_calendar.to_ical) }
 
-puts "Events with locker room monitors have been saved to 'locker_room_monitors.csv' and the iCal feed has been saved to 'Locker_Room_Monitor.ics'."
+puts "Events with locker room monitors have been saved to 'locker_room_monitors.csv' and the iCal feed has been saved to 'locker_room_monitor.ics'."
