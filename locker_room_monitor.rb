@@ -42,8 +42,7 @@ csv_data = filtered_events.each_with_index.map do |event, index|
     Locker Room Monitor: #{locker_room_monitor}
 
     Instructions:
-    - Locker rooms should be opened 30 minutes before the scheduled practice/game.
-    - Locker rooms should be monitored and closed 15 minutes after the scheduled practice/game.
+    - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
 
     Event: #{event.summary}
     Location: #{event.location}
