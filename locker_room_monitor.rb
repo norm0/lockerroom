@@ -33,6 +33,17 @@ csv_data = filtered_events.each_with_index.map do |event, index|
   # Cycle through the family_names array
   locker_room_monitor = family_names[index % family_names.size]
 
+  # Get start and end times
+  start_time = event.dtstart
+  end_time = event.dtend
+
+  # Format the date and time separately
+  date_formatted = start_time.strftime('%Y-%m-%d')
+  time_formatted = start_time.strftime('%H:%M:%S')
+
+  # Calculate duration in minutes
+  duration_in_minutes = ((end_time - start_time) / 60).to_i
+
   # Create an all-day event with instructions for the locker room monitor
   lrm_event = Icalendar::Event.new
   lrm_event.dtstart = Icalendar::Values::Date.new(event.dtstart.to_date) # All-day event starts on the event date
@@ -56,17 +67,19 @@ csv_data = filtered_events.each_with_index.map do |event, index|
   {
     'Event' => event.summary,
     'Location' => event.location,
-    'Start Date' => event.dtstart.strftime('%a, %b %-d, %Y'),
-    'End Date' => event.dtend.strftime('%a, %b %-d, %Y'),
+    'Date' => date_formatted,
+    'Time' => time_formatted,
+    'Duration (minutes)' => duration_in_minutes,
     'Locker Room Monitor' => locker_room_monitor
   }
 end
 
 # Save CSV file with lowercase filename
 CSV.open('locker_room_monitors.csv', 'w') do |csv|
-  csv << ['Event', 'Location', 'Start Date', 'End Date', 'Locker Room Monitor']
+  csv << ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
   csv_data.each do |row|
-    csv << [row['Event'], row['Location'], row['Start Date'], row['End Date'], row['Locker Room Monitor']]
+    csv << [row['Event'], row['Location'], row['Date'], row['Time'], row['Duration (minutes)'],
+            row['Locker Room Monitor']]
   end
 end
 
