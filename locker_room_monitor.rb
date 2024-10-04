@@ -37,9 +37,9 @@ csv_data = filtered_events.each_with_index.map do |event, index|
   start_time = event.dtstart.to_time
   end_time = event.dtend.to_time
 
-  # Format the date and time separately
+  # Format the date and time separately (human-readable)
   date_formatted = start_time.strftime('%Y-%m-%d')
-  time_formatted = start_time.strftime('%H:%M:%S')
+  time_formatted = start_time.strftime('%I:%M %p') # 12-hour format with AM/PM
 
   # Calculate duration in minutes
   duration_in_minutes = ((end_time - start_time) / 60).to_i
