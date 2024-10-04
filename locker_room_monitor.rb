@@ -33,9 +33,9 @@ csv_data = filtered_events.each_with_index.map do |event, index|
   # Cycle through the family_names array
   locker_room_monitor = family_names[index % family_names.size]
 
-  # Get start and end times
-  start_time = event.dtstart
-  end_time = event.dtend
+  # Convert Icalendar::Values::DateTime to Ruby Time object
+  start_time = event.dtstart.to_time
+  end_time = event.dtend.to_time
 
   # Format the date and time separately
   date_formatted = start_time.strftime('%Y-%m-%d')
@@ -46,8 +46,8 @@ csv_data = filtered_events.each_with_index.map do |event, index|
 
   # Create an all-day event with instructions for the locker room monitor
   lrm_event = Icalendar::Event.new
-  lrm_event.dtstart = Icalendar::Values::Date.new(event.dtstart.to_date) # All-day event starts on the event date
-  lrm_event.dtend = Icalendar::Values::Date.new((event.dtstart.to_date + 1)) # End date is the next day (to mark all-day event)
+  lrm_event.dtstart = Icalendar::Values::Date.new(start_time.to_date) # All-day event starts on the event date
+  lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
   lrm_event.summary = "LRM #{locker_room_monitor}"
   lrm_event.description = <<-DESC
     Locker Room Monitor: #{locker_room_monitor}
@@ -57,7 +57,7 @@ csv_data = filtered_events.each_with_index.map do |event, index|
 
     Event: #{event.summary}
     Location: #{event.location}
-    Scheduled Event Time: #{event.dtstart.strftime('%a, %b %-d, %Y at %-I:%M %p')} to #{event.dtend.strftime('%a, %b %-d, %Y at %-I:%M %p')}
+    Scheduled Event Time: #{start_time.strftime('%a, %b %-d, %Y at %-I:%M %p')} to #{end_time.strftime('%a, %b %-d, %Y at %-I:%M %p')}
   DESC
 
   # Add the event to the iCal feed
