@@ -70,9 +70,13 @@ csv_data = filtered_events.each_with_index.map do |event, index|
     'Date' => date_formatted,
     'Time' => time_formatted,
     'Duration (minutes)' => duration_in_minutes,
-    'Locker Room Monitor' => locker_room_monitor
+    'Locker Room Monitor' => locker_room_monitor,
+    'Start Time' => start_time # Add start time for sorting purposes
   }
 end
+
+# Sort the CSV data by 'Start Time' before writing to the CSV file
+csv_data.sort_by! { |row| row['Start Time'] }
 
 # Save CSV file with lowercase filename
 CSV.open('locker_room_monitors.csv', 'w') do |csv|
