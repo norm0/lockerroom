@@ -1,20 +1,20 @@
-Event,Location,Start Date,End Date,Locker Room Monitor
-TBD at AC U12A,New Hope North,"Sun, Oct 6, 2024","Sun, Oct 6, 2024",Becker
-AC U12A - U12 A Shared w/ AC Peewee A,New Hope North,"Mon, Oct 7, 2024","Mon, Oct 7, 2024",Hastings
-AC U12A - U12 A Solo,New Hope North,"Thu, Oct 17, 2024","Thu, Oct 17, 2024",Opel
-AC U12A - U12 A Shared-Solo w/ AC PeeWee B2,New Hope South,"Sun, Oct 27, 2024","Sun, Oct 27, 2024",Gorgos
-AC U12A - U12 A Shared w/ AC U12B1,New Hope North,"Wed, Oct 16, 2024","Wed, Oct 16, 2024",Larsen
-AC U12A - U12 A Shared w/ AC Peewee B1,New Hope North,"Thu, Oct 3, 2024","Thu, Oct 3, 2024",Anderson
-AC U12A - U12 A Shared w/ AC Peewee A,New Hope North,"Thu, Oct 10, 2024","Thu, Oct 10, 2024",Orstad
-AC U12A - U12 A Shared w/ AC Peewee C,New Hope South,"Fri, Oct 18, 2024","Fri, Oct 18, 2024",Campos
-AC U12A - U12 A Solo,New Hope South,"Sat, Oct 5, 2024","Sat, Oct 5, 2024",Powell
-AC U12A - U12 A Shared-Solo w/ AC PeeWee B2,New Hope South,"Sun, Oct 20, 2024","Sun, Oct 20, 2024",Tousignant
-TBD at AC U12A,Breck,"Tue, Oct 15, 2024","Tue, Oct 15, 2024",Marshall
-AC U12A - U12 A Shared w/ AC Peewee B1,Breck,"Tue, Oct 22, 2024","Tue, Oct 22, 2024",Johnson
-TBD at AC U12A,New Hope South,"Sat, Dec 14, 2024","Sat, Dec 14, 2024",Wulff
-AC U12A - U12 A Shared w/ AC PeeWee B2,New Hope North,"Thu, Oct 24, 2024","Thu, Oct 24, 2024",Becker
-AC U12A - U12 A Solo,New Hope South,"Sat, Oct 26, 2024","Sat, Oct 26, 2024",Hastings
-AC U12A - U12 A Solo,New Hope South,"Wed, Oct 9, 2024","Wed, Oct 9, 2024",Opel
-AC U12A - U12 A Solo,New Hope North,"Sat, Oct 12, 2024","Sat, Oct 12, 2024",Gorgos
-AC U12A - Elk River Scrimmage at U12 A - Coach Controlled,New Hope North,"Sun, Oct 13, 2024","Sun, Oct 13, 2024",Larsen
-AC U12A - U12 A Skills w/ AC Peewee C,New Hope North,"Mon, Oct 21, 2024","Mon, Oct 21, 2024",Anderson
+Event,Location,Date,Time,Duration (minutes),Locker Room Monitor
+TBD at AC U12A,New Hope North,2024-10-06,12:00:00,75,Becker
+AC U12A - U12 A Shared w/ AC Peewee A,New Hope North,2024-10-07,17:30:00,60,Hastings
+AC U12A - U12 A Solo,New Hope North,2024-10-17,18:15:00,60,Opel
+AC U12A - U12 A Shared-Solo w/ AC PeeWee B2,New Hope South,2024-10-27,21:00:00,60,Gorgos
+AC U12A - U12 A Shared w/ AC U12B1,New Hope North,2024-10-16,17:30:00,60,Larsen
+AC U12A - U12 A Shared w/ AC Peewee B1,New Hope North,2024-10-03,19:30:00,60,Anderson
+AC U12A - U12 A Shared w/ AC Peewee A,New Hope North,2024-10-10,19:30:00,60,Orstad
+AC U12A - U12 A Shared w/ AC Peewee C,New Hope South,2024-10-18,18:45:00,60,Campos
+AC U12A - U12 A Solo,New Hope South,2024-10-05,20:45:00,60,Powell
+AC U12A - U12 A Shared-Solo w/ AC PeeWee B2,New Hope South,2024-10-20,16:45:00,60,Tousignant
+TBD at AC U12A,Breck,2024-10-15,18:45:00,75,Marshall
+AC U12A - U12 A Shared w/ AC Peewee B1,Breck,2024-10-22,17:15:00,75,Johnson
+TBD at AC U12A,New Hope South,2024-12-14,15:30:00,60,Wulff
+AC U12A - U12 A Shared w/ AC PeeWee B2,New Hope North,2024-10-24,19:30:00,60,Becker
+AC U12A - U12 A Solo,New Hope South,2024-10-26,20:00:00,60,Hastings
+AC U12A - U12 A Solo,New Hope South,2024-10-09,18:15:00,60,Opel
+AC U12A - U12 A Solo,New Hope North,2024-10-12,15:45:00,60,Gorgos
+AC U12A - Elk River Scrimmage at U12 A - Coach Controlled,New Hope North,2024-10-13,13:00:00,75,Larsen
+AC U12A - U12 A Skills w/ AC Peewee C,New Hope North,2024-10-21,17:30:00,45,Anderson
