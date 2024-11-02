@@ -30,13 +30,18 @@ csv_data = calendar.events.each_with_index.map do |event, index|
   # Skip events without a start or end time
   next if event.dtstart.nil? || event.dtend.nil?
 
+  # Skip all-day events with "LRM" in the summary or description
+  if event.dtstart.is_a?(Icalendar::Values::Date) && (event.summary&.include?('LRM') || event.description&.include?('LRM'))
+    next
+  end
+
   # Convert Icalendar::Values::DateTime to Ruby Time object
   start_time = event.dtstart.to_time
   end_time = event.dtend.to_time
 
   # Format the date and time separately (human-readable)
   date_formatted = start_time.strftime('%Y-%m-%d')
-  time_formatted = start_time.strftime('%I:%M %p')  # 12-hour format with AM/PM
+  time_formatted = start_time.strftime('%I:%M %p') # 12-hour format with AM/PM
 
   # Calculate duration in minutes for non-all-day events
   duration_in_minutes = ((end_time - start_time) / 60).to_i
@@ -53,7 +58,7 @@ csv_data = calendar.events.each_with_index.map do |event, index|
     lrm_event = Icalendar::Event.new
     lrm_event.dtstart = Icalendar::Values::Date.new(start_time.to_date) # All-day event starts on the event date
     lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
-    lrm_event.summary = "LRM #{locker_room_monitor}"
+    lrm_event.summary = "#{locker_room_monitor}" # Only the monitor's name
     lrm_event.description = <<-DESC
       Locker Room Monitor: #{locker_room_monitor}
 
@@ -81,7 +86,7 @@ csv_data = calendar.events.each_with_index.map do |event, index|
     'Duration (minutes)' => duration_in_minutes,
     'Locker Room Monitor' => locker_room_monitor || ''
   }
-end.compact  # Remove nil values from the array
+end.compact # Remove nil values from the array
 
 # Sort the CSV data by 'Start Time' before writing to the CSV file
 csv_data.sort_by! { |row| row['Date'] + row['Time'] }
@@ -90,7 +95,8 @@ csv_data.sort_by! { |row| row['Date'] + row['Time'] }
 CSV.open('locker_room_monitors.csv', 'w') do |csv|
   csv << ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
   csv_data.each do |row|
-    csv << [row['Event'], row['Location'], row['Date'], row['Time'], row['Duration (minutes)'], row['Locker Room Monitor']]
+    csv << [row['Event'], row['Location'], row['Date'], row['Time'], row['Duration (minutes)'],
+            row['Locker Room Monitor']]
   end
 end
 
