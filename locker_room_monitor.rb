@@ -3,17 +3,38 @@ require 'icalendar'
 require 'uri'
 require 'csv'
 
+# File to store assignment counts and assigned events
+assignment_counts_file = 'assignment_counts.csv'
+assigned_events_file = 'assigned_events.csv'
+
+# Read existing assignment counts from CSV file
+assignment_counts = Hash.new(0)
+if File.exist?(assignment_counts_file)
+  CSV.foreach(assignment_counts_file, headers: true) do |row|
+    assignment_counts[row['Family']] = row['Count'].to_i
+  end
+end
+
+# Read existing assigned events from CSV file
+assigned_events = {}
+if File.exist?(assigned_events_file)
+  CSV.foreach(assigned_events_file, headers: true) do |row|
+    assigned_events[row['EventID']] = row['Locker Room Monitor']
+  end
+end
+
 # Team configurations for 12A, 12B1, 10B1, and 10B2
 teams = [
   {
     name: '12A',
     ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603019',
-    family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad Mulcahey]
+    family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
+                     Mulcahey]
   },
   {
     name: '12B1',
     ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603021',
-    family_names: %w[Baer Bimberg Chanthavongsa Hammerstrom Kremer Lane Oas Perpich Ray Reinke Silva Hammer]
+    family_names: %w[Baer Bimberg Chanthavongsa Hammerstrom Kremer Lane Oas Perpich Ray Reinke Silva-Hammer]
   },
   {
     name: '10B1',
@@ -28,9 +49,16 @@ teams = [
 ]
 
 # Locations that require locker room monitors
-locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck']
+locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck', 'Orono Ice Arena (ag)', 'Northeast (ag)',
+                           'SLP East (ag)', 'MG West (ag)', 'PIC A (ag)', 'PIC C (ag)', 'Hopkins Pavilion (ag)', 'Thaler (ag)', 'SLP West (ag)', 'Delano Arena']
+
+# Track the last assigned family for each team to avoid back-to-back assignments
+last_assigned_family = {}
 
 teams.each do |team|
+  # Initialize the assignment count for each family in the team if not already present
+  team[:family_names].each { |family| assignment_counts[family] ||= 0 }
+
   # Fetch the iCal feed using Net::HTTP for the current team
   uri = URI(team[:ical_feed_url])
   response = Net::HTTP.get(uri)
@@ -42,7 +70,10 @@ teams.each do |team|
   lrm_calendar = Icalendar::Calendar.new
 
   # Assign a locker room monitor for each event, cycling through family names
-  csv_data = calendar.events.each_with_index.map do |event, index|
+  csv_data = calendar.events.each_with_index.map do |event, _index|
+    # Generate a unique event ID (e.g., using the event UID)
+    event_id = event.uid
+
     # Skip events without a start or end time
     next if event.dtstart.nil? || event.dtend.nil?
 
@@ -64,7 +95,25 @@ teams.each do |team|
 
     # Determine if this event location requires a locker room monitor
     locker_room_monitor = if locations_with_monitors.include?(event.location)
-                            team[:family_names][index % team[:family_names].size] # Cycle through the family names array
+                            # Check if the event has already been assigned a monitor
+                            assigned_events[event_id] || begin
+                              # Shuffle the family names to randomize the order
+                              shuffled_families = team[:family_names].shuffle
+                              # Select the family with the fewest assignments, avoiding back-to-back assignments
+                              eligible_families = shuffled_families.reject do |family|
+                                family == last_assigned_family[team[:name]]
+                              end
+                              family_with_fewest_assignments = eligible_families.min_by do |family|
+                                assignment_counts[family]
+                              end
+                              # Update the count for the selected family
+                              assignment_counts[family_with_fewest_assignments] += 1
+                              # Track the assignment
+                              assigned_events[event_id] = family_with_fewest_assignments
+                              # Update the last assigned family for the team
+                              last_assigned_family[team[:name]] = family_with_fewest_assignments
+                              family_with_fewest_assignments
+                            end
                           else
                             nil # No locker room monitor for other locations
                           end
@@ -123,4 +172,29 @@ teams.each do |team|
   File.open(ics_filename, 'w') { |file| file.write(lrm_calendar.to_ical) }
 
   puts "Events with locker room monitors for #{team[:name]} have been saved to '#{csv_filename}' and the iCal feed has been saved to '#{ics_filename}'."
+end
+
+# Write updated assignment counts back to the CSV file
+CSV.open(assignment_counts_file, 'w') do |csv|
+  csv << %w[Family Count]
+  assignment_counts.each do |family, count|
+    csv << [family, count]
+  end
+end
+
+# Write updated assigned events back to the CSV file
+CSV.open(assigned_events_file, 'w') do |csv|
+  csv << ['EventID', 'Locker Room Monitor']
+  assigned_events.each do |event_id, monitor|
+    csv << [event_id, monitor]
+  end
+end
+
+# Display the family counts by team
+puts "\nLocker Room Monitor Assignment Counts by Team:"
+teams.each do |team|
+  puts "\nTeam #{team[:name]}:"
+  team[:family_names].each do |family|
+    puts "#{family}: #{assignment_counts[family]}"
+  end
 end
