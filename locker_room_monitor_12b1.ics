@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:35e12c50-072a-4a6d-be9f-7a7910dab0b4
+DTSTAMP:20241104T002833Z
+UID:cd31c4a3-1fda-4c7b-924b-f88bc87ee6e6
 DTSTART;VALUE=DATE:20241214
 DTEND;VALUE=DATE:20241215
 DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n   
@@ -16,8 +16,8 @@ DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:87e7365d-4189-4637-886f-b8ee3e769105
+DTSTAMP:20241104T002833Z
+UID:1c4fa533-9ee5-487f-a7ff-8322c6b65334
 DTSTART;VALUE=DATE:20241004
 DTEND;VALUE=DATE:20241005
 DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
@@ -29,8 +29,8 @@ DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:d988a506-a0c0-42f5-9b03-51554444d5a0
+DTSTAMP:20241104T002833Z
+UID:e2204b6b-23ae-4b88-b16f-0bcd49b920ff
 DTSTART;VALUE=DATE:20241016
 DTEND;VALUE=DATE:20241017
 DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
@@ -42,8 +42,8 @@ DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
 SUMMARY:Chanthavongsa
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:0422d6a9-f235-45ef-b0ac-2a3e87eaf2d6
+DTSTAMP:20241104T002833Z
+UID:8f03ef18-89a2-4d1c-b20e-7ae8acadb566
 DTSTART;VALUE=DATE:20241009
 DTEND;VALUE=DATE:20241010
 DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
@@ -54,8 +54,8 @@ DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
 SUMMARY:Hammerstrom
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:638806b5-c2db-4015-8b15-f92fbab24286
+DTSTAMP:20241104T002833Z
+UID:40cdab99-d836-4ac3-9da8-f728ef092549
 DTSTART;VALUE=DATE:20241017
 DTEND;VALUE=DATE:20241018
 DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n 
@@ -67,8 +67,8 @@ DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n
 SUMMARY:Kremer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:4c33d504-c497-4b6f-8827-66f13d4b434d
+DTSTAMP:20241104T002833Z
+UID:8509f13e-1b12-4a96-925e-b68f4e2013e8
 DTSTART;VALUE=DATE:20241007
 DTEND;VALUE=DATE:20241008
 DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n   
@@ -80,8 +80,8 @@ DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n
 SUMMARY:Lane
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:cfee9722-4bfe-4e77-8ce1-f03b5393a0be
+DTSTAMP:20241104T002833Z
+UID:8397eadd-d074-4812-bf2d-ac4a52503b3d
 DTSTART;VALUE=DATE:20241006
 DTEND;VALUE=DATE:20241007
 DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n    
@@ -92,8 +92,8 @@ DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n
 SUMMARY:Oas
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:7b1c5ed0-1eb9-4c5b-84a7-31743f728435
+DTSTAMP:20241104T002833Z
+UID:348f4d42-290d-4d86-8a69-141968dbb072
 DTSTART;VALUE=DATE:20241026
 DTEND;VALUE=DATE:20241027
 DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
@@ -104,8 +104,8 @@ DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
 SUMMARY:Perpich
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:1863ed05-7b50-4ed2-ad09-2d734e0c3753
+DTSTAMP:20241104T002833Z
+UID:5a14f260-83ea-42db-8027-d34d660547c3
 DTSTART;VALUE=DATE:20241024
 DTEND;VALUE=DATE:20241025
 DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n    
@@ -117,8 +117,8 @@ DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n
 SUMMARY:Ray
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:ffd5c9d4-d531-4b74-adcf-c843fc251b21
+DTSTAMP:20241104T002833Z
+UID:2bd8a8f0-55b2-44bf-8b12-326e86275a6c
 DTSTART;VALUE=DATE:20241011
 DTEND;VALUE=DATE:20241012
 DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n 
@@ -129,8 +129,8 @@ DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n
 SUMMARY:Reinke
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:4e95fc97-9b9a-4e2a-9b65-acf039bc21a4
+DTSTAMP:20241104T002833Z
+UID:d7f93627-0874-4704-b41e-0485cc74a6ef
 DTSTART;VALUE=DATE:20241013
 DTEND;VALUE=DATE:20241014
 DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
@@ -142,8 +142,8 @@ DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
 SUMMARY:Silva-Hammer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:ae96c0fa-5b85-4995-9f01-8b2af9d1fa8e
+DTSTAMP:20241104T002833Z
+UID:2c099e57-16b6-4365-b90e-07bdace5fed9
 DTSTART;VALUE=DATE:20241005
 DTEND;VALUE=DATE:20241006
 DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n   
@@ -154,8 +154,8 @@ DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:eb5d3d6c-03b9-4833-b5b7-58b9b3d8f061
+DTSTAMP:20241104T002833Z
+UID:17147d9c-26bb-46e9-afca-3ecd483a4c6c
 DTSTART;VALUE=DATE:20241104
 DTEND;VALUE=DATE:20241105
 DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
@@ -166,8 +166,8 @@ DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:1f75af98-7015-47ca-9e55-788f8643a812
+DTSTAMP:20241104T002833Z
+UID:4af14eaf-4174-41f4-a36a-f2072859f68a
 DTSTART;VALUE=DATE:20241118
 DTEND;VALUE=DATE:20241119
 DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
@@ -179,8 +179,8 @@ DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
 SUMMARY:Chanthavongsa
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:1e5f8e38-1ba8-4229-83c5-902b206ded32
+DTSTAMP:20241104T002833Z
+UID:0e65f5d3-3fd0-440e-95b9-6a08ccf082e5
 DTSTART;VALUE=DATE:20241014
 DTEND;VALUE=DATE:20241015
 DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
@@ -191,8 +191,8 @@ DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
 SUMMARY:Hammerstrom
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:e20c7b51-5173-4a2b-97c2-4ff5e6268a91
+DTSTAMP:20241104T002833Z
+UID:3862e5de-e39b-47fa-ac59-7c07519818d1
 DTSTART;VALUE=DATE:20241020
 DTEND;VALUE=DATE:20241021
 DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n 
@@ -203,8 +203,8 @@ DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n
 SUMMARY:Kremer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:07812508-3e53-46d1-8c78-7b192542c6ea
+DTSTAMP:20241104T002833Z
+UID:d4966196-de9e-4d76-b584-6a9f798dba46
 DTSTART;VALUE=DATE:20241021
 DTEND;VALUE=DATE:20241022
 DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n   
@@ -215,8 +215,8 @@ DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n
 SUMMARY:Lane
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:016e9d82-34aa-4980-b284-57849a14392d
+DTSTAMP:20241104T002833Z
+UID:7dbf13b2-ec14-423e-a5c0-64f8c9d7a88e
 DTSTART;VALUE=DATE:20241023
 DTEND;VALUE=DATE:20241024
 DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n    
@@ -228,8 +228,8 @@ DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n
 SUMMARY:Oas
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:b67a236b-ab87-43e2-a9cd-4b4d6590ff7d
+DTSTAMP:20241104T002833Z
+UID:7e5e3471-3ad3-440d-b171-cec55053df5a
 DTSTART;VALUE=DATE:20241030
 DTEND;VALUE=DATE:20241031
 DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
@@ -241,8 +241,8 @@ DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
 SUMMARY:Perpich
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:d90a609e-f668-4cd8-bbad-6316d13b0aed
+DTSTAMP:20241104T002833Z
+UID:7e9ed1a6-4692-4ecd-b101-0cf58698f9ff
 DTSTART;VALUE=DATE:20241102
 DTEND;VALUE=DATE:20241103
 DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n    
@@ -254,8 +254,8 @@ DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n
 SUMMARY:Ray
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:abe988a8-4c72-45aa-ad94-57aaad4bb2e5
+DTSTAMP:20241104T002833Z
+UID:0c2b7de8-7dce-4da9-a89e-2c219f3a640b
 DTSTART;VALUE=DATE:20241029
 DTEND;VALUE=DATE:20241030
 DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n 
@@ -267,8 +267,8 @@ DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n
 SUMMARY:Reinke
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:1a8981b3-767a-4b48-98ae-e0819be13fa2
+DTSTAMP:20241104T002833Z
+UID:2cf9597e-84de-4691-83a0-3e50976de61b
 DTSTART;VALUE=DATE:20241027
 DTEND;VALUE=DATE:20241028
 DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
@@ -280,8 +280,8 @@ DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
 SUMMARY:Silva-Hammer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:83e1a9d3-6a03-4e39-815b-f5a56301d353
+DTSTAMP:20241104T002833Z
+UID:0d7ae174-8c56-429b-8221-215a5c38d869
 DTSTART;VALUE=DATE:20241210
 DTEND;VALUE=DATE:20241211
 DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n   
@@ -292,8 +292,8 @@ DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:b5679ea2-b952-4258-8ed5-1ad64981ac4c
+DTSTAMP:20241104T002833Z
+UID:e29c1e8d-0e08-40fb-ac92-5f577449416e
 DTSTART;VALUE=DATE:20250121
 DTEND;VALUE=DATE:20250122
 DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
@@ -305,8 +305,8 @@ DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:e7cc9716-af96-4381-8652-3705e88a495a
+DTSTAMP:20241104T002833Z
+UID:6c8947f6-530f-4dc4-8d59-a7179725fb87
 DTSTART;VALUE=DATE:20241123
 DTEND;VALUE=DATE:20241124
 DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
@@ -318,8 +318,8 @@ DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
 SUMMARY:Chanthavongsa
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:924d4321-357d-4f3c-97e6-b9baf09d51bb
+DTSTAMP:20241104T002833Z
+UID:a502744c-0202-4608-a2ad-0ccda0aa214e
 DTSTART;VALUE=DATE:20241126
 DTEND;VALUE=DATE:20241127
 DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
@@ -331,8 +331,8 @@ DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
 SUMMARY:Hammerstrom
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:c7624951-f5f3-4ae7-ba20-bb9d83050efc
+DTSTAMP:20241104T002833Z
+UID:68750f0b-cf36-4aff-93a9-074f81423a98
 DTSTART;VALUE=DATE:20250109
 DTEND;VALUE=DATE:20250110
 DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n 
@@ -344,8 +344,8 @@ DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n
 SUMMARY:Kremer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:e15f220e-46c6-41e0-a35f-c80943fe85c6
+DTSTAMP:20241104T002833Z
+UID:64a24f9a-2703-4dab-909f-2aafd840f4f1
 DTSTART;VALUE=DATE:20241113
 DTEND;VALUE=DATE:20241114
 DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n   
@@ -356,8 +356,8 @@ DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n
 SUMMARY:Lane
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:2c6f5f7b-2050-4584-bf80-d80f529e8bad
+DTSTAMP:20241104T002833Z
+UID:0f381246-fed6-4232-b79a-03b9717a8488
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
 DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n    
@@ -368,8 +368,8 @@ DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n
 SUMMARY:Oas
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:1dcbe0d0-1a46-4236-ab28-dd758ca00fcb
+DTSTAMP:20241104T002833Z
+UID:15d62385-850a-4a10-8302-fdf0b1e23012
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
 DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
@@ -381,8 +381,8 @@ DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
 SUMMARY:Perpich
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:a1c660e9-49ed-442b-887d-36d31237f186
+DTSTAMP:20241104T002833Z
+UID:e594c746-8886-48ab-8b09-80bf44c781b2
 DTSTART;VALUE=DATE:20250108
 DTEND;VALUE=DATE:20250109
 DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n    
@@ -393,8 +393,8 @@ DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n
 SUMMARY:Ray
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:2d53081c-99af-42fc-814f-34b7470ff882
+DTSTAMP:20241104T002833Z
+UID:837322ad-70fd-4db0-8c12-cd246772d711
 DTSTART;VALUE=DATE:20241121
 DTEND;VALUE=DATE:20241122
 DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n 
@@ -406,8 +406,8 @@ DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n
 SUMMARY:Reinke
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:38d1e245-9d86-489f-8d14-d38ea1647b57
+DTSTAMP:20241104T002833Z
+UID:f971cf82-4d4f-47e8-bd9f-b066ada85017
 DTSTART;VALUE=DATE:20241117
 DTEND;VALUE=DATE:20241118
 DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
@@ -419,8 +419,8 @@ DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
 SUMMARY:Silva-Hammer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:04a498bb-c22b-4872-b0cf-5d2e2a09a695
+DTSTAMP:20241104T002833Z
+UID:9b35e217-baf4-4056-afd2-5d04a98151c0
 DTSTART;VALUE=DATE:20241115
 DTEND;VALUE=DATE:20241116
 DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n   
@@ -432,8 +432,8 @@ DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:74ddb433-f389-4152-90b5-3a1e96528bf1
+DTSTAMP:20241104T002833Z
+UID:df865221-1569-4702-af40-7f58d88a8d29
 DTSTART;VALUE=DATE:20241105
 DTEND;VALUE=DATE:20241106
 DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
@@ -445,8 +445,8 @@ DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:08c9743a-c689-4f36-b414-2c846774c0e3
+DTSTAMP:20241104T002833Z
+UID:9c02c998-4bba-41f9-81d1-65364361cc2e
 DTSTART;VALUE=DATE:20241116
 DTEND;VALUE=DATE:20241117
 DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
@@ -458,8 +458,8 @@ DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
 SUMMARY:Chanthavongsa
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:ab4f65a2-0248-4fd3-a336-728c75ffebff
+DTSTAMP:20241104T002833Z
+UID:0e408a1e-b0a9-45f9-9f8d-55b474955b1d
 DTSTART;VALUE=DATE:20241124
 DTEND;VALUE=DATE:20241125
 DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
@@ -471,8 +471,8 @@ DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
 SUMMARY:Hammerstrom
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:80b77af3-4498-43da-bee0-3f1eb6333e9e
+DTSTAMP:20241104T002833Z
+UID:9d115b40-acec-4928-9462-f3061d0ca155
 DTSTART;VALUE=DATE:20241028
 DTEND;VALUE=DATE:20241029
 DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n 
@@ -484,8 +484,8 @@ DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n
 SUMMARY:Kremer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:e7ee4a85-61e4-4492-8cad-9270084e3d80
+DTSTAMP:20241104T002833Z
+UID:a7ddd4b0-270c-41e7-bd48-a78c88c16abd
 DTSTART;VALUE=DATE:20241216
 DTEND;VALUE=DATE:20241217
 DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n   
@@ -497,8 +497,8 @@ DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n
 SUMMARY:Lane
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:800954b7-d031-4f0a-b8c2-7850415bd54d
+DTSTAMP:20241104T002833Z
+UID:c74f7b5e-3f37-4355-a52e-dcc3a49aabae
 DTSTART;VALUE=DATE:20241223
 DTEND;VALUE=DATE:20241224
 DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n    
@@ -510,8 +510,8 @@ DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n
 SUMMARY:Oas
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:94df5205-c55b-4dee-9686-ff691bddccd1
+DTSTAMP:20241104T002833Z
+UID:bbba7bdd-e505-4849-bf8e-2af8707cf3ca
 DTSTART;VALUE=DATE:20250113
 DTEND;VALUE=DATE:20250114
 DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
@@ -523,8 +523,8 @@ DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
 SUMMARY:Perpich
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:a4b20826-2e38-4263-88ef-3f2c029ae5b7
+DTSTAMP:20241104T002833Z
+UID:84fe3477-5fe9-4186-ab82-1f529c36392d
 DTSTART;VALUE=DATE:20250127
 DTEND;VALUE=DATE:20250128
 DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n    
@@ -536,8 +536,8 @@ DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n
 SUMMARY:Ray
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:f63a776b-abcc-4f25-b0fc-d7cd78142f4f
+DTSTAMP:20241104T002833Z
+UID:18ce453d-db87-49e9-ba50-23ef0af8b35c
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n 
@@ -549,8 +549,8 @@ DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n
 SUMMARY:Reinke
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:b678e615-f82a-43d4-8ea9-fee11c94fe64
+DTSTAMP:20241104T002833Z
+UID:39fe69d2-9443-4cd8-88be-e5306a31c1f1
 DTSTART;VALUE=DATE:20250210
 DTEND;VALUE=DATE:20250211
 DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
@@ -562,8 +562,8 @@ DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
 SUMMARY:Silva-Hammer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:7afe9c18-638c-442d-a7ff-e7cf1b0cbf94
+DTSTAMP:20241104T002833Z
+UID:4523184d-75cc-45ae-b7ee-d3f3057eeb67
 DTSTART;VALUE=DATE:20241107
 DTEND;VALUE=DATE:20241108
 DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n   
@@ -574,8 +574,8 @@ DESCRIPTION:        Locker Room Monitor: Baer\n\n        Instructions:\n
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:0abaa14a-4442-46ef-bb36-a23083b476e7
+DTSTAMP:20241104T002833Z
+UID:7aa8bb14-cb9d-46ca-9db5-2a4e43212002
 DTSTART;VALUE=DATE:20241112
 DTEND;VALUE=DATE:20241113
 DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
@@ -586,8 +586,8 @@ DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241102T190909Z
-UID:22aeded4-092f-4b24-8a6a-1725e41f1fcc
+DTSTAMP:20241104T002833Z
+UID:8f776cf5-a653-4a2d-940a-fd6a73de8bb2
 DTSTART;VALUE=DATE:20241120
 DTEND;VALUE=DATE:20241121
 DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
@@ -597,5 +597,172 @@ DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
   Event Time: Wed\, Nov 20\, 2024 at 6:15 PM to Wed\, Nov 20\, 2024 at 7:15
   PM\n
 SUMMARY:Chanthavongsa
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:614c681c-ffb9-4c2a-af7f-8b1db57e4147
+DTSTART;VALUE=DATE:20241120
+DTEND;VALUE=DATE:20241121
+DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: MinnetonkaU1
+ 2b1 at AC U12B1\n        Location: New Hope South\n        Scheduled Event
+  Time: Wed\, Nov 20\, 2024 at 6:15 PM to Wed\, Nov 20\, 2024 at 7:15 PM\n
+SUMMARY:Perpich
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:f388de04-fd95-4ded-abfa-423224fa98d9
+DTSTART;VALUE=DATE:20241201
+DTEND;VALUE=DATE:20241202
+DESCRIPTION:        Locker Room Monitor: Lane\n\n        Instructions:\n   
+      - Locker rooms should be monitored 30 minutes before and closed 15 mi
+ nutes after the scheduled practice/game.\n\n        Event: AC U12B1 - AC U
+ 12B1 Shared w/ AC PeeWee B2\n        Location: New Hope North\n        Sch
+ eduled Event Time: Sun\, Dec 1\, 2024 at 6:15 PM to Sun\, Dec 1\, 2024 at 
+ 7:15 PM\n
+SUMMARY:Lane
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:18772456-eeaf-4840-a9ec-14b3ebd79fac
+DTSTART;VALUE=DATE:20241213
+DTEND;VALUE=DATE:20241214
+DESCRIPTION:        Locker Room Monitor: Kremer\n\n        Instructions:\n 
+        - Locker rooms should be monitored 30 minutes before and closed 15 
+ minutes after the scheduled practice/game.\n\n        Event: AC U12B1 - AC
+  U12B1 Solo-Shared w/ U12 A\n        Location: New Hope North\n        Sch
+ eduled Event Time: Fri\, Dec 13\, 2024 at 8:15 PM to Fri\, Dec 13\, 2024 a
+ t 9:15 PM\n
+SUMMARY:Kremer
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:e08e13f1-f260-4f88-8658-3111f07cfd48
+DTSTART;VALUE=DATE:20241219
+DTEND;VALUE=DATE:20241220
+DESCRIPTION:        Locker Room Monitor: Hammerstrom\n\n        Instruction
+ s:\n        - Locker rooms should be monitored 30 minutes before and close
+ d 15 minutes after the scheduled practice/game.\n\n        Event: AC U12B1
+  - AC U12B1 Shared w/ AC Squirt B2\n        Location: New Hope South\n    
+     Scheduled Event Time: Thu\, Dec 19\, 2024 at 6:15 PM to Thu\, Dec 19\,
+  2024 at 7:15 PM\n
+SUMMARY:Hammerstrom
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:a9ee79d9-9470-4ffc-8c7e-930c35c4f143
+DTSTART;VALUE=DATE:20241130
+DTEND;VALUE=DATE:20241201
+DESCRIPTION:        Locker Room Monitor: Reinke\n\n        Instructions:\n 
+        - Locker rooms should be monitored 30 minutes before and closed 15 
+ minutes after the scheduled practice/game.\n\n        Event: AC U12B1 - AC
+  U12B1 Solo\n        Location: New Hope North\n        Scheduled Event Tim
+ e: Sat\, Nov 30\, 2024 at 12:15 PM to Sat\, Nov 30\, 2024 at 1:15 PM\n
+SUMMARY:Reinke
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:86d27a68-30e9-491a-b27d-3312342b7ce2
+DTSTART;VALUE=DATE:20241229
+DTEND;VALUE=DATE:20241230
+DESCRIPTION:        Locker Room Monitor: Silva-Hammer\n\n        Instructio
+ ns:\n        - Locker rooms should be monitored 30 minutes before and clos
+ ed 15 minutes after the scheduled practice/game.\n\n        Event: AC U12B
+ 1 - AC U12B1 Shared w/ U12 A\n        Location: New Hope South\n        Sc
+ heduled Event Time: Sun\, Dec 29\, 2024 at 1:45 PM to Sun\, Dec 29\, 2024 
+ at 2:45 PM\n
+SUMMARY:Silva-Hammer
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:3185acf0-9aa0-47df-9f26-ef4b3ba2a651
+DTSTART;VALUE=DATE:20241127
+DTEND;VALUE=DATE:20241128
+DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n    
+     - Locker rooms should be monitored 30 minutes before and closed 15 min
+ utes after the scheduled practice/game.\n\n        Event: AC U12B1 - AC U1
+ 2B1 Shared w/ AC Squirt A\n        Location: New Hope North\n        Sched
+ uled Event Time: Wed\, Nov 27\, 2024 at 7:15 PM to Wed\, Nov 27\, 2024 at 
+ 8:15 PM\n
+SUMMARY:Ray
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:9a1b6228-1c5b-4525-bd2e-f6218de5475c
+DTSTART;VALUE=DATE:20241129
+DTEND;VALUE=DATE:20241130
+DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n    
+     - Locker rooms should be monitored 30 minutes before and closed 15 min
+ utes after the scheduled practice/game.\n\n        Event: AC U12B1 - AC U1
+ 2B1 Solo-Shared w/ U12 A\n        Location: New Hope South\n        Schedu
+ led Event Time: Fri\, Nov 29\, 2024 at 8:45 PM to Fri\, Nov 29\, 2024 at 9
+ :45 PM\n
+SUMMARY:Oas
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:8d97fc03-89a5-4abd-b663-967a4f55fa15
+DTSTART;VALUE=DATE:20241215
+DTEND;VALUE=DATE:20241216
+DESCRIPTION:        Locker Room Monitor: Chanthavongsa\n\n        Instructi
+ ons:\n        - Locker rooms should be monitored 30 minutes before and clo
+ sed 15 minutes after the scheduled practice/game.\n\n        Event: AC U12
+ B1 - AC U12B1 Shared-Solo w/ U12 A\n        Location: New Hope South\n    
+     Scheduled Event Time: Sun\, Dec 15\, 2024 at 3:30 PM to Sun\, Dec 15\,
+  2024 at 4:30 PM\n
+SUMMARY:Chanthavongsa
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:e06b7922-02ca-4e2b-b8b2-c9a5c3614c3a
+DTSTART;VALUE=DATE:20241204
+DTEND;VALUE=DATE:20241205
+DESCRIPTION:        Locker Room Monitor: Perpich\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U12B1 - A
+ C U12B1 Shared-Solo w/ AC Peewee C\n        Location: New Hope North\n    
+     Scheduled Event Time: Wed\, Dec 4\, 2024 at 9:00 PM to Wed\, Dec 4\, 2
+ 024 at 10:00 PM\n
+SUMMARY:Perpich
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:71f1fad5-0d4c-4e8a-bf89-167df042eb68
+DTSTART;VALUE=DATE:20241217
+DTEND;VALUE=DATE:20241218
+DESCRIPTION:        Locker Room Monitor: Oas\n\n        Instructions:\n    
+     - Locker rooms should be monitored 30 minutes before and closed 15 min
+ utes after the scheduled practice/game.\n\n        Event: AC U12B1 - AC U1
+ 2B1 Shared-Solo w/ AC Peewee A\n        Location: New Hope South\n        
+ Scheduled Event Time: Tue\, Dec 17\, 2024 at 8:00 PM to Tue\, Dec 17\, 202
+ 4 at 9:00 PM\n
+SUMMARY:Oas
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:6d5dea45-5d25-47cd-a004-e2222354e82e
+DTSTART;VALUE=DATE:20241222
+DTEND;VALUE=DATE:20241223
+DESCRIPTION:        Locker Room Monitor: Ray\n\n        Instructions:\n    
+     - Locker rooms should be monitored 30 minutes before and closed 15 min
+ utes after the scheduled practice/game.\n\n        Event: AC U12B1 - AC U1
+ 2B1 Shared-Solo w/ AC Squirt C RED\n        Location: New Hope South\n    
+     Scheduled Event Time: Sun\, Dec 22\, 2024 at 2:15 PM to Sun\, Dec 22\,
+  2024 at 3:15 PM\n
+SUMMARY:Ray
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241104T002833Z
+UID:08e54ff3-46c9-4d15-86ba-c09fc584ac0e
+DTSTART;VALUE=DATE:20241228
+DTEND;VALUE=DATE:20241229
+DESCRIPTION:        Locker Room Monitor: Bimberg\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U12B1 - A
+ C U12B1 Shared-Solo w/ U12 A\n        Location: New Hope North\n        Sc
+ heduled Event Time: Sat\, Dec 28\, 2024 at 9:00 PM to Sat\, Dec 28\, 2024 
+ at 10:00 PM\n
+SUMMARY:Bimberg
 END:VEVENT
 END:VCALENDAR
