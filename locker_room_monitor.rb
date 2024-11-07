@@ -200,7 +200,7 @@ teams.each do |team|
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
     raw_date = start_time.strftime('%Y-%m-%d') # Raw date for sorting
-    formatted_date = start_time.strftime('%A %I:%M %p').downcase # Formatted date for display
+    formatted_date = start_time.strftime('%a %I:%M %p').downcase # Formatted date for display
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
     # Balanced random assignment of locker room monitors
