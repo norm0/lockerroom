@@ -146,6 +146,37 @@ def clear_google_sheet_data(service, spreadsheet_id, range)
   service.clear_values(spreadsheet_id, range, clear_request)
 end
 
+# Method to sort the Google Sheet by date (assuming date is in the third column)
+def sort_google_sheet_by_date(service, spreadsheet_id, sheet_id)
+  sort_request = Google::Apis::SheetsV4::BatchUpdateSpreadsheetRequest.new(
+    requests: [
+      {
+        sort_range: {
+          range: {
+            sheet_id:,
+            start_row_index: 1, # Skip header row
+            start_column_index: 0,
+            end_column_index: 6 # Assuming data goes up to column F
+          },
+          sort_specs: [
+            {
+              dimension_index: 2, # Date column index (third column)
+              sort_order: 'ASCENDING'
+            }
+          ]
+        }
+      }
+    ]
+  )
+
+  service.batch_update_spreadsheet(spreadsheet_id, sort_request)
+end
+
+def get_sheet_id(service, spreadsheet_id)
+  spreadsheet = service.get_spreadsheet(spreadsheet_id)
+  spreadsheet.sheets.first.properties.sheet_id # Assumes only one sheet
+end
+
 # Fetch, merge, and update data for each team
 service = setup_google_sheets
 teams.each do |team|
@@ -185,13 +216,15 @@ teams.each do |team|
 
     # Prepare data for Google Sheets only if it passed all exclusion checks
     [event.summary, location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
-  end.compact # Remove nil values from the array
+  end.compact
 
-  # Clear the existing data in Google Sheets for this team's range
+  # Clear existing data and write new data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
-
-  # Write filtered data to Google Sheets
   write_team_data_to_individual_sheets(service, team, csv_data)
+
+  # Sort the sheet by date
+  sheet_id = get_sheet_id(service, team[:spreadsheet_id]) # Get the sheet ID dynamically
+  sort_google_sheet_by_date(service, team[:spreadsheet_id], sheet_id)
 
   # Write iCal file for each team
   ics_filename = "locker_room_monitor_#{team[:name].downcase.gsub(' ', '_')}.ics"
