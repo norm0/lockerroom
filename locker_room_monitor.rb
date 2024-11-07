@@ -12,22 +12,22 @@ APPLICATION_NAME = 'Google Sheets API Ruby Integration'
 SCOPE = [Google::Apis::SheetsV4::AUTH_SPREADSHEETS]
 
 # File to store assignment counts and assigned events
-assignment_counts_file = 'assignment_counts.csv'
-assigned_events_file = 'assigned_events.csv'
+@assignment_counts_file = 'assignment_counts.csv'
+@assigned_events_file = 'assigned_events.csv'
 
 # Initialize global data
 @assignment_counts = Hash.new(0)
 @assigned_events = {}
 
 # Load assignment counts and assigned events from files if they exist
-if File.exist?(assignment_counts_file)
-  CSV.foreach(assignment_counts_file, headers: true) do |row|
+if File.exist?(@assignment_counts_file)
+  CSV.foreach(@assignment_counts_file, headers: true) do |row|
     @assignment_counts[row['Family']] = row['Count'].to_i
   end
 end
 
-if File.exist?(assigned_events_file)
-  CSV.foreach(assigned_events_file, headers: true) do |row|
+if File.exist?(@assigned_events_file)
+  CSV.foreach(@assigned_events_file, headers: true) do |row|
     @assigned_events[row['EventID']] = row['Locker Room Monitor']
   end
 end
@@ -77,7 +77,7 @@ end
 
 # Save assignment counts to CSV
 def save_assignment_counts
-  CSV.open(assignment_counts_file, 'w') do |csv|
+  CSV.open(@assignment_counts_file, 'w') do |csv|
     csv << %w[Family Count]
     @assignment_counts.each { |family, count| csv << [family, count] }
   end
@@ -85,7 +85,7 @@ end
 
 # Save assigned events to CSV
 def save_assigned_events
-  CSV.open(assigned_events_file, 'w') do |csv|
+  CSV.open(@assigned_events_file, 'w') do |csv|
     csv << ['EventID', 'Locker Room Monitor']
     @assigned_events.each { |event_id, monitor| csv << [event_id, monitor] }
   end
