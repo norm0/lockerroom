@@ -152,38 +152,36 @@ teams.each do |team|
   uri = URI(team[:ical_feed_url])
   response = Net::HTTP.get(uri)
   calendar = Icalendar::Calendar.parse(response).first
+
   csv_data = calendar.events.each_with_index.map do |event, index|
-    # Skip if event contains 'LRM' in the summary or description, or if it's in an excluded location
+    # Skip if the event contains 'LRM' in the summary or description
     next if event.summary&.include?('LRM') || event.description&.include?('LRM')
-    next if excluded_locations.include?(event.location)
+
+    # Skip if the location is in the excluded locations
+    location = event.location
+    next if excluded_locations.include?(location)
+
+    # Skip if event has no start or end time
     next if event.dtstart.nil? || event.dtend.nil?
 
+    # Process event times
     event_id = event.uid
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
-
     date_formatted = start_time.strftime('%A %m/%d')
     time_formatted = start_time.strftime('%I:%M %p %Z')
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
-    locker_room_monitor = if locations_with_monitors.include?(event.location)
+    # Determine if this event location requires a locker room monitor
+    locker_room_monitor = if locations_with_monitors.include?(location)
                             @assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
                           end
 
-    # Prepare data for Google Sheets
+    # Prepare data for Google Sheets only if it passed all exclusion checks
+    [event.summary, location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
+  end.compact # Remove nil values from the array
 
-    # Add locker room monitor event to iCal if applicable
-    next unless locker_room_monitor
-
-    lrm_event = Icalendar::Event.new
-    lrm_event.dtstart = Icalendar::Values::DateTime.new(start_time)
-    lrm_event.dtend = Icalendar::Values::DateTime.new(end_time)
-    lrm_event.summary = "LRM: #{locker_room_monitor} for #{event.summary}"
-    lrm_event.location = event.location
-    lrm_event.description = "Locker Room Monitor: #{locker_room_monitor}\nEvent: #{event.summary}\nLocation: #{event.location}"
-    lrm_calendar.add_event(lrm_event)
-  end.compact
-
+  # Write filtered data to Google Sheets
   write_team_data_to_individual_sheets(service, team, csv_data)
 
   # Write iCal file for each team
