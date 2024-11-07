@@ -1,3 +1,4 @@
+name: Run Locker Room Monitor Script & Sync Google Sheets
 on:
   schedule:
     - cron: "0 */12 * * *"  # Runs every 12 hours
