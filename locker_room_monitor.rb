@@ -233,5 +233,7 @@ teams.each do |team|
   ics_filename = "locker_room_monitor_#{team[:name].downcase.gsub(' ', '_')}.ics"
   File.open(ics_filename, 'w') { |file| file.write(lrm_calendar.to_ical) }
 end
+# Save assignment counts to ensure persistence
+save_assignment_counts
 
 puts 'Data fetched, merged, and updated successfully, including .ics files.'
