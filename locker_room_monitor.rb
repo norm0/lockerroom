@@ -5,9 +5,10 @@ require 'csv'
 require 'google/apis/sheets_v4'
 require 'googleauth'
 require 'json'
+require 'stringio'
 
 APPLICATION_NAME = 'Google Sheets API Ruby Integration'
-SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS
+SCOPE = ['https://www.googleapis.com/auth/spreadsheets']
 
 # File to store assignment counts and assigned events
 assignment_counts_file = 'assignment_counts.csv'
@@ -21,14 +22,16 @@ def setup_google_sheets
   service
 end
 
-# Google Sheets authorization
+# Google Sheets authorization using a service account
 def authorize
+  # Parse the service account JSON from the GitHub secret
   credentials = JSON.parse(ENV['GOOGLE_SHEETS_CREDENTIALS'])
-  client_id = Google::Auth::ClientId.from_hash(credentials)
-  token_store = Google::Auth::Stores::FileTokenStore.new(file: 'token.yaml')
-  authorizer = Google::Auth::UserAuthorizer.new(client_id, SCOPE, token_store)
-  user_id = 'default'
-  authorizer.get_credentials(user_id)
+
+  # Set up ServiceAccountCredentials using the JSON key
+  Google::Auth::ServiceAccountCredentials.make_creds(
+    json_key_io: StringIO.new(credentials.to_json),
+    scope: SCOPE
+  )
 end
 
 # Read existing assignment counts from CSV file
@@ -56,7 +59,7 @@ teams = [
                      Mulcahey],
     spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
   }
-  # Add other team configurations (similar structure as above)...
+  # Add other team configurations similarly...
 ]
 
 # Locations that require locker room monitors
