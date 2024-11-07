@@ -129,14 +129,14 @@ teams = [
   }
 ]
 
-# Locations that require locker room monitors
-locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck', 'Orono Ice Arena (ag)', 'Northeast (ag)',
-                           'SLP East (ag)', 'MG West (ag)', 'PIC A (ag)', 'PIC C (ag)', 'Hopkins Pavilion (ag)', 'Thaler (ag)', 'SLP West (ag)', 'Delano Arena', 'MG Premier (East) (ag)']
-
-# Locations that do not require locker room monitors
-excluded_locations = [
-  'New Hope North - Skills Off Ice',
-  'New Hope Ice Arena, Louisiana Avenue North, New Hope, MN, USA',
+# Define an exclusion list for events that do not require a locker room monitor
+exclusion_list = [
+  'Skills Off Ice',  # Example keywords or patterns
+  'Dryland',
+  'Goalie Training',
+  'Off Ice',
+  'Conditioning',
+  'Meeting',
   nil, '' # Empty locations
 ]
 
@@ -196,8 +196,8 @@ teams.each do |team|
   calendar = Icalendar::Calendar.parse(response).first
 
   csv_data = calendar.events.each_with_index.map do |event, index|
-    next if event.summary&.include?('LRM') || event.description&.include?('LRM')
-    next if excluded_locations.include?(event.location)
+    # Skip if the event matches any term in the exclusion list
+    next if exclusion_list.any? { |term| event.summary&.include?(term) || event.description&.include?(term) }
     next if event.dtstart.nil? || event.dtend.nil?
 
     event_id = event.uid
@@ -208,14 +208,12 @@ teams.each do |team|
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
     # Balanced random assignment of locker room monitors per team
-    locker_room_monitor = if locations_with_monitors.include?(event.location)
-                            @assigned_events[event_id] || begin
-                              family_with_fewest_assignments = team[:family_names].min_by { |family| assignment_counts[family] }
-                              assignment_counts[family_with_fewest_assignments] += 1
-                              @assigned_events[event_id] = family_with_fewest_assignments
-                              family_with_fewest_assignments
-                            end
-                          end
+    locker_room_monitor = @assigned_events[event_id] || begin
+      family_with_fewest_assignments = team[:family_names].min_by { |family| assignment_counts[family] }
+      assignment_counts[family_with_fewest_assignments] += 1
+      @assigned_events[event_id] = family_with_fewest_assignments
+      family_with_fewest_assignments
+    end
 
     # Prepare data for Google Sheets
     [event.summary, event.location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
@@ -236,7 +234,6 @@ teams.each do |team|
   # Save assignment counts for the team
   save_team_assignment_counts(team, assignment_counts)
 end
-
 
   # Clear existing data and write new data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
