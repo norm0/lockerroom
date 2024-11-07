@@ -191,36 +191,34 @@ teams.each do |team|
   response = Net::HTTP.get(uri)
   calendar = Icalendar::Calendar.parse(response).first
 
-  csv_data = calendar.events.each_with_index.map do |event, index|
-    # Skip if the event contains 'LRM' in the summary or description
+  csv_data = calendar.events.each_with_index.map do |event, _index|
     next if event.summary&.include?('LRM') || event.description&.include?('LRM')
-    
-    # Skip if the location is in the excluded locations
-    location = event.location
-    next if excluded_locations.include?(location)
-
-    # Skip if event has no start or end time
+    next if excluded_locations.include?(event.location)
     next if event.dtstart.nil? || event.dtend.nil?
 
-    # Process event times
     event_id = event.uid
-    start_time = event.dtstart.to_time.in_time_zone("Central Time (US & Canada)")
-    end_time = event.dtend.to_time.in_time_zone("Central Time (US & Canada)")
-
-    # Create Raw Date for sorting and Formatted Date for display
-    raw_date = start_time.strftime('%Y-%m-%d')   # Raw date for sorting
-    formatted_date = start_time.strftime('%m/%d/%y %a %I:%M %p').downcase # Formatted date for display
-
-    # Calculate duration
+    start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
+    end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
+    raw_date = start_time.strftime('%Y-%m-%d') # Raw date for sorting
+    formatted_date = start_time.strftime('%A %I:%M %p').downcase # Formatted date for display
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
-    # Determine if this event location requires a locker room monitor
-    locker_room_monitor = if locations_with_monitors.include?(location)
-                            @assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
+    # Balanced random assignment of locker room monitors
+    locker_room_monitor = if locations_with_monitors.include?(event.location)
+                            @assigned_events[event_id] || begin
+                              # Select the family with the fewest assignments
+                              family_with_fewest_assignments = team[:family_names].min_by do |family|
+                                @assignment_counts[family]
+                              end
+                              # Update assignment count and assign family to event
+                              @assignment_counts[family_with_fewest_assignments] += 1
+                              @assigned_events[event_id] = family_with_fewest_assignments
+                              family_with_fewest_assignments
+                            end
                           end
 
     # Prepare data for Google Sheets
-    [event.summary, location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
+    [event.summary, event.location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
   end.compact
 
   # Clear existing data and write new data to Google Sheets
