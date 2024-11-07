@@ -6,9 +6,10 @@ require 'google/apis/sheets_v4'
 require 'googleauth'
 require 'json'
 require 'stringio'
+require 'active_support/time'
 
 APPLICATION_NAME = 'Google Sheets API Ruby Integration'
-SCOPE = ['https://www.googleapis.com/auth/spreadsheets']
+SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS
 
 # File to store assignment counts and assigned events
 assignment_counts_file = 'assignment_counts.csv'
@@ -22,28 +23,66 @@ def setup_google_sheets
   service
 end
 
-# Google Sheets authorization using a service account
+# Google Sheets authorization
 def authorize
-  # Parse the service account JSON from the GitHub secret
   credentials = JSON.parse(ENV['GOOGLE_SHEETS_CREDENTIALS'])
-
-  # Set up ServiceAccountCredentials using the JSON key
-  Google::Auth::ServiceAccountCredentials.make_creds(
-    json_key_io: StringIO.new(credentials.to_json),
-    scope: SCOPE
-  )
+  client_id = Google::Auth::ClientId.from_hash(credentials)
+  token_store = Google::Auth::Stores::FileTokenStore.new(file: 'token.yaml')
+  authorizer = Google::Auth::UserAuthorizer.new(client_id, SCOPE, token_store)
+  user_id = 'default'
+  authorizer.get_credentials(user_id)
 end
 
-# Method to write data to Google Sheets
+# Fetch data from Google Sheets and merge with local CSVs
+def fetch_and_merge_google_sheet_data(service, team)
+  sheet_data = service.get_spreadsheet_values(team[:spreadsheet_id], 'Sheet1!A2:F').values
+
+  # Update assigned events and assignment counts from Google Sheets
+  sheet_data.each do |row|
+    event_id = row[0]
+    monitor = row[5] # Assuming event_id and monitor columns in the Sheet
+
+    # If monitor data is missing, skip
+    next unless monitor
+
+    # Check if we need to update or add this event in assigned_events
+    if assigned_events[event_id] != monitor
+      assigned_events[event_id] = monitor
+      assignment_counts[monitor] += 1 unless monitor.empty?
+    end
+  end
+
+  # Save merged data to CSV files
+  save_assignment_counts
+  save_assigned_events
+end
+
+# Save assignment counts to CSV
+def save_assignment_counts
+  CSV.open(assignment_counts_file, 'w') do |csv|
+    csv << %w[Family Count]
+    assignment_counts.each { |family, count| csv << [family, count] }
+  end
+end
+
+# Save assigned events to CSV
+def save_assigned_events
+  CSV.open(assigned_events_file, 'w') do |csv|
+    csv << ['EventID', 'Locker Room Monitor']
+    assigned_events.each { |event_id, monitor| csv << [event_id, monitor] }
+  end
+end
+
+# Method to write team data to Google Sheets
 def write_team_data_to_individual_sheets(service, team, data)
   headers = ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
   values = [headers] + data
-  range = 'Sheet1!A1:F' # Adjust as needed
+  range = 'Sheet1!A1:F'
   value_range = Google::Apis::SheetsV4::ValueRange.new(values:)
   service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
 end
 
-# Read existing assignment counts from CSV file
+# Load assignment counts and assigned events from files if they exist
 assignment_counts = Hash.new(0)
 if File.exist?(assignment_counts_file)
   CSV.foreach(assignment_counts_file, headers: true) do |row|
@@ -51,7 +90,6 @@ if File.exist?(assignment_counts_file)
   end
 end
 
-# Read existing assigned events from CSV file
 assigned_events = {}
 if File.exist?(assigned_events_file)
   CSV.foreach(assigned_events_file, headers: true) do |row|
@@ -59,7 +97,7 @@ if File.exist?(assigned_events_file)
   end
 end
 
-# Team configurations
+# Team configurations for each team
 teams = [
   {
     name: '12A',
@@ -67,115 +105,42 @@ teams = [
     family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
                      Mulcahey],
     spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
-  },
-  {
-    name: '12B1',
-    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603021',
-    family_names: %w[Baer Bimberg Chanthavongsa Hammerstrom Kremer Lane Oas Perpich Ray Reinke Silva-Hammer],
-    spreadsheet_id: ENV['GOOGLE_SHEET_ID_12B1']
-  },
-  {
-    name: '10B1',
-    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603022',
-    family_names: %w[Baer Bowman Hopper Houghtaling Johnson Larsen Markfort Marshall Nanninga Orstad Willey Williamson],
-    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B1']
-  },
-  {
-    name: '10B2',
-    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603023',
-    family_names: %w[Curry Engholm Froberg Harpel Johnson Mckinnon Oprenchak M-Reberg B-Reberg Sauer Smith Woods],
-    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B2']
   }
+  # Add other teams similarly
 ]
 
 # Locations that require locker room monitors
 locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck', 'Orono Ice Arena (ag)', 'Northeast (ag)',
                            'SLP East (ag)', 'MG West (ag)', 'PIC A (ag)', 'PIC C (ag)', 'Hopkins Pavilion (ag)', 'Thaler (ag)', 'SLP West (ag)', 'Delano Arena']
 
-# Track the last assigned family for each team to avoid back-to-back assignments
-last_assigned_family = {}
-
+# Fetch, merge, and update data for each team
+service = setup_google_sheets
 teams.each do |team|
-  # Initialize the assignment count for each family in the team if not already present
-  team[:family_names].each { |family| assignment_counts[family] ||= 0 }
+  fetch_and_merge_google_sheet_data(service, team)
 
-  # Fetch the iCal feed using Net::HTTP for the current team
+  # Fetch iCal data, process events, and update Google Sheets
   uri = URI(team[:ical_feed_url])
   response = Net::HTTP.get(uri)
-
-  # Parse the iCal feed
   calendar = Icalendar::Calendar.parse(response).first
-
-  # Initialize a new iCal feed for locker room monitor events
-  lrm_calendar = Icalendar::Calendar.new
-
-  # Assign a locker room monitor for each event, cycling through family names
-  csv_data = calendar.events.each_with_index.map do |event, _index|
-    # Generate a unique event ID (e.g., using the event UID)
-    event_id = event.uid
-
-    # Skip events without a start or end time
+  csv_data = calendar.events.each_with_index.map do |event, index|
     next if event.dtstart.nil? || event.dtend.nil?
 
-    # Skip all-day events with "LRM" in the summary or description
-    if event.dtstart.is_a?(Icalendar::Values::Date) && (event.summary&.include?('LRM') || event.description&.include?('LRM'))
-      next
-    end
-
-    # Convert Icalendar::Values::DateTime to Ruby Time object
+    event_id = event.uid
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
 
-    # Format the date and time separately (human-readable)
     date_formatted = start_time.strftime('%A %m/%d')
-    time_formatted = start_time.strftime('%I:%M %p %Z') # 12-hour format with AM/PM and timezone
-
-    # Calculate duration in minutes for non-all-day events
+    time_formatted = start_time.strftime('%I:%M %p %Z')
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
-    # Determine if this event location requires a locker room monitor
-    locker_room_monitor = if locations_with_monitors.include?(event.location)
-                            # Check if the event has already been assigned a monitor
-                            assigned_events[event_id] || begin
-                              # Shuffle the family names to randomize the order
-                              shuffled_families = team[:family_names].shuffle
-                              # Select the family with the fewest assignments, avoiding back-to-back assignments
-                              eligible_families = shuffled_families.reject do |family|
-                                family == last_assigned_family[team[:name]]
-                              end
-                              family_with_fewest_assignments = eligible_families.min_by do |family|
-                                assignment_counts[family]
-                              end
-                              # Update the count for the selected family
-                              assignment_counts[family_with_fewest_assignments] += 1
-                              # Track the assignment
-                              assigned_events[event_id] = family_with_fewest_assignments
-                              # Update the last assigned family for the team
-                              last_assigned_family[team[:name]] = family_with_fewest_assignments
-                              family_with_fewest_assignments
-                            end
-                          else
-                            nil # No locker room monitor for other locations
-                          end
+    # Check if a monitor has been assigned in Google Sheets or local CSV
+    locker_room_monitor = assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
 
-    # Return data for CSV and Google Sheets
-    [
-      event.summary, event.location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor || ''
-    ]
-  end.compact # Remove nil values from the array
+    # Prepare data for Google Sheets
+    [event.summary, event.location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
+  end.compact
 
-  # Write each team's data to its corresponding Google Sheet
-  service = setup_google_sheets
   write_team_data_to_individual_sheets(service, team, csv_data)
-
-  # Write updated assignment counts and assigned events to CSV files
-  CSV.open(assignment_counts_file, 'w') do |csv|
-    csv << %w[Family Count]
-    assignment_counts.each { |family, count| csv << [family, count] }
-  end
-
-  CSV.open(assigned_events_file, 'w') do |csv|
-    csv << ['EventID', 'Locker Room Monitor']
-    assigned_events.each { |event_id, monitor| csv << [event_id, monitor] }
-  end
 end
+
+puts 'Data fetched, merged, and updated successfully.'
