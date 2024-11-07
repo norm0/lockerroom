@@ -129,14 +129,14 @@ teams = [
   }
 ]
 
-# Define an exclusion list for events that do not require a locker room monitor
-exclusion_list = [
-  'Skills Off Ice',  # Example keywords or patterns
-  'Dryland',
-  'Goalie Training',
-  'Off Ice',
-  'Conditioning',
-  'Meeting',
+# Locations that require locker room monitors
+locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck', 'Orono Ice Arena (ag)', 'Northeast (ag)',
+                           'SLP East (ag)', 'MG West (ag)', 'PIC A (ag)', 'PIC C (ag)', 'Hopkins Pavilion (ag)', 'Thaler (ag)', 'SLP West (ag)', 'Delano Arena', 'MG Premier (East) (ag)']
+
+# Locations that do not require locker room monitors
+excluded_locations = [
+  'New Hope North - Skills Off Ice',
+  'New Hope Ice Arena, Louisiana Avenue North, New Hope, MN, USA',
   nil, '' # Empty locations
 ]
 
@@ -180,6 +180,15 @@ end
 # Fetch, merge, and update data for each team
 service = setup_google_sheets
 
+# Define an exclusion list for events that do not require a locker room monitor
+exclusion_list = [
+  'Skills Off Ice', # Example keywords or patterns
+  'Dryland',
+  'Goalie Training',
+  'Off Ice',
+  'Conditioning'
+]
+
 teams.each do |team|
   # Initialize assignment counts for the current team
   assignment_counts = Hash.new(0)
@@ -195,14 +204,14 @@ teams.each do |team|
   response = Net::HTTP.get(uri)
   calendar = Icalendar::Calendar.parse(response).first
 
-  csv_data = calendar.events.each_with_index.map do |event, index|
+  csv_data = calendar.events.each_with_index.map do |event, _index|
     # Skip if the event matches any term in the exclusion list
     next if exclusion_list.any? { |term| event.summary&.include?(term) || event.description&.include?(term) }
     next if event.dtstart.nil? || event.dtend.nil?
 
     event_id = event.uid
-    start_time = event.dtstart.to_time.in_time_zone("Central Time (US & Canada)")
-    end_time = event.dtend.to_time.in_time_zone("Central Time (US & Canada)")
+    start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
+    end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
     raw_date = start_time.strftime('%Y-%m-%d')
     formatted_date = start_time.strftime('%m/%d/%y %a %I:%M %p').downcase
     duration_in_minutes = ((end_time - start_time) / 60).to_i
@@ -235,18 +244,6 @@ teams.each do |team|
   save_team_assignment_counts(team, assignment_counts)
 end
 
-  # Clear existing data and write new data to Google Sheets
-  clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
-  write_team_data_to_individual_sheets(service, team, csv_data)
-
-  # Sort the sheet by the Raw Date column
-  sheet_id = get_sheet_id(service, team[:spreadsheet_id]) # Get the sheet ID dynamically
-  sort_google_sheet_by_date(service, team[:spreadsheet_id], sheet_id)
-
-  # Write iCal file for each team
-  ics_filename = "locker_room_monitor_#{team[:name].downcase.gsub(' ', '_')}.ics"
-  File.open(ics_filename, 'w') { |file| file.write(lrm_calendar.to_ical) }
-end
 # Save assignment counts to ensure persistence
 save_assignment_counts
 
