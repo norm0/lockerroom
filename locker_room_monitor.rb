@@ -129,6 +129,10 @@ teams = [
   }
 ]
 
+# Locations that require locker room monitors
+locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck', 'Orono Ice Arena (ag)', 'Northeast (ag)',
+                           'SLP East (ag)', 'MG West (ag)', 'PIC A (ag)', 'PIC C (ag)', 'Hopkins Pavilion (ag)', 'Thaler (ag)', 'SLP West (ag)', 'Delano Arena']
+
 # Locations that do not require locker room monitors
 excluded_locations = [
   'New Hope North - Skills Off Ice',
@@ -136,21 +140,22 @@ excluded_locations = [
   nil, '' # Empty locations
 ]
 
-# Locations that require locker room monitors
-locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck', 'Orono Ice Arena (ag)', 'Northeast (ag)',
-                           'SLP East (ag)', 'MG West (ag)', 'PIC A (ag)', 'PIC C (ag)', 'Hopkins Pavilion (ag)', 'Thaler (ag)', 'SLP West (ag)', 'Delano Arena']
-
 # Fetch, merge, and update data for each team
 service = setup_google_sheets
-# Inside the loop where monitors are assigned
 teams.each do |team|
   fetch_and_merge_google_sheet_data(service, team)
+
+  # Initialize iCal calendar for each team
+  lrm_calendar = Icalendar::Calendar.new
 
   # Fetch iCal data, process events, and update Google Sheets
   uri = URI(team[:ical_feed_url])
   response = Net::HTTP.get(uri)
   calendar = Icalendar::Calendar.parse(response).first
   csv_data = calendar.events.each_with_index.map do |event, index|
+    # Skip if event contains 'LRM' in the summary or description, or if it's in an excluded location
+    next if event.summary&.include?('LRM') || event.description&.include?('LRM')
+    next if excluded_locations.include?(event.location)
     next if event.dtstart.nil? || event.dtend.nil?
 
     event_id = event.uid
@@ -161,20 +166,29 @@ teams.each do |team|
     time_formatted = start_time.strftime('%I:%M %p %Z')
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
-    # Determine if this event location requires a locker room monitor
-    location = event.location
-    next if excluded_locations.include?(location) # Skip excluded locations
-
-    # Only assign a monitor if the location requires it
-    locker_room_monitor = if locations_with_monitors.include?(location)
+    locker_room_monitor = if locations_with_monitors.include?(event.location)
                             @assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
                           end
 
     # Prepare data for Google Sheets
-    [event.summary, location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
+
+    # Add locker room monitor event to iCal if applicable
+    next unless locker_room_monitor
+
+    lrm_event = Icalendar::Event.new
+    lrm_event.dtstart = Icalendar::Values::DateTime.new(start_time)
+    lrm_event.dtend = Icalendar::Values::DateTime.new(end_time)
+    lrm_event.summary = "LRM: #{locker_room_monitor} for #{event.summary}"
+    lrm_event.location = event.location
+    lrm_event.description = "Locker Room Monitor: #{locker_room_monitor}\nEvent: #{event.summary}\nLocation: #{event.location}"
+    lrm_calendar.add_event(lrm_event)
   end.compact
 
   write_team_data_to_individual_sheets(service, team, csv_data)
+
+  # Write iCal file for each team
+  ics_filename = "locker_room_monitor_#{team[:name].downcase.gsub(' ', '_')}.ics"
+  File.open(ics_filename, 'w') { |file| file.write(lrm_calendar.to_ical) }
 end
 
-puts 'Data fetched, merged, and updated successfully.'
+puts 'Data fetched, merged, and updated successfully, including .ics files.'
