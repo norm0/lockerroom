@@ -9,7 +9,7 @@ require 'stringio'
 require 'active_support/time'
 
 APPLICATION_NAME = 'Google Sheets API Ruby Integration'
-SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS
+SCOPE = [Google::Apis::SheetsV4::AUTH_SPREADSHEETS]
 
 # File to store assignment counts and assigned events
 assignment_counts_file = 'assignment_counts.csv'
@@ -23,14 +23,15 @@ def setup_google_sheets
   service
 end
 
-# Google Sheets authorization
+# Google Sheets authorization using a service account
 def authorize
   credentials = JSON.parse(ENV['GOOGLE_SHEETS_CREDENTIALS'])
-  client_id = Google::Auth::ClientId.from_hash(credentials)
-  token_store = Google::Auth::Stores::FileTokenStore.new(file: 'token.yaml')
-  authorizer = Google::Auth::UserAuthorizer.new(client_id, SCOPE, token_store)
-  user_id = 'default'
-  authorizer.get_credentials(user_id)
+
+  # Set up ServiceAccountCredentials using the JSON key
+  Google::Auth::ServiceAccountCredentials.make_creds(
+    json_key_io: StringIO.new(credentials.to_json),
+    scope: SCOPE
+  )
 end
 
 # Fetch data from Google Sheets and merge with local CSVs
@@ -98,6 +99,7 @@ if File.exist?(assigned_events_file)
 end
 
 # Team configurations for each team
+# Team configurations for each team
 teams = [
   {
     name: '12A',
@@ -105,8 +107,25 @@ teams = [
     family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
                      Mulcahey],
     spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
+  },
+  {
+    name: '12B1',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603021',
+    family_names: %w[Baer Bimberg Chanthavongsa Hammerstrom Kremer Lane Oas Perpich Ray Reinke Silva-Hammer],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_12B1']
+  },
+  {
+    name: '10B1',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603022',
+    family_names: %w[Baer Bowman Hopper Houghtaling Johnson Larsen Markfort Marshall Nanninga Orstad Willey Williamson],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B1']
+  },
+  {
+    name: '10B2',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603023',
+    family_names: %w[Curry Engholm Froberg Harpel Johnson Mckinnon Oprenchak M-Reberg B-Reberg Sauer Smith Woods],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B2']
   }
-  # Add other teams similarly
 ]
 
 # Locations that require locker room monitors
