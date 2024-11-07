@@ -129,12 +129,20 @@ teams = [
   }
 ]
 
+# Locations that do not require locker room monitors
+excluded_locations = [
+  'New Hope North - Skills Off Ice',
+  'New Hope Ice Arena, Louisiana Avenue North, New Hope, MN, USA',
+  nil, '' # Empty locations
+]
+
 # Locations that require locker room monitors
 locations_with_monitors = ['New Hope North', 'New Hope South', 'Breck', 'Orono Ice Arena (ag)', 'Northeast (ag)',
                            'SLP East (ag)', 'MG West (ag)', 'PIC A (ag)', 'PIC C (ag)', 'Hopkins Pavilion (ag)', 'Thaler (ag)', 'SLP West (ag)', 'Delano Arena']
 
 # Fetch, merge, and update data for each team
 service = setup_google_sheets
+# Inside the loop where monitors are assigned
 teams.each do |team|
   fetch_and_merge_google_sheet_data(service, team)
 
@@ -153,11 +161,17 @@ teams.each do |team|
     time_formatted = start_time.strftime('%I:%M %p %Z')
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
-    # Check if a monitor has been assigned in Google Sheets or local CSV
-    locker_room_monitor = @assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
+    # Determine if this event location requires a locker room monitor
+    location = event.location
+    next if excluded_locations.include?(location) # Skip excluded locations
+
+    # Only assign a monitor if the location requires it
+    locker_room_monitor = if locations_with_monitors.include?(location)
+                            @assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
+                          end
 
     # Prepare data for Google Sheets
-    [event.summary, event.location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
+    [event.summary, location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
   end.compact
 
   write_team_data_to_individual_sheets(service, team, csv_data)
