@@ -1,4 +1,4 @@
-name: Sync Google Sheets
+name: Run Locker Room Monitor Script & Sync Google Sheets
 
 on:
   schedule:
