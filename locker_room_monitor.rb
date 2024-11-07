@@ -34,6 +34,15 @@ def authorize
   )
 end
 
+# Method to write data to Google Sheets
+def write_team_data_to_individual_sheets(service, team, data)
+  headers = ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
+  values = [headers] + data
+  range = 'Sheet1!A1:F' # Adjust as needed
+  value_range = Google::Apis::SheetsV4::ValueRange.new(values:)
+  service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
+end
+
 # Read existing assignment counts from CSV file
 assignment_counts = Hash.new(0)
 if File.exist?(assignment_counts_file)
@@ -152,13 +161,4 @@ teams.each do |team|
     csv << ['EventID', 'Locker Room Monitor']
     assigned_events.each { |event_id, monitor| csv << [event_id, monitor] }
   end
-end
-
-# Method to write data to Google Sheets
-def write_team_data_to_individual_sheets(service, team, data)
-  headers = ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
-  values = [headers] + data
-  range = 'Sheet1!A1:F'  # Adjust as needed
-  value_range = Google::Apis::SheetsV4::ValueRange.new(values:)
-  service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
 end
