@@ -15,6 +15,23 @@ SCOPE = [Google::Apis::SheetsV4::AUTH_SPREADSHEETS]
 assignment_counts_file = 'assignment_counts.csv'
 assigned_events_file = 'assigned_events.csv'
 
+# Initialize global data
+@assignment_counts = Hash.new(0)
+@assigned_events = {}
+
+# Load assignment counts and assigned events from files if they exist
+if File.exist?(assignment_counts_file)
+  CSV.foreach(assignment_counts_file, headers: true) do |row|
+    @assignment_counts[row['Family']] = row['Count'].to_i
+  end
+end
+
+if File.exist?(assigned_events_file)
+  CSV.foreach(assigned_events_file, headers: true) do |row|
+    @assigned_events[row['EventID']] = row['Locker Room Monitor']
+  end
+end
+
 # Google Sheets setup
 def setup_google_sheets
   service = Google::Apis::SheetsV4::SheetsService.new
@@ -47,9 +64,9 @@ def fetch_and_merge_google_sheet_data(service, team)
     next unless monitor
 
     # Check if we need to update or add this event in assigned_events
-    if assigned_events[event_id] != monitor
-      assigned_events[event_id] = monitor
-      assignment_counts[monitor] += 1 unless monitor.empty?
+    if @assigned_events[event_id] != monitor
+      @assigned_events[event_id] = monitor
+      @assignment_counts[monitor] += 1 unless monitor.empty?
     end
   end
 
@@ -62,7 +79,7 @@ end
 def save_assignment_counts
   CSV.open(assignment_counts_file, 'w') do |csv|
     csv << %w[Family Count]
-    assignment_counts.each { |family, count| csv << [family, count] }
+    @assignment_counts.each { |family, count| csv << [family, count] }
   end
 end
 
@@ -70,7 +87,7 @@ end
 def save_assigned_events
   CSV.open(assigned_events_file, 'w') do |csv|
     csv << ['EventID', 'Locker Room Monitor']
-    assigned_events.each { |event_id, monitor| csv << [event_id, monitor] }
+    @assigned_events.each { |event_id, monitor| csv << [event_id, monitor] }
   end
 end
 
@@ -83,22 +100,6 @@ def write_team_data_to_individual_sheets(service, team, data)
   service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
 end
 
-# Load assignment counts and assigned events from files if they exist
-assignment_counts = Hash.new(0)
-if File.exist?(assignment_counts_file)
-  CSV.foreach(assignment_counts_file, headers: true) do |row|
-    assignment_counts[row['Family']] = row['Count'].to_i
-  end
-end
-
-assigned_events = {}
-if File.exist?(assigned_events_file)
-  CSV.foreach(assigned_events_file, headers: true) do |row|
-    assigned_events[row['EventID']] = row['Locker Room Monitor']
-  end
-end
-
-# Team configurations for each team
 # Team configurations for each team
 teams = [
   {
@@ -153,7 +154,7 @@ teams.each do |team|
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
     # Check if a monitor has been assigned in Google Sheets or local CSV
-    locker_room_monitor = assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
+    locker_room_monitor = @assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
 
     # Prepare data for Google Sheets
     [event.summary, event.location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
