@@ -179,6 +179,7 @@ end
 
 # Fetch, merge, and update data for each team
 service = setup_google_sheets
+
 teams.each do |team|
   fetch_and_merge_google_sheet_data(service, team)
 
@@ -193,7 +194,7 @@ teams.each do |team|
   csv_data = calendar.events.each_with_index.map do |event, index|
     # Skip if the event contains 'LRM' in the summary or description
     next if event.summary&.include?('LRM') || event.description&.include?('LRM')
-
+    
     # Skip if the location is in the excluded locations
     location = event.location
     next if excluded_locations.include?(location)
@@ -203,10 +204,14 @@ teams.each do |team|
 
     # Process event times
     event_id = event.uid
-    start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
-    end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
-    date_formatted = start_time.strftime('%A %m/%d')
-    time_formatted = start_time.strftime('%I:%M %p %Z')
+    start_time = event.dtstart.to_time.in_time_zone("Central Time (US & Canada)")
+    end_time = event.dtend.to_time.in_time_zone("Central Time (US & Canada)")
+
+    # Create Raw Date for sorting and Formatted Date for display
+    raw_date = start_time.strftime('%Y-%m-%d')   # Raw date for sorting
+    formatted_date = start_time.strftime('%m/%d/%y %a %I:%M %p').downcase # Formatted date for display
+
+    # Calculate duration
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
     # Determine if this event location requires a locker room monitor
@@ -214,15 +219,15 @@ teams.each do |team|
                             @assigned_events[event_id] || team[:family_names][index % team[:family_names].size]
                           end
 
-    # Prepare data for Google Sheets only if it passed all exclusion checks
-    [event.summary, location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
+    # Prepare data for Google Sheets
+    [event.summary, location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
   end.compact
 
   # Clear existing data and write new data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, csv_data)
 
-  # Sort the sheet by date
+  # Sort the sheet by the Raw Date column
   sheet_id = get_sheet_id(service, team[:spreadsheet_id]) # Get the sheet ID dynamically
   sort_google_sheet_by_date(service, team[:spreadsheet_id], sheet_id)
 
