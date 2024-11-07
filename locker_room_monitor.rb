@@ -140,6 +140,12 @@ excluded_locations = [
   nil, '' # Empty locations
 ]
 
+# Method to clear team data in Google Sheets before updating
+def clear_google_sheet_data(service, spreadsheet_id, range)
+  clear_request = Google::Apis::SheetsV4::ClearValuesRequest.new
+  service.clear_values(spreadsheet_id, range, clear_request)
+end
+
 # Fetch, merge, and update data for each team
 service = setup_google_sheets
 teams.each do |team|
@@ -180,6 +186,9 @@ teams.each do |team|
     # Prepare data for Google Sheets only if it passed all exclusion checks
     [event.summary, location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor]
   end.compact # Remove nil values from the array
+
+  # Clear the existing data in Google Sheets for this team's range
+  clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
 
   # Write filtered data to Google Sheets
   write_team_data_to_individual_sheets(service, team, csv_data)
