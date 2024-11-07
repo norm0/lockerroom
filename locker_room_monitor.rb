@@ -123,12 +123,12 @@ teams.each do |team|
     end
 
     # Convert Icalendar::Values::DateTime to Ruby Time object
-    start_time = event.dtstart.to_time
-    end_time = event.dtend.to_time
+    start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
+    end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
 
     # Format the date and time separately (human-readable)
-    date_formatted = start_time.strftime('%Y-%m-%d')
-    time_formatted = start_time.strftime('%I:%M %p') # 12-hour format with AM/PM
+    date_formatted = start_time.strftime('%A %m/%d')
+    time_formatted = start_time.strftime('%I:%M %p %Z') # 12-hour format with AM/PM and timezone
 
     # Calculate duration in minutes for non-all-day events
     duration_in_minutes = ((end_time - start_time) / 60).to_i
