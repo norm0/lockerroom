@@ -100,8 +100,25 @@ teams = [
     family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
                      Mulcahey],
     spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
+  },
+  {
+    name: '12B1',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603021',
+    family_names: %w[Baer Bimberg Chanthavongsa Hammerstrom Kremer Lane Oas Perpich Ray Reinke Silva-Hammer],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_12B1']
+  },
+  {
+    name: '10B1',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603022',
+    family_names: %w[Baer Bowman Hopper Houghtaling Johnson Larsen Markfort Marshall Nanninga Orstad Willey Williamson],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B1']
+  },
+  {
+    name: '10B2',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603023',
+    family_names: %w[Curry Engholm Froberg Harpel Johnson Mckinnon Oprenchak M-Reberg B-Reberg Sauer Smith Woods],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B2']
   }
-  # Repeat similar setup for other teams
 ]
 
 # Fetch, merge, and update data for each team
