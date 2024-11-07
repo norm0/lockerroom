@@ -29,4 +29,4 @@ jobs:
           GOOGLE_SHEET_ID_12B1: ${{ secrets.GOOGLE_SHEET_ID_12B1 }}
           GOOGLE_SHEET_ID_10B1: ${{ secrets.GOOGLE_SHEET_ID_10B1 }}
           GOOGLE_SHEET_ID_10B2: ${{ secrets.GOOGLE_SHEET_ID_10B2 }}
-        run: ruby locker_room_monitors.rb
+        run: ruby locker_room_monitor.rb
