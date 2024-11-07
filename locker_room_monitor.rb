@@ -2,10 +2,34 @@ require 'net/http'
 require 'icalendar'
 require 'uri'
 require 'csv'
+require 'google/apis/sheets_v4'
+require 'googleauth'
+require 'json'
+
+APPLICATION_NAME = 'Google Sheets API Ruby Integration'
+SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS
 
 # File to store assignment counts and assigned events
 assignment_counts_file = 'assignment_counts.csv'
 assigned_events_file = 'assigned_events.csv'
+
+# Google Sheets setup
+def setup_google_sheets
+  service = Google::Apis::SheetsV4::SheetsService.new
+  service.client_options.application_name = APPLICATION_NAME
+  service.authorization = authorize
+  service
+end
+
+# Google Sheets authorization
+def authorize
+  credentials = JSON.parse(ENV['GOOGLE_SHEETS_CREDENTIALS'])
+  client_id = Google::Auth::ClientId.from_hash(credentials)
+  token_store = Google::Auth::Stores::FileTokenStore.new(file: 'token.yaml')
+  authorizer = Google::Auth::UserAuthorizer.new(client_id, SCOPE, token_store)
+  user_id = 'default'
+  authorizer.get_credentials(user_id)
+end
 
 # Read existing assignment counts from CSV file
 assignment_counts = Hash.new(0)
@@ -23,29 +47,16 @@ if File.exist?(assigned_events_file)
   end
 end
 
-# Team configurations for 12A, 12B1, 10B1, and 10B2
+# Team configurations
 teams = [
   {
     name: '12A',
     ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603019',
     family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
-                     Mulcahey]
-  },
-  {
-    name: '12B1',
-    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603021',
-    family_names: %w[Baer Bimberg Chanthavongsa Hammerstrom Kremer Lane Oas Perpich Ray Reinke Silva-Hammer]
-  },
-  {
-    name: '10B1',
-    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603022',
-    family_names: %w[Baer Bowman Hopper Houghtaling Johnson Larsen Markfort Marshall Nanninga Orstad Willey Williamson]
-  },
-  {
-    name: '10B2',
-    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603023',
-    family_names: %w[Curry Engholm Froberg Harpel Johnson Mckinnon Oprenchak M-Reberg B-Reberg Sauer Smith Woods]
+                     Mulcahey],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
   }
+  # Add other team configurations (similar structure as above)...
 ]
 
 # Locations that require locker room monitors
@@ -118,83 +129,33 @@ teams.each do |team|
                             nil # No locker room monitor for other locations
                           end
 
-    # Create an all-day event with instructions for the locker room monitor (only if required)
-    if locker_room_monitor
-      lrm_event = Icalendar::Event.new
-      lrm_event.dtstart = Icalendar::Values::Date.new(start_time.to_date) # All-day event starts on the event date
-      lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
-      lrm_event.summary = "#{locker_room_monitor}" # Only the monitor's name
-      lrm_event.description = <<-DESC
-        Locker Room Monitor: #{locker_room_monitor}
-
-        Instructions:
-        - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
-
-        Event: #{event.summary}
-        Location: #{event.location}
-        Scheduled Event Time: #{start_time.strftime('%a, %b %-d, %Y at %-I:%M %p')} to #{end_time.strftime('%a, %b %-d, %Y at %-I:%M %p')}
-      DESC
-
-      # Add the event to the iCal feed
-      lrm_calendar.add_event(lrm_event)
-
-      # Set duration to nil for all-day events
-      duration_in_minutes = nil
-    end
-
-    # Return data for CSV export
-    {
-      'Event' => event.summary,
-      'Location' => event.location,
-      'Date' => date_formatted,
-      'Time' => time_formatted,
-      'Duration (minutes)' => duration_in_minutes,
-      'Locker Room Monitor' => locker_room_monitor || ''
-    }
+    # Return data for CSV and Google Sheets
+    [
+      event.summary, event.location, date_formatted, time_formatted, duration_in_minutes, locker_room_monitor || ''
+    ]
   end.compact # Remove nil values from the array
 
-  # Sort the CSV data by 'Start Time' before writing to the CSV file
-  csv_data.sort_by! { |row| row['Date'] + row['Time'] }
+  # Write each team's data to its corresponding Google Sheet
+  service = setup_google_sheets
+  write_team_data_to_individual_sheets(service, team, csv_data)
 
-  # Save CSV file with a team-specific filename
-  csv_filename = "locker_room_monitors_#{team[:name].downcase.gsub(' ', '_')}.csv"
-  CSV.open(csv_filename, 'w') do |csv|
-    csv << ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
-    csv_data.each do |row|
-      csv << [row['Event'], row['Location'], row['Date'], row['Time'], row['Duration (minutes)'],
-              row['Locker Room Monitor']]
-    end
+  # Write updated assignment counts and assigned events to CSV files
+  CSV.open(assignment_counts_file, 'w') do |csv|
+    csv << %w[Family Count]
+    assignment_counts.each { |family, count| csv << [family, count] }
   end
 
-  # Finalize the iCal feed and save it with a team-specific filename
-  ics_filename = "locker_room_monitor_#{team[:name].downcase.gsub(' ', '_')}.ics"
-  lrm_calendar.publish
-  File.open(ics_filename, 'w') { |file| file.write(lrm_calendar.to_ical) }
-
-  puts "Events with locker room monitors for #{team[:name]} have been saved to '#{csv_filename}' and the iCal feed has been saved to '#{ics_filename}'."
-end
-
-# Write updated assignment counts back to the CSV file
-CSV.open(assignment_counts_file, 'w') do |csv|
-  csv << %w[Family Count]
-  assignment_counts.each do |family, count|
-    csv << [family, count]
+  CSV.open(assigned_events_file, 'w') do |csv|
+    csv << ['EventID', 'Locker Room Monitor']
+    assigned_events.each { |event_id, monitor| csv << [event_id, monitor] }
   end
 end
 
-# Write updated assigned events back to the CSV file
-CSV.open(assigned_events_file, 'w') do |csv|
-  csv << ['EventID', 'Locker Room Monitor']
-  assigned_events.each do |event_id, monitor|
-    csv << [event_id, monitor]
-  end
-end
-
-# Display the family counts by team
-puts "\nLocker Room Monitor Assignment Counts by Team:"
-teams.each do |team|
-  puts "\nTeam #{team[:name]}:"
-  team[:family_names].each do |family|
-    puts "#{family}: #{assignment_counts[family]}"
-  end
+# Method to write data to Google Sheets
+def write_team_data_to_individual_sheets(service, team, data)
+  headers = ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
+  values = [headers] + data
+  range = 'Sheet1!A1:F'  # Adjust as needed
+  value_range = Google::Apis::SheetsV4::ValueRange.new(values:)
+  service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
 end

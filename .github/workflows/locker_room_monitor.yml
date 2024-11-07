@@ -1,14 +1,14 @@
-name: Run Locker Room Monitor Script
+name: Sync Google Sheets
 
 on:
   schedule:
-    - cron: "0 0 * * 1"  # Runs every Monday at midnight UTC
-  workflow_dispatch:
+    - cron: "0 */12 * * *"  # Runs every 12 hours
+  workflow_dispatch:         # Allows manual triggering
 
 jobs:
-  run_script:
+  sync_google_sheets:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,23 +16,17 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.1'  # Specify your Ruby version
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
-          gem install bundler
-          bundle install
+          gem install google-api-client
 
-      - name: Run Locker Room Monitor Script
-        run: |
-          ruby locker_room_monitor.rb  # Ensure this file exists at the root of the repo
-
-      - name: Commit and Push Changes (if any)
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add .
-          git commit -m "Update CSV and iCal feed"
-          git push
+      - name: Run Locker Room Monitors Script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+          GOOGLE_SHEET_ID_12A: ${{ secrets.GOOGLE_SHEET_ID_12A }}
+          GOOGLE_SHEET_ID_12B1: ${{ secrets.GOOGLE_SHEET_ID_12B1 }}
+          GOOGLE_SHEET_ID_10B1: ${{ secrets.GOOGLE_SHEET_ID_10B1 }}
+          GOOGLE_SHEET_ID_10B2: ${{ secrets.GOOGLE_SHEET_ID_10B2 }}
+        run: ruby locker_room_monitors.rb
