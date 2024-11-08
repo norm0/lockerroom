@@ -104,7 +104,9 @@ end
 
 # Define an exclusion list for events that do not require a locker room monitor
 exclusion_list = [
-  'Skills Off Ice', 'Dryland', 'Goalie Training', 'Off Ice', 'Conditioning', 'Meeting', 'Goalie', 'LRM'
+  'Skills Off Ice', 'Dryland', 'Goalie Training', 'Off Ice', 'Conditioning',
+  'Meeting', 'Goalie', 'LRM', 'pictures',
+  'New Hope Ice Arena, Louisiana Avenue North, New Hope, MN, USA'
 ]
 
 # Define teams and configurations
