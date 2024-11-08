@@ -168,12 +168,13 @@ teams.each do |team|
   lrm_calendar = Icalendar::Calendar.new
 
   csv_data = calendar.events.each_with_index.map do |event, _index|
-    # Skip events if summary or description is nil, empty, or matches exclusion criteria
-    next if event.summary.nil? || event.summary.strip.empty? || event.summary.include?('LRM')
-    next if event.description.nil? || event.description.strip.empty? || event.description.include?('LRM')
-    next if exclusion_list.any? do |term|
-              event.summary.include?(term) || event.description.include?(term) || event.location.include?(term)
-            end
+    # Skip events if summary, description, or location matches exclusion criteria
+    if exclusion_list.any? do |term|
+         event.summary&.include?(term) || event.description&.include?(term) || event.location&.include?(term)
+       end
+      puts "Excluding event: #{event.summary} at #{event.location}"
+      next
+    end
     next if event.dtstart.nil? || event.dtend.nil?
     next if event.location.nil? || event.location.strip.empty?
 
