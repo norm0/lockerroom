@@ -156,6 +156,9 @@ teams.each do |team|
   response = Net::HTTP.get(uri)
   calendar = Icalendar::Calendar.parse(response).first
 
+  # Initialize a new iCal feed for locker room monitor events
+  lrm_calendar = Icalendar::Calendar.new
+
   csv_data = calendar.events.each_with_index.map do |event, _index|
     # Skip events if summary or description is nil, empty, or matches exclusion criteria
     next if event.summary.nil? || event.summary.strip.empty? || event.summary.include?('LRM')
@@ -177,6 +180,30 @@ teams.each do |team|
       assignment_counts[family_with_fewest_assignments] += 1
       @assigned_events[team[:name]][event_id] = family_with_fewest_assignments
       family_with_fewest_assignments
+    end
+
+    # Create an all-day event with instructions for the locker room monitor (only if required)
+    if locker_room_monitor
+      lrm_event = Icalendar::Event.new
+      lrm_event.dtstart = Icalendar::Values::Date.new(start_time.to_date) # All-day event starts on the event date
+      lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
+      lrm_event.summary = "#{locker_room_monitor}" # Only the monitor's name
+      lrm_event.description = <<-DESC
+        Locker Room Monitor: #{locker_room_monitor}
+
+        Instructions:
+        - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
+
+        Event: #{event.summary}
+        Location: #{event.location}
+        Scheduled Event Time: #{start_time.strftime('%a, %b %-d, %Y at %-I:%M %p')} to #{end_time.strftime('%a, %b %-d, %Y at %-I:%M %p')}
+      DESC
+
+      # Add the event to the iCal feed
+      lrm_calendar.add_event(lrm_event)
+
+      # Set duration to nil for all-day events
+      duration_in_minutes = nil
     end
 
     # Prepare data for Google Sheets
@@ -205,6 +232,22 @@ teams.each do |team|
         csv << [team_name, event_id, monitor]
       end
     end
+  end
+
+  # Save the iCal feed to a file
+  ics_filename = "locker_room_monitor_#{team[:name].downcase.gsub(' ', '_')}.ics"
+  lrm_calendar.publish
+  File.open(ics_filename, 'w') { |file| file.write(lrm_calendar.to_ical) }
+
+  puts "Events with locker room monitors for #{team[:name]} have been saved to '#{ics_filename}' and the iCal feed has been saved to '#{ics_filename}'."
+end
+
+# Display the family counts by team
+puts "\nLocker Room Monitor Assignment Counts by Team:"
+teams.each do |team|
+  puts "\nTeam #{team[:name]}:"
+  team[:family_names].each do |family|
+    puts "#{family}: #{assignment_counts[family]}"
   end
 end
 
