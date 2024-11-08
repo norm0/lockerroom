@@ -155,9 +155,9 @@ teams.each do |team|
   calendar = Icalendar::Calendar.parse(response).first
 
   csv_data = calendar.events.each_with_index.map do |event, _index|
-    # Skip events if summary or description is nil or empty
-    next if event.summary.nil? || event.summary.strip.empty?
-    next if event.description.nil? || event.description.strip.empty?
+    # Skip events if summary or description is nil, empty, or contains "LRM"
+    next if event.summary.nil? || event.summary.strip.empty? || event.summary.include?('LRM')
+    next if event.description.nil? || event.description.strip.empty? || event.description.include?('LRM')
 
     # Check if the event summary or description matches any term in the exclusion list
     next if exclusion_list.any? { |term| event.summary.include?(term) || event.description.include?(term) }
@@ -169,7 +169,7 @@ teams.each do |team|
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
     raw_date = start_time.strftime('%Y-%m-%d')
-    formatted_date = start_time.strftime('%m/%d/%y %a %I:%M %p').downcase
+    formatted_date = start_time.strftime('%a %I:%M %p').downcase
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
     # Balanced assignment of locker room monitor per team
