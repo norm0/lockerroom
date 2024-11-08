@@ -76,7 +76,7 @@ def sort_google_sheet_by_date(service, spreadsheet_id, sheet_id)
       {
         sort_range: {
           range: {
-            sheet_id: sheet_id, # Assign sheet_id explicitly here
+            sheet_id:, # Assign sheet_id explicitly here
             start_row_index: 1, # Skip header row
             start_column_index: 0,
             end_column_index: 6 # Assuming data goes up to column F
@@ -170,8 +170,8 @@ teams.each do |team|
   csv_data = calendar.events.each_with_index.map do |event, _index|
     # Skip events if summary, description, or location matches exclusion criteria
     if exclusion_list.any? do |term|
-         event.summary&.downcase&.include?(term.downcase) || 
-         event.description&.downcase&.include?(term.downcase) || 
+         event.summary&.downcase&.include?(term.downcase) ||
+         event.description&.downcase&.include?(term.downcase) ||
          event.location&.downcase&.include?(term.downcase)
        end
       puts "Excluding event: #{event.summary} at #{event.location}"
@@ -179,7 +179,7 @@ teams.each do |team|
     end
     next if event.dtstart.nil? || event.dtend.nil?
     next if event.location.nil? || event.location.strip.empty?
-  
+
     # Process the event if it’s not excluded
     event_id = event.uid
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
@@ -187,7 +187,7 @@ teams.each do |team|
     raw_date = start_time.strftime('%Y-%m-%d')
     formatted_date = start_time.strftime('%a %I:%M %p').capitalize
     duration_in_minutes = ((end_time - start_time) / 60).to_i
-  
+
     # Balanced random assignment of locker room monitor per team
     locker_room_monitor = @assigned_events[team[:name]][event_id] || begin
       family_with_fewest_assignments = team[:family_names].min_by { |family| assignment_counts[family] }
@@ -195,7 +195,7 @@ teams.each do |team|
       @assigned_events[team[:name]][event_id] = family_with_fewest_assignments
       family_with_fewest_assignments
     end
-  
+
     # Create an all-day event with instructions for the locker room monitor (only if required)
     if locker_room_monitor
       lrm_event = Icalendar::Event.new
@@ -204,21 +204,21 @@ teams.each do |team|
       lrm_event.summary = locker_room_monitor.force_encoding('UTF-8') # Only the monitor's name
       lrm_event.description = <<-DESC.force_encoding('UTF-8')
         Locker Room Monitor: #{locker_room_monitor}
-  
+
         Instructions:
         - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
-  
+
         Event: #{event.summary.force_encoding('UTF-8')}
         Location: #{event.location.force_encoding('UTF-8')}
         Scheduled Event Time: #{start_time.strftime('%a, %b %-d, %Y at %-I:%M %p').force_encoding('UTF-8')} to #{end_time.strftime('%a, %b %-d, %Y at %-I:%M %p').force_encoding('UTF-8')}
       DESC
-  
+
       # Add the event to the iCal feed
       lrm_calendar.add_event(lrm_event)
-  
+
       # Preserve the original duration for Google Sheets (do not set it to nil)
     end
-  
+
     # Prepare data for Google Sheets
     [
       event.summary.force_encoding('UTF-8'),
@@ -228,12 +228,6 @@ teams.each do |team|
       duration_in_minutes, # Keep the duration value as is
       locker_room_monitor.force_encoding('UTF-8')
     ]
-  end.compact
-  
-
-    # Prepare data for Google Sheets
-    [event.summary.force_encoding('UTF-8'), event.location.force_encoding('UTF-8'), raw_date, formatted_date,
-     duration_in_minutes, locker_room_monitor.force_encoding('UTF-8')]
   end.compact
 
   # Fetch existing data from Google Sheets
