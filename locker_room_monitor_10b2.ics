@@ -4,187 +4,225 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:bacdf468-c763-4098-bdfc-ea8269500b87
-DTSTART;VALUE=DATE:20241214
-DTEND;VALUE=DATE:20241215
+DTSTAMP:20241108T012113Z
+UID:5e6e8a7d-3adb-4fb2-9071-632f2909b531
+DTSTART;VALUE=DATE:20241205
+DTEND;VALUE=DATE:20241206
 DESCRIPTION:        Locker Room Monitor: Curry\n\n        Instructions:\n  
        - Locker rooms should be monitored 30 minutes before and closed 15 m
- inutes after the scheduled practice/game.\n\n        Event: TBD at AC U10B
- 2\n        Location: New Hope South\n        Scheduled Event Time: Sat\, D
- ec 14\, 2024 at 11:45 AM to Sat\, Dec 14\, 2024 at 12:45 PM\n
+ inutes after the scheduled practice/game.\n\n        Event: Sugar & Spice 
+ Tournament\n        Location: Hastings\, MN\, USA\n        Scheduled Event
+  Time: Thu\, Dec 5\, 2024 at 6:00 PM to Fri\, Dec 6\, 2024 at 6:00 PM\n
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:8adbd064-f0ff-440e-bb95-70a690cb776a
+DTSTAMP:20241108T012113Z
+UID:348cbcc9-d17b-474a-8f01-9a7e3a4d4bcc
+DTSTART;VALUE=DATE:20250116
+DTEND;VALUE=DATE:20250117
+DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - B
+ ig Ole U10B2 Tournament\n        Location: Alexandria\, MN\, USA\n        
+ Scheduled Event Time: Thu\, Jan 16\, 2025 at 6:00 PM to Fri\, Jan 17\, 202
+ 5 at 6:00 PM\n
+SUMMARY:Engholm
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:104e4477-af07-41d0-b042-f6c16d8e48b1
+DTSTART;VALUE=DATE:20241213
+DTEND;VALUE=DATE:20241214
+DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC Girls Hoc
+ key Day\n        Location: New Hope Ice Arena\, Louisiana Avenue North\, N
+ ew Hope\, MN\, USA\n        Scheduled Event Time: Fri\, Dec 13\, 2024 at 6
+ :00 PM to Sat\, Dec 14\, 2024 at 6:00 PM\n
+SUMMARY:Froberg
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:c89de714-44bf-42b9-863e-85f9801ba1e2
+DTSTART;VALUE=DATE:20241214
+DTEND;VALUE=DATE:20241215
+DESCRIPTION:        Locker Room Monitor: Harpel\n\n        Instructions:\n 
+        - Locker rooms should be monitored 30 minutes before and closed 15 
+ minutes after the scheduled practice/game.\n\n        Event: TBD at AC U10
+ B2\n        Location: New Hope South\n        Scheduled Event Time: Sat\, 
+ Dec 14\, 2024 at 11:45 AM to Sat\, Dec 14\, 2024 at 12:45 PM\n
+SUMMARY:Harpel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:8369de6c-e86e-48de-a9ce-a170be1555c1
 DTSTART;VALUE=DATE:20241118
 DTEND;VALUE=DATE:20241119
-DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
+DESCRIPTION:        Locker Room Monitor: Johnson\n\n        Instructions:\n
          - Locker rooms should be monitored 30 minutes before and closed 15
   minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
  C U10 B2 Skills w/ \n        Location: New Hope North\n        Scheduled E
  vent Time: Mon\, Nov 18\, 2024 at 7:45 PM to Mon\, Nov 18\, 2024 at 8:30 P
  M\n
-SUMMARY:Engholm
+SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:163315f2-cc59-415a-b37e-9eb308cde742
+DTSTAMP:20241108T012113Z
+UID:e0b904d8-2884-4769-9e16-16e5a9fabf28
 DTSTART;VALUE=DATE:20241125
 DTEND;VALUE=DATE:20241126
-DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
-         - Locker rooms should be monitored 30 minutes before and closed 15
-  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
- C U10 B2 Skills w/ \n        Location: New Hope North\n        Scheduled E
- vent Time: Mon\, Nov 25\, 2024 at 7:45 PM to Mon\, Nov 25\, 2024 at 8:30 P
- M\n
-SUMMARY:Froberg
+DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
+ n        - Locker rooms should be monitored 30 minutes before and closed 1
+ 5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
+ AC U10 B2 Skills w/ \n        Location: New Hope North\n        Scheduled 
+ Event Time: Mon\, Nov 25\, 2024 at 7:45 PM to Mon\, Nov 25\, 2024 at 8:30 
+ PM\n
+SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:d4478613-03d4-4a66-adda-7ffcde795b4b
+DTSTAMP:20241108T012113Z
+UID:4a239569-68bc-4028-be86-bfbe50eaf135
 DTSTART;VALUE=DATE:20241030
 DTEND;VALUE=DATE:20241031
-DESCRIPTION:        Locker Room Monitor: Harpel\n\n        Instructions:\n 
-        - Locker rooms should be monitored 30 minutes before and closed 15 
- minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC
-  U10 B2 Shared w/ AC U12B1\n        Location: New Hope South\n        Sche
- duled Event Time: Wed\, Oct 30\, 2024 at 6:15 PM to Wed\, Oct 30\, 2024 at
-  7:15 PM\n
-SUMMARY:Harpel
+DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
+ \n        - Locker rooms should be monitored 30 minutes before and closed 
+ 15 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 -
+  AC U10 B2 Shared w/ AC U12B1\n        Location: New Hope South\n        S
+ cheduled Event Time: Wed\, Oct 30\, 2024 at 6:15 PM to Wed\, Oct 30\, 2024
+  at 7:15 PM\n
+SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:5f4e2d00-3022-4426-95f0-8d0c09b52c1e
+DTSTAMP:20241108T012113Z
+UID:f25fbc7d-4a3b-4643-a18d-d3b79185e231
 DTSTART;VALUE=DATE:20241102
 DTEND;VALUE=DATE:20241103
-DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
+DESCRIPTION:        Locker Room Monitor: M-Reberg\n\n        Instructions:\
  n        - Locker rooms should be monitored 30 minutes before and closed 1
  5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
  AC U10 B2 Shared w/ AC Squirt A\n        Location: New Hope North\n       
   Scheduled Event Time: Sat\, Nov 2\, 2024 at 11:15 AM to Sat\, Nov 2\, 202
  4 at 12:15 PM\n
-SUMMARY:Mckinnon
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:095e2165-de55-4c7c-a314-7b2f49afd801
-DTSTART;VALUE=DATE:20241111
-DTEND;VALUE=DATE:20241112
-DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
- \n        - Locker rooms should be monitored 30 minutes before and closed 
- 15 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 -
-  AC U10 B2 Solo-Shared w/ AC U10 B1\n        Location: New Hope North\n   
-      Scheduled Event Time: Mon\, Nov 11\, 2024 at 6:00 PM to Mon\, Nov 11\
- , 2024 at 7:00 PM\n
-SUMMARY:Oprenchak
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:95ca489f-24d5-41d7-8c22-abfaa22c0d7c
-DTSTART;VALUE=DATE:20241117
-DTEND;VALUE=DATE:20241118
-DESCRIPTION:        Locker Room Monitor: M-Reberg\n\n        Instructions:\
- n        - Locker rooms should be monitored 30 minutes before and closed 1
- 5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
- AC U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        S
- cheduled Event Time: Sun\, Nov 17\, 2024 at 6:15 PM to Sun\, Nov 17\, 2024
-  at 7:15 PM\n
 SUMMARY:M-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:2f9866b6-1fa0-4cec-9d52-2cb339947ead
-DTSTART;VALUE=DATE:20241120
-DTEND;VALUE=DATE:20241121
+DTSTAMP:20241108T012113Z
+UID:1037bbac-39a2-4464-8711-f59aaffa8d84
+DTSTART;VALUE=DATE:20241111
+DTEND;VALUE=DATE:20241112
 DESCRIPTION:        Locker Room Monitor: B-Reberg\n\n        Instructions:\
  n        - Locker rooms should be monitored 30 minutes before and closed 1
  5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
- AC U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        S
- cheduled Event Time: Wed\, Nov 20\, 2024 at 6:00 PM to Wed\, Nov 20\, 2024
-  at 7:00 PM\n
+ AC U10 B2 Solo-Shared w/ AC U10 B1\n        Location: New Hope North\n    
+     Scheduled Event Time: Mon\, Nov 11\, 2024 at 6:00 PM to Mon\, Nov 11\,
+  2024 at 7:00 PM\n
 SUMMARY:B-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:65837c70-1fe9-4a84-bd31-44d0967b509e
+DTSTAMP:20241108T012113Z
+UID:e5c6c8a5-3fc7-4e72-9ed8-50c08d28ee29
+DTSTART;VALUE=DATE:20241117
+DTEND;VALUE=DATE:20241118
+DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n  
+       - Locker rooms should be monitored 30 minutes before and closed 15 m
+ inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
+ U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        Sche
+ duled Event Time: Sun\, Nov 17\, 2024 at 6:15 PM to Sun\, Nov 17\, 2024 at
+  7:15 PM\n
+SUMMARY:Sauer
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:99d5586f-e5e8-4d87-9d4e-d1e33bad82fc
+DTSTART;VALUE=DATE:20241120
+DTEND;VALUE=DATE:20241121
+DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n  
+       - Locker rooms should be monitored 30 minutes before and closed 15 m
+ inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
+ U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        Sche
+ duled Event Time: Wed\, Nov 20\, 2024 at 6:00 PM to Wed\, Nov 20\, 2024 at
+  7:00 PM\n
+SUMMARY:Smith
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:d1b08c6f-d121-4e9a-9d0a-f7e09b0d30ba
 DTSTART;VALUE=DATE:20241122
 DTEND;VALUE=DATE:20241123
-DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n  
+DESCRIPTION:        Locker Room Monitor: Woods\n\n        Instructions:\n  
        - Locker rooms should be monitored 30 minutes before and closed 15 m
  inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
  U10 B2 Shared w/ AC U10 B1\n        Location: New Hope South\n        Sche
  duled Event Time: Fri\, Nov 22\, 2024 at 5:00 PM to Fri\, Nov 22\, 2024 at
   6:00 PM\n
-SUMMARY:Sauer
+SUMMARY:Woods
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:29ff5344-b52c-4047-84ab-fc407b9cd2d7
+DTSTAMP:20241108T012113Z
+UID:adbe8e1b-1360-4114-b60b-a08f13bbac96
 DTSTART;VALUE=DATE:20241116
 DTEND;VALUE=DATE:20241117
-DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n  
+DESCRIPTION:        Locker Room Monitor: Curry\n\n        Instructions:\n  
        - Locker rooms should be monitored 30 minutes before and closed 15 m
  inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
  U10 B2 Solo\n        Location: New Hope North\n        Scheduled Event Tim
  e: Sat\, Nov 16\, 2024 at 7:15 AM to Sat\, Nov 16\, 2024 at 8:15 AM\n
-SUMMARY:Smith
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:e75eaee4-1f6d-46b0-ad24-6e7752e74cb8
-DTSTART;VALUE=DATE:20241114
-DTEND;VALUE=DATE:20241115
-DESCRIPTION:        Locker Room Monitor: Curry\n\n        Instructions:\n  
-       - Locker rooms should be monitored 30 minutes before and closed 15 m
- inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
- U10 B2 Shared w/ AC U10 B1\n        Location: New Hope South\n        Sche
- duled Event Time: Thu\, Nov 14\, 2024 at 5:00 PM to Thu\, Nov 14\, 2024 at
-  6:00 PM\n
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:49ae8a80-e267-473a-8847-5b577d129f26
+DTSTAMP:20241108T012113Z
+UID:44253289-1153-4cb0-8b73-7e80c344c3f1
+DTSTART;VALUE=DATE:20241114
+DTEND;VALUE=DATE:20241115
+DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
+ C U10 B2 Shared w/ AC U10 B1\n        Location: New Hope South\n        Sc
+ heduled Event Time: Thu\, Nov 14\, 2024 at 5:00 PM to Thu\, Nov 14\, 2024 
+ at 6:00 PM\n
+SUMMARY:Engholm
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:ce8c7870-367a-44db-ad09-4f221199dd9a
 DTSTART;VALUE=DATE:20241105
 DTEND;VALUE=DATE:20241106
-DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
+DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
          - Locker rooms should be monitored 30 minutes before and closed 15
   minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
  C U10 B2 Shared w/ AC U10 B1\n        Location: New Hope South\n        Sc
  heduled Event Time: Tue\, Nov 5\, 2024 at 7:30 PM to Tue\, Nov 5\, 2024 at
   8:30 PM\n
-SUMMARY:Engholm
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:26fa05b3-c32e-4175-9a1b-30bbb6185758
-DTSTART;VALUE=DATE:20241123
-DTEND;VALUE=DATE:20241124
-DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
-         - Locker rooms should be monitored 30 minutes before and closed 15
-  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 at 
- Wayzata 10U B2 Yellow\n        Location: PIC A (ag)\n        Scheduled Eve
- nt Time: Sat\, Nov 23\, 2024 at 9:30 AM to Sat\, Nov 23\, 2024 at 10:30 AM
- \n
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:d70b26ab-0272-455b-89ac-2bfcfca2e3bd
-DTSTART;VALUE=DATE:20241108
-DTEND;VALUE=DATE:20241109
+DTSTAMP:20241108T012113Z
+UID:6ef79580-2ed7-4569-8c91-0a8a6ef86196
+DTSTART;VALUE=DATE:20241123
+DTEND;VALUE=DATE:20241124
 DESCRIPTION:        Locker Room Monitor: Harpel\n\n        Instructions:\n 
         - Locker rooms should be monitored 30 minutes before and closed 15 
- minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC
-  U10 B2 Solo\n        Location: New Hope South\n        Scheduled Event Ti
- me: Fri\, Nov 8\, 2024 at 7:30 PM to Fri\, Nov 8\, 2024 at 8:30 PM\n
+ minutes after the scheduled practice/game.\n\n        Event: AC U10B2 at W
+ ayzata 10U B2 Yellow\n        Location: PIC A (ag)\n        Scheduled Even
+ t Time: Sat\, Nov 23\, 2024 at 9:30 AM to Sat\, Nov 23\, 2024 at 10:30 AM\
+ n
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:3cd2e43a-8288-4507-96a0-70480fe18084
+DTSTAMP:20241108T012113Z
+UID:7b765745-9cf3-456c-9e7b-a1fd6820662e
+DTSTART;VALUE=DATE:20241108
+DTEND;VALUE=DATE:20241109
+DESCRIPTION:        Locker Room Monitor: Johnson\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
+ C U10 B2 Solo\n        Location: New Hope South\n        Scheduled Event T
+ ime: Fri\, Nov 8\, 2024 at 7:30 PM to Fri\, Nov 8\, 2024 at 8:30 PM\n
+SUMMARY:Johnson
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:967bb6a3-9950-4d01-990b-e9a3252d517f
 DTSTART;VALUE=DATE:20241110
 DTEND;VALUE=DATE:20241111
 DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
@@ -195,8 +233,8 @@ DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
 SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:189fe994-e7fc-438b-ae5a-4551106bb698
+DTSTAMP:20241108T012113Z
+UID:71512c8d-c80a-422d-b965-c8be6e2e3936
 DTSTART;VALUE=DATE:20241130
 DTEND;VALUE=DATE:20241201
 DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
@@ -207,8 +245,8 @@ DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
 SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:95828f97-363d-4ef2-8ae6-e77cb3ccd251
+DTSTAMP:20241108T012113Z
+UID:a3e0c307-66b9-421b-96e9-6f16601175ad
 DTSTART;VALUE=DATE:20241124
 DTEND;VALUE=DATE:20241125
 DESCRIPTION:        Locker Room Monitor: M-Reberg\n\n        Instructions:\
@@ -219,8 +257,8 @@ DESCRIPTION:        Locker Room Monitor: M-Reberg\n\n        Instructions:\
 SUMMARY:M-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:e2cb0038-42ed-47f1-bb62-d6023cce2ac9
+DTSTAMP:20241108T012113Z
+UID:79d1d390-c26a-4bcb-b4da-5764d3cec4c1
 DTSTART;VALUE=DATE:20250219
 DTEND;VALUE=DATE:20250220
 DESCRIPTION:        Locker Room Monitor: B-Reberg\n\n        Instructions:\
@@ -232,95 +270,109 @@ DESCRIPTION:        Locker Room Monitor: B-Reberg\n\n        Instructions:\
 SUMMARY:B-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:0875a6ed-6032-46a6-a6a9-47ebbcbdbd55
+DTSTAMP:20241108T012113Z
+UID:1fbc7e73-f1a9-498c-ab90-b83a1e42f057
+DTSTART;VALUE=DATE:20241110
+DTEND;VALUE=DATE:20241111
+DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n  
+       - Locker rooms should be monitored 30 minutes before and closed 15 m
+ inutes after the scheduled practice/game.\n\n        Event: Sunday Goalie 
+ Skills\n        Location: New Hope Ice Arena\, Louisiana Avenue North\, Ne
+ w Hope\, MN\, USA\n        Scheduled Event Time: Sun\, Nov 10\, 2024 at 4:
+ 45 PM to Sun\, Nov 10\, 2024 at 5:45 PM\n
+SUMMARY:Sauer
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:869e6cb2-8234-4bc8-9fca-1939d9d45b7d
 DTSTART;VALUE=DATE:20250115
 DTEND;VALUE=DATE:20250116
-DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n  
+DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n  
        - Locker rooms should be monitored 30 minutes before and closed 15 m
  inutes after the scheduled practice/game.\n\n        Event: Orono-Westonka
   10U B2 at AC U10B2\n        Location: New Hope South\n        Scheduled E
  vent Time: Wed\, Jan 15\, 2025 at 6:15 PM to Wed\, Jan 15\, 2025 at 7:15 P
  M\n
-SUMMARY:Sauer
+SUMMARY:Smith
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:8c7add0a-033e-4196-9868-aefcc1aae1a6
+DTSTAMP:20241108T012113Z
+UID:73a7de99-7ddc-4312-8f82-b300e89276ba
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
-DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n  
+DESCRIPTION:        Locker Room Monitor: Woods\n\n        Instructions:\n  
        - Locker rooms should be monitored 30 minutes before and closed 15 m
  inutes after the scheduled practice/game.\n\n        Event: OMG 10UB2 Oran
  ge at AC U10B2\n        Location: New Hope North\n        Scheduled Event 
  Time: Wed\, Feb 5\, 2025 at 6:00 PM to Wed\, Feb 5\, 2025 at 7:00 PM\n
-SUMMARY:Smith
+SUMMARY:Woods
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:af7fb7df-e5f5-4101-b36a-8fc59d2a6e82
+DTSTAMP:20241108T012113Z
+UID:4be6a7e3-6e5d-45e1-bc2b-953aaceb7d14
 DTSTART;VALUE=DATE:20250125
 DTEND;VALUE=DATE:20250126
-DESCRIPTION:        Locker Room Monitor: Woods\n\n        Instructions:\n  
+DESCRIPTION:        Locker Room Monitor: Curry\n\n        Instructions:\n  
        - Locker rooms should be monitored 30 minutes before and closed 15 m
  inutes after the scheduled practice/game.\n\n        Event: Delano 10U B2 
  at AC U10B2\n        Location: New Hope North\n        Scheduled Event Tim
  e: Sat\, Jan 25\, 2025 at 1:30 PM to Sat\, Jan 25\, 2025 at 2:30 PM\n
-SUMMARY:Woods
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:4855387a-949e-4079-b079-1994743a3a8a
-DTSTART;VALUE=DATE:20241215
-DTEND;VALUE=DATE:20241216
-DESCRIPTION:        Locker Room Monitor: Curry\n\n        Instructions:\n  
-       - Locker rooms should be monitored 30 minutes before and closed 15 m
- inutes after the scheduled practice/game.\n\n        Event: OMG 10UB2 Crim
- son at AC U10B2\n        Location: New Hope North\n        Scheduled Event
-  Time: Sun\, Dec 15\, 2024 at 2:45 PM to Sun\, Dec 15\, 2024 at 3:45 PM\n
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:cd2468de-1a8e-4392-8afd-a1bb7bcaf7f3
+DTSTAMP:20241108T012113Z
+UID:16ab6481-006b-41da-97ec-43820ad704a6
+DTSTART;VALUE=DATE:20241215
+DTEND;VALUE=DATE:20241216
+DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: OMG 10UB2 Cr
+ imson at AC U10B2\n        Location: New Hope North\n        Scheduled Eve
+ nt Time: Sun\, Dec 15\, 2024 at 2:45 PM to Sun\, Dec 15\, 2024 at 3:45 PM\
+ n
+SUMMARY:Engholm
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:296a5fd3-96ee-4472-a073-25fa1673d369
 DTSTART;VALUE=DATE:20250202
 DTEND;VALUE=DATE:20250203
-DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
+DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
          - Locker rooms should be monitored 30 minutes before and closed 15
   minutes after the scheduled practice/game.\n\n        Event: Mpls 10UB2 a
  t AC U10B2\n        Location: New Hope South\n        Scheduled Event Time
  : Sun\, Feb 2\, 2025 at 12:30 PM to Sun\, Feb 2\, 2025 at 1:30 PM\n
-SUMMARY:Engholm
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:967431b1-4377-4daf-8c52-3e47aed43f6b
-DTSTART;VALUE=DATE:20250112
-DTEND;VALUE=DATE:20250113
-DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
-         - Locker rooms should be monitored 30 minutes before and closed 15
-  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 at 
- Hopkins Park 10UB2\n        Location: Hopkins Pavilion (ag)\n        Sched
- uled Event Time: Sun\, Jan 12\, 2025 at 5:00 PM to Sun\, Jan 12\, 2025 at 
- 6:00 PM\n
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:03628a4b-82ae-4942-a5da-dd90f291afb8
-DTSTART;VALUE=DATE:20250209
-DTEND;VALUE=DATE:20250210
+DTSTAMP:20241108T012113Z
+UID:546683be-a90d-41f8-8423-9cb2ba00fffe
+DTSTART;VALUE=DATE:20250112
+DTEND;VALUE=DATE:20250113
 DESCRIPTION:        Locker Room Monitor: Harpel\n\n        Instructions:\n 
         - Locker rooms should be monitored 30 minutes before and closed 15 
- minutes after the scheduled practice/game.\n\n        Event: AC U10B2 at O
- rono-Westonka 10U B2\n        Location: Thaler (ag)\n        Scheduled Eve
- nt Time: Sun\, Feb 9\, 2025 at 11:45 AM to Sun\, Feb 9\, 2025 at 12:45 PM\
- n
+ minutes after the scheduled practice/game.\n\n        Event: AC U10B2 at H
+ opkins Park 10UB2\n        Location: Hopkins Pavilion (ag)\n        Schedu
+ led Event Time: Sun\, Jan 12\, 2025 at 5:00 PM to Sun\, Jan 12\, 2025 at 6
+ :00 PM\n
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:a9ad157c-0009-4a22-ae3d-6217340a96b0
+DTSTAMP:20241108T012113Z
+UID:50a13039-e544-4531-9042-62cab1f704da
+DTSTART;VALUE=DATE:20250209
+DTEND;VALUE=DATE:20250210
+DESCRIPTION:        Locker Room Monitor: Johnson\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 at 
+ Orono-Westonka 10U B2\n        Location: Thaler (ag)\n        Scheduled Ev
+ ent Time: Sun\, Feb 9\, 2025 at 11:45 AM to Sun\, Feb 9\, 2025 at 12:45 PM
+ \n
+SUMMARY:Johnson
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:21192288-baca-4069-8105-b70c10bf49d1
 DTSTART;VALUE=DATE:20241202
 DTEND;VALUE=DATE:20241203
 DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
@@ -332,8 +384,8 @@ DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
 SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:df059adc-d1f1-4e04-a342-9c7d515db256
+DTSTAMP:20241108T012113Z
+UID:5b67bfc8-309c-4193-84e5-fd953e8f3c83
 DTSTART;VALUE=DATE:20241209
 DTEND;VALUE=DATE:20241210
 DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
@@ -345,8 +397,8 @@ DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
 SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:14cc40d9-c2e5-49ec-964d-0c7ea73c0a15
+DTSTAMP:20241108T012113Z
+UID:e00369e2-a710-442c-9969-69ffebcf9d15
 DTSTART;VALUE=DATE:20241223
 DTEND;VALUE=DATE:20241224
 DESCRIPTION:        Locker Room Monitor: M-Reberg\n\n        Instructions:\
@@ -358,8 +410,8 @@ DESCRIPTION:        Locker Room Monitor: M-Reberg\n\n        Instructions:\
 SUMMARY:M-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:60b37631-3950-4214-93e1-0c24a52c8a07
+DTSTAMP:20241108T012113Z
+UID:b1f5453e-de69-4805-840f-1236f942332d
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
 DESCRIPTION:        Locker Room Monitor: B-Reberg\n\n        Instructions:\
@@ -371,8 +423,8 @@ DESCRIPTION:        Locker Room Monitor: B-Reberg\n\n        Instructions:\
 SUMMARY:B-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:adac1a0b-2d0e-47e2-9dcf-8564a389bc1e
+DTSTAMP:20241108T012113Z
+UID:9163f6f6-3aca-4c35-bf4d-49650f081b93
 DTSTART;VALUE=DATE:20250127
 DTEND;VALUE=DATE:20250128
 DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n  
@@ -384,8 +436,8 @@ DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n
 SUMMARY:Sauer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:c83874aa-2cd4-40e6-9382-9a7bda8b5ef4
+DTSTAMP:20241108T012113Z
+UID:b2c0f89f-7895-46dd-b76d-6c6630535e6c
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n  
@@ -397,8 +449,8 @@ DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n
 SUMMARY:Smith
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:356b2df6-5a8c-4bcd-aeb4-898af4bdc13b
+DTSTAMP:20241108T012113Z
+UID:eb90317d-13c9-416d-9e09-9bf910d68703
 DTSTART;VALUE=DATE:20241103
 DTEND;VALUE=DATE:20241104
 DESCRIPTION:        Locker Room Monitor: Woods\n\n        Instructions:\n  
@@ -410,145 +462,222 @@ DESCRIPTION:        Locker Room Monitor: Woods\n\n        Instructions:\n
 SUMMARY:Woods
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:66f337cb-a5d2-4e00-bf4e-388dae397023
-DTSTART;VALUE=DATE:20241127
-DTEND;VALUE=DATE:20241128
-DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n  
-       - Locker rooms should be monitored 30 minutes before and closed 15 m
- inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
- U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        Sche
- duled Event Time: Wed\, Nov 27\, 2024 at 6:00 PM to Wed\, Nov 27\, 2024 at
-  7:00 PM\n
-SUMMARY:Sauer
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:8a0b67f7-96e9-4ce5-bbc6-4b02b74d116f
-DTSTART;VALUE=DATE:20241212
-DTEND;VALUE=DATE:20241213
-DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
- n        - Locker rooms should be monitored 30 minutes before and closed 1
- 5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
- AC U10 B2 Shared w/ AC Peewee C\n        Location: New Hope North\n       
-  Scheduled Event Time: Thu\, Dec 12\, 2024 at 5:00 PM to Thu\, Dec 12\, 20
- 24 at 6:00 PM\n
-SUMMARY:Mckinnon
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:c32fe9a3-7f40-491d-990e-9783e40c1906
-DTSTART;VALUE=DATE:20241217
-DTEND;VALUE=DATE:20241218
+DTSTAMP:20241108T012113Z
+UID:e97083d5-3c9a-493c-891b-bc293373f769
+DTSTART;VALUE=DATE:20241202
+DTEND;VALUE=DATE:20241203
 DESCRIPTION:        Locker Room Monitor: Curry\n\n        Instructions:\n  
        - Locker rooms should be monitored 30 minutes before and closed 15 m
  inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
- U10 B2 Shared w/ AC Squirt C BLUE\n        Location: New Hope South\n     
-    Scheduled Event Time: Tue\, Dec 17\, 2024 at 5:00 PM to Tue\, Dec 17\, 
- 2024 at 6:00 PM\n
+ U10 B2 Skills w/ AC U10 B1\n        Location: New Hope North - Skills Off 
+ Ice\n        Scheduled Event Time: Mon\, Dec 2\, 2024 at 7:00 PM to Mon\, 
+ Dec 2\, 2024 at 7:45 PM\n
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:7779b096-9c5a-4226-a409-7994b41382ed
-DTSTART;VALUE=DATE:20241201
-DTEND;VALUE=DATE:20241202
-DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
- \n        - Locker rooms should be monitored 30 minutes before and closed 
- 15 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 -
-  AC U10 B2 Solo-Shared w/ AC Peewee B1\n        Location: New Hope South\n
-         Scheduled Event Time: Sun\, Dec 1\, 2024 at 3:00 PM to Sun\, Dec 1
- \, 2024 at 4:00 PM\n
-SUMMARY:Oprenchak
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:781833d4-7ce7-478a-8cab-c0f97c958d7c
-DTSTART;VALUE=DATE:20241130
-DTEND;VALUE=DATE:20241201
+DTSTAMP:20241108T012113Z
+UID:d14d9f97-6dbd-4b5c-9d65-ab74ce3e7c3c
+DTSTART;VALUE=DATE:20241209
+DTEND;VALUE=DATE:20241210
 DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
          - Locker rooms should be monitored 30 minutes before and closed 15
   minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
- C U10 B2 Solo-Shared w/ U12 A\n        Location: New Hope North\n        S
- cheduled Event Time: Sat\, Nov 30\, 2024 at 5:45 PM to Sat\, Nov 30\, 2024
-  at 6:45 PM\n
+ C U10 B2 Skills w/ AC PeeWee B2\n        Location: New Hope North - Skills
+  Off Ice\n        Scheduled Event Time: Mon\, Dec 9\, 2024 at 7:00 PM to M
+ on\, Dec 9\, 2024 at 7:45 PM\n
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:be26356d-efad-49a2-902c-31eaf4f754ac
-DTSTART;VALUE=DATE:20241229
-DTEND;VALUE=DATE:20241230
-DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n  
-       - Locker rooms should be monitored 30 minutes before and closed 15 m
- inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
- U10 B2 Shared-Solo w/ AC Peewee B1\n        Location: New Hope South\n    
-     Scheduled Event Time: Sun\, Dec 29\, 2024 at 3:30 PM to Sun\, Dec 29\,
-  2024 at 4:30 PM\n
-SUMMARY:Smith
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:b72f4b8a-6790-4b6b-85aa-d1ecfcff2a49
-DTSTART;VALUE=DATE:20241204
-DTEND;VALUE=DATE:20241205
-DESCRIPTION:        Locker Room Monitor: Woods\n\n        Instructions:\n  
-       - Locker rooms should be monitored 30 minutes before and closed 15 m
- inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
- U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        Sche
- duled Event Time: Wed\, Dec 4\, 2024 at 7:15 PM to Wed\, Dec 4\, 2024 at 8
- :15 PM\n
-SUMMARY:Woods
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:81b79034-1f76-44b1-af07-db72c854bdc2
-DTSTART;VALUE=DATE:20241218
-DTEND;VALUE=DATE:20241219
+DTSTAMP:20241108T012113Z
+UID:2dc7e510-23fb-4e75-b1e1-f2138d689797
+DTSTART;VALUE=DATE:20241127
+DTEND;VALUE=DATE:20241128
 DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
          - Locker rooms should be monitored 30 minutes before and closed 15
   minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
- C U10 B2 Solo-Shared w/ AC Peewee C\n        Location: New Hope South\n   
-      Scheduled Event Time: Wed\, Dec 18\, 2024 at 7:30 PM to Wed\, Dec 18\
- , 2024 at 8:30 PM\n
+ C U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        Sc
+ heduled Event Time: Wed\, Nov 27\, 2024 at 6:00 PM to Wed\, Nov 27\, 2024 
+ at 7:00 PM\n
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:7440f975-b695-46fb-bd91-1b402d3d613a
-DTSTART;VALUE=DATE:20241220
-DTEND;VALUE=DATE:20241221
-DESCRIPTION:        Locker Room Monitor: B-Reberg\n\n        Instructions:\
- n        - Locker rooms should be monitored 30 minutes before and closed 1
- 5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
- AC U10 B2 Shared w/ AC Squirt C BLUE\n        Location: New Hope South\n  
-       Scheduled Event Time: Fri\, Dec 20\, 2024 at 6:15 PM to Fri\, Dec 20
- \, 2024 at 7:15 PM\n
-SUMMARY:B-Reberg
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:46815010-088f-4852-be6d-3c6d8d97ef08
-DTSTART;VALUE=DATE:20241220
-DTEND;VALUE=DATE:20241221
+DTSTAMP:20241108T012113Z
+UID:f83b301f-20d1-48ee-85c6-a0f7c424096d
+DTSTART;VALUE=DATE:20241212
+DTEND;VALUE=DATE:20241213
 DESCRIPTION:        Locker Room Monitor: Harpel\n\n        Instructions:\n 
         - Locker rooms should be monitored 30 minutes before and closed 15 
  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC
-  U10 B2 Shared w/ AC Squirt C BLUE\n        Location: New Hope South\n    
-     Scheduled Event Time: Fri\, Dec 20\, 2024 at 6:15 PM to Fri\, Dec 20\,
-  2024 at 7:15 PM\n
+  U10 B2 Shared w/ AC Peewee C\n        Location: New Hope North\n        S
+ cheduled Event Time: Thu\, Dec 12\, 2024 at 5:00 PM to Thu\, Dec 12\, 2024
+  at 6:00 PM\n
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241107T172515Z
-UID:551471b1-a85b-4634-9c8d-dddfc195ef89
-DTSTART;VALUE=DATE:20241222
-DTEND;VALUE=DATE:20241223
+DTSTAMP:20241108T012113Z
+UID:bfd38055-a0b8-4e51-98b1-4842be1430b6
+DTSTART;VALUE=DATE:20241217
+DTEND;VALUE=DATE:20241218
+DESCRIPTION:        Locker Room Monitor: Johnson\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
+ C U10 B2 Shared w/ AC Squirt C BLUE\n        Location: New Hope South\n   
+      Scheduled Event Time: Tue\, Dec 17\, 2024 at 5:00 PM to Tue\, Dec 17\
+ , 2024 at 6:00 PM\n
+SUMMARY:Johnson
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:5d9d94e5-cdf1-450f-9492-bd3a57c2f7ca
+DTSTART;VALUE=DATE:20241201
+DTEND;VALUE=DATE:20241202
 DESCRIPTION:        Locker Room Monitor: Mckinnon\n\n        Instructions:\
  n        - Locker rooms should be monitored 30 minutes before and closed 1
  5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
- AC U10 B2 Solo\n        Location: New Hope North\n        Scheduled Event 
- Time: Sun\, Dec 22\, 2024 at 6:15 PM to Sun\, Dec 22\, 2024 at 7:15 PM\n
+ AC U10 B2 Solo-Shared w/ AC Peewee B1\n        Location: New Hope South\n 
+        Scheduled Event Time: Sun\, Dec 1\, 2024 at 3:00 PM to Sun\, Dec 1\
+ , 2024 at 4:00 PM\n
 SUMMARY:Mckinnon
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:499e84bf-d8c7-4056-852b-28a1edfcab68
+DTSTART;VALUE=DATE:20241130
+DTEND;VALUE=DATE:20241201
+DESCRIPTION:        Locker Room Monitor: Oprenchak\n\n        Instructions:
+ \n        - Locker rooms should be monitored 30 minutes before and closed 
+ 15 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 -
+  AC U10 B2 Solo-Shared w/ U12 A\n        Location: New Hope North\n       
+  Scheduled Event Time: Sat\, Nov 30\, 2024 at 5:45 PM to Sat\, Nov 30\, 20
+ 24 at 6:45 PM\n
+SUMMARY:Oprenchak
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:bb3e2ffd-ac47-4e55-a0c4-370b4347edf8
+DTSTART;VALUE=DATE:20241229
+DTEND;VALUE=DATE:20241230
+DESCRIPTION:        Locker Room Monitor: M-Reberg\n\n        Instructions:\
+ n        - Locker rooms should be monitored 30 minutes before and closed 1
+ 5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
+ AC U10 B2 Shared-Solo w/ AC Peewee B1\n        Location: New Hope South\n 
+        Scheduled Event Time: Sun\, Dec 29\, 2024 at 3:30 PM to Sun\, Dec 2
+ 9\, 2024 at 4:30 PM\n
+SUMMARY:M-Reberg
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:a53ca25f-3f9a-45db-9c31-aa4ab56cfa03
+DTSTART;VALUE=DATE:20241204
+DTEND;VALUE=DATE:20241205
+DESCRIPTION:        Locker Room Monitor: B-Reberg\n\n        Instructions:\
+ n        - Locker rooms should be monitored 30 minutes before and closed 1
+ 5 minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - 
+ AC U10 B2 Shared w/ AC U10 B1\n        Location: New Hope North\n        S
+ cheduled Event Time: Wed\, Dec 4\, 2024 at 7:15 PM to Wed\, Dec 4\, 2024 a
+ t 8:15 PM\n
+SUMMARY:B-Reberg
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:19eb1560-3658-4305-a081-a64795ac9e63
+DTSTART;VALUE=DATE:20241218
+DTEND;VALUE=DATE:20241219
+DESCRIPTION:        Locker Room Monitor: Sauer\n\n        Instructions:\n  
+       - Locker rooms should be monitored 30 minutes before and closed 15 m
+ inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
+ U10 B2 Solo-Shared w/ AC Peewee C\n        Location: New Hope South\n     
+    Scheduled Event Time: Wed\, Dec 18\, 2024 at 7:30 PM to Wed\, Dec 18\, 
+ 2024 at 8:30 PM\n
+SUMMARY:Sauer
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:4d0e1400-e5a7-4869-9c70-a11ec5858cf2
+DTSTART;VALUE=DATE:20241220
+DTEND;VALUE=DATE:20241221
+DESCRIPTION:        Locker Room Monitor: Smith\n\n        Instructions:\n  
+       - Locker rooms should be monitored 30 minutes before and closed 15 m
+ inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
+ U10 B2 Shared w/ AC Squirt C BLUE\n        Location: New Hope South\n     
+    Scheduled Event Time: Fri\, Dec 20\, 2024 at 6:15 PM to Fri\, Dec 20\, 
+ 2024 at 7:15 PM\n
+SUMMARY:Smith
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:19ede629-9c58-419f-89f8-766fa4219f45
+DTSTART;VALUE=DATE:20241220
+DTEND;VALUE=DATE:20241221
+DESCRIPTION:        Locker Room Monitor: Woods\n\n        Instructions:\n  
+       - Locker rooms should be monitored 30 minutes before and closed 15 m
+ inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
+ U10 B2 Shared w/ AC Squirt C BLUE\n        Location: New Hope South\n     
+    Scheduled Event Time: Fri\, Dec 20\, 2024 at 6:15 PM to Fri\, Dec 20\, 
+ 2024 at 7:15 PM\n
+SUMMARY:Woods
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:50ff658b-d11e-4600-bf02-c7ba25bed266
+DTSTART;VALUE=DATE:20241223
+DTEND;VALUE=DATE:20241224
+DESCRIPTION:        Locker Room Monitor: Curry\n\n        Instructions:\n  
+       - Locker rooms should be monitored 30 minutes before and closed 15 m
+ inutes after the scheduled practice/game.\n\n        Event: AC U10B2 - AC 
+ U10 B2 Skills w/ AC U10 B1\n        Location: New Hope North - Skills Off 
+ Ice\n        Scheduled Event Time: Mon\, Dec 23\, 2024 at 8:45 PM to Mon\,
+  Dec 23\, 2024 at 9:30 PM\n
+SUMMARY:Curry
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:4b1af4ac-fe12-40e0-8313-246814cb607e
+DTSTART;VALUE=DATE:20250106
+DTEND;VALUE=DATE:20250107
+DESCRIPTION:        Locker Room Monitor: Engholm\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
+ C U10 B2 Skills w/ U12 A\n        Location: New Hope North - Skills Off Ic
+ e\n        Scheduled Event Time: Mon\, Jan 6\, 2025 at 7:00 PM to Mon\, Ja
+ n 6\, 2025 at 7:45 PM\n
+SUMMARY:Engholm
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:cbe2c3cf-c0ab-4ccf-a699-b21d7a935e48
+DTSTART;VALUE=DATE:20241109
+DTEND;VALUE=DATE:20241110
+DESCRIPTION:        Locker Room Monitor: Froberg\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 at 
+ Edina\n        Location: Braemar South\n        Scheduled Event Time: Sat\
+ , Nov 9\, 2024 at 12:50 PM to Sat\, Nov 9\, 2024 at 1:50 PM\n
+SUMMARY:Froberg
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:16664937-a266-4b3c-ac52-37088143afa0
+DTSTART;VALUE=DATE:20241123
+DTEND;VALUE=DATE:20241124
+DESCRIPTION:        Locker Room Monitor: Harpel\n\n        Instructions:\n 
+        - Locker rooms should be monitored 30 minutes before and closed 15 
+ minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - U1
+ 0 B2 pictures\n        Location: New Hope Ice Arena\, Louisiana Avenue Nor
+ th\, New Hope\, MN\, USA\n        Scheduled Event Time: Sat\, Nov 23\, 202
+ 4 at 11:45 AM to Sat\, Nov 23\, 2024 at 12:00 PM\n
+SUMMARY:Harpel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20241108T012113Z
+UID:ddc52fa1-d5f3-4447-98dd-a80da7150768
+DTSTART;VALUE=DATE:20241222
+DTEND;VALUE=DATE:20241223
+DESCRIPTION:        Locker Room Monitor: Johnson\n\n        Instructions:\n
+         - Locker rooms should be monitored 30 minutes before and closed 15
+  minutes after the scheduled practice/game.\n\n        Event: AC U10B2 - A
+ C U10 B2 Solo\n        Location: New Hope North\n        Scheduled Event T
+ ime: Sun\, Dec 22\, 2024 at 6:15 PM to Sun\, Dec 22\, 2024 at 7:15 PM\n
+SUMMARY:Johnson
 END:VEVENT
 END:VCALENDAR
