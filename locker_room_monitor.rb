@@ -49,8 +49,6 @@ end
 # Google Sheets authorization using a service account
 def authorize
   credentials = JSON.parse(ENV['GOOGLE_SHEETS_CREDENTIALS'])
-
-  # Set up ServiceAccountCredentials using the JSON key
   Google::Auth::ServiceAccountCredentials.make_creds(
     json_key_io: StringIO.new(credentials.to_json),
     scope: SCOPE
@@ -106,14 +104,7 @@ end
 
 # Define an exclusion list for events that do not require a locker room monitor
 exclusion_list = [
-  'Skills Off Ice', # Example keywords or patterns
-  'Dryland',
-  'Goalie Training',
-  'Off Ice',
-  'Conditioning',
-  'Meeting',
-  'Goalie',
-  'LRM'
+  'Skills Off Ice', 'Dryland', 'Goalie Training', 'Off Ice', 'Conditioning', 'Meeting', 'Goalie', 'LRM'
 ]
 
 # Define teams and configurations
@@ -169,12 +160,9 @@ teams.each do |team|
 
   csv_data = calendar.events.each_with_index.map do |event, _index|
     # Skip events if summary, description, or location matches exclusion criteria
-    if exclusion_list.any? do |term|
-         event.summary&.downcase&.include?(term.downcase) || event.description&.downcase&.include?(term.downcase) || event.location&.downcase&.include?(term.downcase)
-       end
-      puts "Excluding event: #{event.summary} at #{event.location}"
-      next
-    end
+    next if exclusion_list.any? do |term|
+              event.summary&.downcase&.include?(term.downcase) || event.description&.downcase&.include?(term.downcase) || event.location&.downcase&.include?(term.downcase)
+            end
     next if event.dtstart.nil? || event.dtend.nil?
     next if event.location.nil? || event.location.strip.empty?
 
@@ -184,7 +172,7 @@ teams.each do |team|
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
     raw_date = start_time.strftime('%Y-%m-%d')
     formatted_date = start_time.strftime('%a %I:%M %p').capitalize
-    duration_in_minutes = ((end_time - start_time) / 60).to_i
+    duration_in_minutes = ((end_time - start_time) / 60).to_i.to_s # Convert to string for Sheets compatibility
 
     # Balanced random assignment of locker room monitor per team
     locker_room_monitor = @assigned_events[team[:name]][event_id] || begin
@@ -218,7 +206,7 @@ teams.each do |team|
       duration_in_minutes = nil
     end
 
-    # Prepare data for Google Sheets
+    # Add data for Google Sheets
     [event.summary.force_encoding('UTF-8'), event.location.force_encoding('UTF-8'), raw_date, formatted_date,
      duration_in_minutes, locker_room_monitor.force_encoding('UTF-8')]
   end.compact
@@ -227,15 +215,13 @@ teams.each do |team|
   existing_data = fetch_existing_data(service, team[:spreadsheet_id], 'Sheet1!A2:F') # Skip header row
 
   # Merge existing data with new data
-  merged_data = # Assuming the first two columns (Event, Location) are unique identifiers
-    (existing_data + csv_data).uniq do |row|
-        row[0..1]
-    end
+  merged_data = (existing_data + csv_data).uniq { |row| row[0..1] }
+
   # Clear existing data and write merged data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, merged_data)
 
-  # Save assignment counts to ensure persistence
+  # Save assignment counts for persistence
   @assignment_counts[team[:name]] = assignment_counts
   CSV.open(@assignment_counts_file, 'w') do |csv|
     csv << %w[Team Family Count]
@@ -246,7 +232,7 @@ teams.each do |team|
     end
   end
 
-  # Save assigned events to ensure persistence
+  # Save assigned events for persistence
   CSV.open(@assigned_events_file, 'w') do |csv|
     csv << %w[Team EventID Locker_Room_Monitor]
     @assigned_events.each do |team_name, events|
