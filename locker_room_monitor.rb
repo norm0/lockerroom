@@ -76,7 +76,7 @@ def sort_google_sheet_by_date(service, spreadsheet_id, sheet_id)
       {
         sort_range: {
           range: {
-            sheet_id:,
+            sheet_id: sheet_id, # Assign sheet_id explicitly here
             start_row_index: 1, # Skip header row
             start_column_index: 0,
             end_column_index: 6 # Assuming data goes up to column F
