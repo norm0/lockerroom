@@ -165,6 +165,7 @@ teams.each do |team|
     next if event.description.nil? || event.description.strip.empty? || event.description.include?('LRM')
     next if exclusion_list.any? { |term| event.summary.include?(term) || event.description.include?(term) }
     next if event.dtstart.nil? || event.dtend.nil?
+    next if event.location.nil? || event.location.strip.empty?
 
     # Process the event if it’s not excluded
     event_id = event.uid
