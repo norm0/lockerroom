@@ -224,7 +224,7 @@ teams.each do |team|
   end.compact
 
   # Fetch existing data from Google Sheets
-  existing_data = fetch_existing_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
+  existing_data = fetch_existing_data(service, team[:spreadsheet_id], 'Sheet1!A2:F') # Skip header row
 
   # Merge existing data with new data
   merged_data = # Assuming the first two columns (Event, Location) are unique identifiers
