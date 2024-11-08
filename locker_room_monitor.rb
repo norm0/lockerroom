@@ -111,7 +111,9 @@ exclusion_list = [
   'Goalie Training',
   'Off Ice',
   'Conditioning',
-  'Meeting'
+  'Meeting',
+  'New Hope North - Skills Off Ice',
+  'New Hope Ice Arena, Louisiana Avenue North, New Hope, MN, USA'
 ]
 
 # Define teams and configurations
