@@ -162,10 +162,10 @@ teams.each do |team|
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
     raw_date = start_time.strftime('%Y-%m-%d')
-    formatted_date = start_time.strftime('%a %I:%M %p').downcase
+    formatted_date = start_time.strftime('%m/%d/%y %a %I:%M %p').downcase
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
-    # Balanced random assignment of locker room monitor per team
+    # Balanced assignment of locker room monitor per team
     locker_room_monitor = @assigned_events[event_id] || begin
       family_with_fewest_assignments = team[:family_names].min_by { |family| assignment_counts[family] }
       assignment_counts[family_with_fewest_assignments] += 1
@@ -173,19 +173,25 @@ teams.each do |team|
       family_with_fewest_assignments
     end
 
-    # Prepare data for Google Sheets
-    [event.summary, event.location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
+    # Store the event data for Google Sheets, including the team name
+    [event.summary, event.location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor, team[:name]]
   end.compact
 
   # Clear existing data and write new data to Google Sheets
-  clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
+  clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:G')
   write_team_data_to_individual_sheets(service, team, csv_data)
 
-  # Save assignment counts to ensure persistence
+  # Save assignment counts per team
   CSV.open("#{@assignment_counts_file}_#{team[:name]}.csv", 'w') do |csv|
-    csv << %w[Family Count]
-    assignment_counts.each { |family, count| csv << [family, count] }
+    csv << %w[Family Team Count]
+    assignment_counts.each { |family, count| csv << [family, team[:name], count] }
   end
+end
+
+# Save assigned events to a CSV file with the team name included
+CSV.open(@assigned_events_file, 'w') do |csv|
+  csv << ['EventID', 'Locker Room Monitor', 'Team']
+  @assigned_events.each { |event_id, monitor| csv << [event_id, monitor, team[:name]] }
 end
 
 puts 'Data fetched, merged, and updated successfully, including .ics files.'
