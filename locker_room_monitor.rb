@@ -112,8 +112,7 @@ exclusion_list = [
   'Off Ice',
   'Conditioning',
   'Meeting',
-  'New Hope North - Skills Off Ice',
-  'New Hope Ice Arena, Louisiana Avenue North, New Hope, MN, USA',
+  'Goalie',
   'LRM'
 ]
 
@@ -171,7 +170,7 @@ teams.each do |team|
   csv_data = calendar.events.each_with_index.map do |event, _index|
     # Skip events if summary, description, or location matches exclusion criteria
     if exclusion_list.any? do |term|
-         event.summary&.include?(term) || event.description&.include?(term) || event.location&.include?(term)
+         event.summary&.downcase&.include?(term.downcase) || event.description&.downcase&.include?(term.downcase) || event.location&.downcase&.include?(term.downcase)
        end
       puts "Excluding event: #{event.summary} at #{event.location}"
       next
