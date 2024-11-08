@@ -75,12 +75,17 @@ teams_to_process.each do |team|
     event.dtstart.nil? || event.dtend.nil? || exclusion_list.any? { |term| event.location&.include?(term) }
   end
 
-  # Print the filtered events
+  # Print the filtered events with duration
   filtered_events.each do |event|
+    start_time = event.dtstart.to_time
+    end_time = event.dtend.to_time
+    duration_in_minutes = ((end_time - start_time) / 60).to_i
+
     puts "Event: #{event.summary}"
     puts "Location: #{event.location}"
     puts "Start Date: #{event.dtstart}"
     puts "End Date: #{event.dtend}"
+    puts "Duration: #{duration_in_minutes} minutes"
     puts '-' * 40
   end
 end
