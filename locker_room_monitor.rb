@@ -171,7 +171,9 @@ teams.each do |team|
     # Skip events if summary or description is nil, empty, or matches exclusion criteria
     next if event.summary.nil? || event.summary.strip.empty? || event.summary.include?('LRM')
     next if event.description.nil? || event.description.strip.empty? || event.description.include?('LRM')
-    next if exclusion_list.any? { |term| event.summary.include?(term) || event.description.include?(term) }
+    next if exclusion_list.any? do |term|
+              event.summary.include?(term) || event.description.include?(term) || event.location.include?(term)
+            end
     next if event.dtstart.nil? || event.dtend.nil?
     next if event.location.nil? || event.location.strip.empty?
 
