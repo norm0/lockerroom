@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.2.2
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1.201.0
         with:
           ruby-version: '3.1'
 
@@ -31,3 +31,14 @@ jobs:
           GOOGLE_SHEET_ID_10B1: ${{ secrets.GOOGLE_SHEET_ID_10B1 }}
           GOOGLE_SHEET_ID_10B2: ${{ secrets.GOOGLE_SHEET_ID_10B2 }}
         run: ruby locker_room_monitor.rb
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add *.ics
+          git commit -m "Update .ics files"
+          git push  
