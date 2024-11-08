@@ -4,6 +4,7 @@ require 'uri'
 require 'csv'
 require 'google/apis/sheets_v4'
 require 'googleauth'
+require 'googleauth/stores/file_token_store'
 require 'json'
 require 'stringio'
 require 'active_support/time'
@@ -38,23 +39,29 @@ if File.exist?(@assigned_events_file)
   end
 end
 
-# Google Sheets setup
-def setup_google_sheets
+# Define the authorize method to handle Google OAuth2
+def authorize
+  client_id = Google::Auth::ClientId.from_file('credentials.json')
+  token_store = Google::Auth::Stores::FileTokenStore.new(file: 'token.yaml')
+  authorizer = Google::Auth::UserAuthorizer.new(client_id, SCOPE, token_store)
+  user_id = 'default'
+  credentials = authorizer.get_credentials(user_id)
+  if credentials.nil?
+    url = authorizer.get_authorization_url(base_url: OOB_URI)
+    puts "Open the following URL in your browser and authorize the application:\n#{url}"
+    print 'Enter the authorization code: '
+    code = gets.chomp
+    credentials = authorizer.get_and_store_credentials_from_code(user_id:, code:, base_url: OOB_URI)
+  end
+  credentials
+end
+
+# Initialize the Google Sheets API service
+def initialize_service
   service = Google::Apis::SheetsV4::SheetsService.new
   service.client_options.application_name = APPLICATION_NAME
   service.authorization = authorize
   service
-end
-
-# Google Sheets authorization using a service account
-def authorize
-  credentials = JSON.parse(ENV['GOOGLE_SHEETS_CREDENTIALS'])
-
-  # Set up ServiceAccountCredentials using the JSON key
-  Google::Auth::ServiceAccountCredentials.make_creds(
-    json_key_io: StringIO.new(credentials.to_json),
-    scope: SCOPE
-  )
 end
 
 # Method to clear team data in Google Sheets before updating
@@ -92,7 +99,12 @@ end
 # Method to write team data to Google Sheets
 def write_team_data_to_individual_sheets(service, team, data)
   headers = ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
-  values = [headers] + data
+  values = [headers] + # Replace nils with empty strings
+           data.map do |row|
+                                    row.map do |cell|
+                                      cell.nil? ? '' : cell.to_s
+                                    end
+           end
   range = 'Sheet1!A1:F'
   value_range = Google::Apis::SheetsV4::ValueRange.new(values:)
   service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
@@ -138,7 +150,7 @@ teams = [
 ]
 
 # Fetch, merge, and update data for each team
-service = setup_google_sheets
+service = initialize_service
 
 # Method to retrieve the sheet ID for sorting
 def get_sheet_id(service, spreadsheet_id)
@@ -191,6 +203,23 @@ teams.each do |team|
   CSV.open("#{@assignment_counts_file}_#{team[:name]}.csv", 'w') do |csv|
     csv << %w[Family Count]
     assignment_counts.each { |family, count| csv << [family, count] }
+  end
+
+  # Save assigned events to ensure persistence
+  CSV.open("#{@assigned_events_file}_#{team[:name]}.csv", 'w') do |csv|
+    csv << %w[EventID Locker_Room_Monitor]
+    assigned_events.each do |event_id, monitor|
+      csv << [event_id, monitor]
+    end
+  end
+end
+
+# Display the family counts by team
+puts "\nLocker Room Monitor Assignment Counts by Team:"
+teams.each do |team|
+  puts "\nTeam #{team[:name]}:"
+  team[:family_names].each do |family|
+    puts "#{family}: #{assignment_counts[family]}"
   end
 end
 
