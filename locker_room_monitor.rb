@@ -99,8 +99,7 @@ exclusion_list = [
   'Goalie Training',
   'Off Ice',
   'Conditioning',
-  'Meeting',
-  nil, '' # Empty
+  'Meeting'
 ]
 
 # Define teams and configurations
@@ -150,23 +149,32 @@ teams.each do |team|
   calendar = Icalendar::Calendar.parse(response).first
 
   csv_data = calendar.events.each_with_index.map do |event, _index|
-    next if exclusion_list.any? { |term| event.summary&.include?(term) || event.description&.include?(term) }
+    # Skip events if summary or description is nil or empty
+    next if event.summary.nil? || event.summary.strip.empty?
+    next if event.description.nil? || event.description.strip.empty?
+  
+    # Check if the event summary or description matches any term in the exclusion list
+    next if exclusion_list.any? { |term| event.summary.include?(term) || event.description.include?(term) }
+  
     next if event.dtstart.nil? || event.dtend.nil?
-
+  
+    # Process the event if it’s not excluded
     event_id = event.uid
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
     raw_date = start_time.strftime('%Y-%m-%d')
     formatted_date = start_time.strftime('%m/%d/%y %a %I:%M %p').downcase
     duration_in_minutes = ((end_time - start_time) / 60).to_i
-
+  
+    # Balanced assignment of locker room monitor per team
     locker_room_monitor = @assigned_events[event_id] || begin
       family_with_fewest_assignments = team[:family_names].min_by { |family| assignment_counts[family] }
       assignment_counts[family_with_fewest_assignments] += 1
       @assigned_events[event_id] = family_with_fewest_assignments
       family_with_fewest_assignments
     end
-
+  
+    # Prepare data for Google Sheets
     [event.summary, event.location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
   end.compact
 
