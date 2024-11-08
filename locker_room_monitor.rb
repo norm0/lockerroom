@@ -63,6 +63,12 @@ def clear_google_sheet_data(service, spreadsheet_id, range)
   service.clear_values(spreadsheet_id, range, clear_request)
 end
 
+# Method to fetch existing data from Google Sheets
+def fetch_existing_data(service, spreadsheet_id, range)
+  response = service.get_spreadsheet_values(spreadsheet_id, range)
+  response.values || []
+end
+
 # Method to sort the Google Sheet by date (assuming date is in the third column)
 def sort_google_sheet_by_date(service, spreadsheet_id, sheet_id)
   sort_request = Google::Apis::SheetsV4::BatchUpdateSpreadsheetRequest.new(
@@ -212,9 +218,17 @@ teams.each do |team|
      duration_in_minutes, locker_room_monitor.force_encoding('UTF-8')]
   end.compact
 
-  # Clear existing data and write new data to Google Sheets
+  # Fetch existing data from Google Sheets
+  existing_data = fetch_existing_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
+
+  # Merge existing data with new data
+  merged_data = # Assuming the first two columns (Event, Location) are unique identifiers
+    (existing_data + csv_data).uniq do |row|
+        row[0..1]
+    end
+  # Clear existing data and write merged data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
-  write_team_data_to_individual_sheets(service, team, csv_data)
+  write_team_data_to_individual_sheets(service, team, merged_data)
 
   # Save assignment counts to ensure persistence
   @assignment_counts[team[:name]] = assignment_counts
