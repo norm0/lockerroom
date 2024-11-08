@@ -216,6 +216,7 @@ teams.each do |team|
   write_team_data_to_individual_sheets(service, team, csv_data)
 
   # Save assignment counts to ensure persistence
+  @assignment_counts[team[:name]] = assignment_counts
   CSV.open(@assignment_counts_file, 'w') do |csv|
     csv << %w[Team Family Count]
     @assignment_counts.each do |team_name, counts|
@@ -245,10 +246,10 @@ end
 
 # Display the family counts by team
 puts "\nLocker Room Monitor Assignment Counts by Team:"
-teams.each do |team|
-  puts "\nTeam #{team[:name]}:"
-  team[:family_names].each do |family|
-    puts "#{family}: #{assignment_counts[family]}"
+@assignment_counts.each do |team_name, counts|
+  puts "\nTeam #{team_name}:"
+  counts.each do |family, count|
+    puts "#{family}: #{count}"
   end
 end
 
