@@ -203,7 +203,7 @@ teams.each do |team|
       lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
       lrm_event.summary = locker_room_monitor.force_encoding('UTF-8') # Only the monitor's name
       lrm_event.description = <<-DESC.force_encoding('UTF-8')
-        Locker Room Monitor: #{locker_room_monitor}
+        LRM: #{locker_room_monitor}
 
         Instructions:
         - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
