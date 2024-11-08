@@ -141,13 +141,9 @@ def get_sheet_id(service, spreadsheet_id)
 end
 
 teams.each do |team|
+  # Initialize a separate assignment count for each team
   assignment_counts = Hash.new(0)
   team[:family_names].each { |family| assignment_counts[family] ||= 0 }
-
-  # Implement fetch_and_merge_google_sheet_data here if necessary for sync
-
-  # Initialize iCal calendar for each team
-  lrm_calendar = Icalendar::Calendar.new
 
   # Fetch iCal data, process events, and update Google Sheets
   uri = URI(team[:ical_feed_url])
@@ -155,13 +151,10 @@ teams.each do |team|
   calendar = Icalendar::Calendar.parse(response).first
 
   csv_data = calendar.events.each_with_index.map do |event, _index|
-    # Skip events if summary or description is nil, empty, or contains "LRM"
+    # Skip events if summary or description is nil, empty, or matches exclusion criteria
     next if event.summary.nil? || event.summary.strip.empty? || event.summary.include?('LRM')
     next if event.description.nil? || event.description.strip.empty? || event.description.include?('LRM')
-
-    # Check if the event summary or description matches any term in the exclusion list
     next if exclusion_list.any? { |term| event.summary.include?(term) || event.description.include?(term) }
-
     next if event.dtstart.nil? || event.dtend.nil?
 
     # Process the event if it’s not excluded
@@ -172,7 +165,7 @@ teams.each do |team|
     formatted_date = start_time.strftime('%a %I:%M %p').downcase
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
-    # Balanced assignment of locker room monitor per team
+    # Balanced random assignment of locker room monitor per team
     locker_room_monitor = @assigned_events[event_id] || begin
       family_with_fewest_assignments = team[:family_names].min_by { |family| assignment_counts[family] }
       assignment_counts[family_with_fewest_assignments] += 1
@@ -184,12 +177,11 @@ teams.each do |team|
     [event.summary, event.location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
   end.compact
 
+  # Clear existing data and write new data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, csv_data)
-  sheet_id = get_sheet_id(service, team[:spreadsheet_id])
-  sort_google_sheet_by_date(service, team[:spreadsheet_id], sheet_id)
 
-  # Save assignment counts for persistence
+  # Save assignment counts to ensure persistence
   CSV.open("#{@assignment_counts_file}_#{team[:name]}.csv", 'w') do |csv|
     csv << %w[Family Count]
     assignment_counts.each { |family, count| csv << [family, count] }
