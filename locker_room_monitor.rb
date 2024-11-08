@@ -231,9 +231,13 @@ teams.each do |team|
     (existing_data + csv_data).uniq do |row|
         row[0..1]
     end
-  # Clear existing data and write merged data to Google Sheets
+  # Clear existing data and write new data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, merged_data)
+
+  # Retrieve the sheet ID and sort by date
+  sheet_id = get_sheet_id(service, team[:spreadsheet_id])
+  sort_google_sheet_by_date(service, team[:spreadsheet_id], sheet_id)
 
   # Save assignment counts to ensure persistence
   @assignment_counts[team[:name]] = assignment_counts
