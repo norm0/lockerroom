@@ -187,16 +187,16 @@ teams.each do |team|
       lrm_event = Icalendar::Event.new
       lrm_event.dtstart = Icalendar::Values::Date.new(start_time.to_date) # All-day event starts on the event date
       lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
-      lrm_event.summary = "#{locker_room_monitor}" # Only the monitor's name
-      lrm_event.description = <<-DESC
+      lrm_event.summary = locker_room_monitor.force_encoding('UTF-8') # Only the monitor's name
+      lrm_event.description = <<-DESC.force_encoding('UTF-8')
         Locker Room Monitor: #{locker_room_monitor}
 
         Instructions:
         - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
 
-        Event: #{event.summary}
-        Location: #{event.location}
-        Scheduled Event Time: #{start_time.strftime('%a, %b %-d, %Y at %-I:%M %p')} to #{end_time.strftime('%a, %b %-d, %Y at %-I:%M %p')}
+        Event: #{event.summary.force_encoding('UTF-8')}
+        Location: #{event.location.force_encoding('UTF-8')}
+        Scheduled Event Time: #{start_time.strftime('%a, %b %-d, %Y at %-I:%M %p').force_encoding('UTF-8')} to #{end_time.strftime('%a, %b %-d, %Y at %-I:%M %p').force_encoding('UTF-8')}
       DESC
 
       # Add the event to the iCal feed
@@ -207,7 +207,8 @@ teams.each do |team|
     end
 
     # Prepare data for Google Sheets
-    [event.summary, event.location, raw_date, formatted_date, duration_in_minutes, locker_room_monitor]
+    [event.summary.force_encoding('UTF-8'), event.location.force_encoding('UTF-8'), raw_date, formatted_date,
+     duration_in_minutes, locker_room_monitor.force_encoding('UTF-8')]
   end.compact
 
   # Clear existing data and write new data to Google Sheets
