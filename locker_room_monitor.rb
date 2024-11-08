@@ -92,6 +92,17 @@ def write_team_data_to_individual_sheets(service, team, data)
   service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
 end
 
+# Define an exclusion list for events that do not require a locker room monitor
+exclusion_list = [
+  'Skills Off Ice', # Example keywords or patterns
+  'Dryland',
+  'Goalie Training',
+  'Off Ice',
+  'Conditioning',
+  'Meeting',
+  nil, '' # Empty
+]
+
 # Define teams and configurations
 teams = [
   {
