@@ -167,7 +167,13 @@ teams.each do |team|
   # Initialize a new iCal feed for locker room monitor events
   lrm_calendar = Icalendar::Calendar.new
 
+  require 'date'
+
   csv_data = calendar.events.each_with_index.map do |event, _index|
+    # Skip events if they are in the past or match the exclusion criteria
+    next if event.dtstart.nil? || event.dtend.nil?
+    next if event.dtstart.to_time < Time.now # Skip past events
+
     # Skip events if summary, description, or location matches exclusion criteria
     if exclusion_list.any? do |term|
          event.summary&.downcase&.include?(term.downcase) ||
@@ -177,10 +183,10 @@ teams.each do |team|
       puts "Excluding event: #{event.summary} at #{event.location}"
       next
     end
-    next if event.dtstart.nil? || event.dtend.nil?
+
     next if event.location.nil? || event.location.strip.empty?
 
-    # Process the event if it’s not excluded
+    # Process the event if it’s not excluded and is today or in the future
     event_id = event.uid
     start_time = event.dtstart.to_time.in_time_zone('Central Time (US & Canada)')
     end_time = event.dtend.to_time.in_time_zone('Central Time (US & Canada)')
@@ -225,7 +231,7 @@ teams.each do |team|
       event.location.force_encoding('UTF-8'),
       raw_date,
       formatted_date,
-      duration_in_minutes, # Keep the duration value as is
+      duration_in_minutes,
       locker_room_monitor.force_encoding('UTF-8')
     ]
   end.compact
