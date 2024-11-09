@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:3ced5b4c-3167-4a41-a22c-5c6a92d11184
+DTSTAMP:20241109T002747Z
+UID:32c867a7-bd4b-4f6e-830d-9523ee15edcb
 DTSTART;VALUE=DATE:20241205
 DTEND;VALUE=DATE:20241206
 DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
@@ -16,8 +16,8 @@ DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:e69807ba-392e-4f99-a7ce-bded0d5c821e
+DTSTAMP:20241109T002747Z
+UID:a0227cb1-eb67-4097-8d71-333761999ff5
 DTSTART;VALUE=DATE:20241213
 DTEND;VALUE=DATE:20241214
 DESCRIPTION:        LRM: Bowman\n\n        Instructions:\n        - Locker 
@@ -29,8 +29,8 @@ DESCRIPTION:        LRM: Bowman\n\n        Instructions:\n        - Locker
 SUMMARY:Bowman
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:1304f578-ba02-44af-80db-5b6358019965
+DTSTAMP:20241109T002747Z
+UID:15d8dc84-9eac-45b8-902c-c0e85633df23
 DTSTART;VALUE=DATE:20241214
 DTEND;VALUE=DATE:20241215
 DESCRIPTION:        LRM: Hopper\n\n        Instructions:\n        - Locker 
@@ -41,8 +41,8 @@ DESCRIPTION:        LRM: Hopper\n\n        Instructions:\n        - Locker
 SUMMARY:Hopper
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:f704a949-726b-43ae-bfe4-73b00ddca652
+DTSTAMP:20241109T002747Z
+UID:998cf1ba-02a8-4da1-8370-75e120fb07be
 DTSTART;VALUE=DATE:20241118
 DTEND;VALUE=DATE:20241119
 DESCRIPTION:        LRM: Houghtaling\n\n        Instructions:\n        - Lo
@@ -53,8 +53,8 @@ DESCRIPTION:        LRM: Houghtaling\n\n        Instructions:\n        - Lo
 SUMMARY:Houghtaling
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:d268949c-f3d4-4918-ab69-51991349ebbf
+DTSTAMP:20241109T002747Z
+UID:01d35152-33d9-49c3-98aa-a4c2440aac68
 DTSTART;VALUE=DATE:20241110
 DTEND;VALUE=DATE:20241111
 DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
@@ -65,8 +65,8 @@ DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:8412d836-b4dc-42c3-a589-995f1b2c83cd
+DTSTAMP:20241109T002747Z
+UID:1521a252-9404-4396-b9c1-33e94983bab2
 DTSTART;VALUE=DATE:20241111
 DTEND;VALUE=DATE:20241112
 DESCRIPTION:        LRM: Larsen\n\n        Instructions:\n        - Locker 
@@ -77,8 +77,8 @@ DESCRIPTION:        LRM: Larsen\n\n        Instructions:\n        - Locker
 SUMMARY:Larsen
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:29b0505c-d2ce-4782-8b8b-330f12b695dc
+DTSTAMP:20241109T002747Z
+UID:92e29c5f-f273-4eec-92af-dfea02ab5d17
 DTSTART;VALUE=DATE:20241117
 DTEND;VALUE=DATE:20241118
 DESCRIPTION:        LRM: Markfort\n\n        Instructions:\n        - Locke
@@ -89,8 +89,8 @@ DESCRIPTION:        LRM: Markfort\n\n        Instructions:\n        - Locke
 SUMMARY:Markfort
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:ce7d0406-3a99-4715-8c9f-f510b8b00786
+DTSTAMP:20241109T002747Z
+UID:d1f804bf-dc05-4dc5-9693-b21a6daee677
 DTSTART;VALUE=DATE:20241120
 DTEND;VALUE=DATE:20241121
 DESCRIPTION:        LRM: Marshall\n\n        Instructions:\n        - Locke
@@ -101,8 +101,8 @@ DESCRIPTION:        LRM: Marshall\n\n        Instructions:\n        - Locke
 SUMMARY:Marshall
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:93c9deae-f1c2-4493-a8dd-cb3b1b977c9a
+DTSTAMP:20241109T002747Z
+UID:827a0ad3-84ad-411d-b101-e834d1cad078
 DTSTART;VALUE=DATE:20241122
 DTEND;VALUE=DATE:20241123
 DESCRIPTION:        LRM: Nanninga\n\n        Instructions:\n        - Locke
@@ -113,8 +113,8 @@ DESCRIPTION:        LRM: Nanninga\n\n        Instructions:\n        - Locke
 SUMMARY:Nanninga
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:946091e6-76be-4a85-bfe0-b5dc008b31ee
+DTSTAMP:20241109T002747Z
+UID:92c66cbd-9868-4aad-bab8-e121fabd9ebe
 DTSTART;VALUE=DATE:20241123
 DTEND;VALUE=DATE:20241124
 DESCRIPTION:        LRM: Orstad\n\n        Instructions:\n        - Locker 
@@ -125,8 +125,8 @@ DESCRIPTION:        LRM: Orstad\n\n        Instructions:\n        - Locker
 SUMMARY:Orstad
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:595be4a8-3de9-4280-8106-0902b384e2cc
+DTSTAMP:20241109T002747Z
+UID:ce7c2d44-7107-42c8-91cd-a3431e2bb005
 DTSTART;VALUE=DATE:20241114
 DTEND;VALUE=DATE:20241115
 DESCRIPTION:        LRM: Willey\n\n        Instructions:\n        - Locker 
@@ -137,8 +137,8 @@ DESCRIPTION:        LRM: Willey\n\n        Instructions:\n        - Locker
 SUMMARY:Willey
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:39c390de-ec2b-4197-bc4c-468f4aaad685
+DTSTAMP:20241109T002747Z
+UID:42b978c7-f0ab-4526-ad52-e175d5db963d
 DTSTART;VALUE=DATE:20241109
 DTEND;VALUE=DATE:20241110
 DESCRIPTION:        LRM: Williamson\n\n        Instructions:\n        - Loc
@@ -150,8 +150,8 @@ DESCRIPTION:        LRM: Williamson\n\n        Instructions:\n        - Loc
 SUMMARY:Williamson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:a2d1869f-fd82-48c3-8031-d395e702f45c
+DTSTAMP:20241109T002747Z
+UID:12437275-cb44-4c09-ad98-87702d253ea1
 DTSTART;VALUE=DATE:20241116
 DTEND;VALUE=DATE:20241117
 DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
@@ -162,8 +162,8 @@ DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:d36f5795-39b4-48df-b5b1-a755f343e024
+DTSTAMP:20241109T002747Z
+UID:633e711e-01f8-4e25-b835-ff3c2ab0924d
 DTSTART;VALUE=DATE:20241211
 DTEND;VALUE=DATE:20241212
 DESCRIPTION:        LRM: Bowman\n\n        Instructions:\n        - Locker 
@@ -174,8 +174,8 @@ DESCRIPTION:        LRM: Bowman\n\n        Instructions:\n        - Locker
 SUMMARY:Bowman
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:493b809e-8e29-4192-9be5-7b3f44108fa7
+DTSTAMP:20241109T002747Z
+UID:e30c20ae-8107-42a7-9c61-182edc103e7a
 DTSTART;VALUE=DATE:20250215
 DTEND;VALUE=DATE:20250216
 DESCRIPTION:        LRM: Hopper\n\n        Instructions:\n        - Locker 
@@ -186,8 +186,8 @@ DESCRIPTION:        LRM: Hopper\n\n        Instructions:\n        - Locker
 SUMMARY:Hopper
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:0ec922c9-0a62-4e17-944f-e75077afa43f
+DTSTAMP:20241109T002747Z
+UID:10e4a481-61f2-4407-b0df-f16db7702170
 DTSTART;VALUE=DATE:20250119
 DTEND;VALUE=DATE:20250120
 DESCRIPTION:        LRM: Houghtaling\n\n        Instructions:\n        - Lo
@@ -198,8 +198,8 @@ DESCRIPTION:        LRM: Houghtaling\n\n        Instructions:\n        - Lo
 SUMMARY:Houghtaling
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:559ef734-e611-4f92-8194-ea993aa25b1c
+DTSTAMP:20241109T002747Z
+UID:bff0e0ea-9293-457c-923e-401a525fe57e
 DTSTART;VALUE=DATE:20250202
 DTEND;VALUE=DATE:20250203
 DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
@@ -210,8 +210,8 @@ DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:eaf5c59a-37bd-4e3c-8b8b-f6e28ef37c50
+DTSTAMP:20241109T002747Z
+UID:9e6c2278-3d8a-434d-8708-dd1a68b8ac34
 DTSTART;VALUE=DATE:20250223
 DTEND;VALUE=DATE:20250224
 DESCRIPTION:        LRM: Larsen\n\n        Instructions:\n        - Locker 
@@ -222,8 +222,8 @@ DESCRIPTION:        LRM: Larsen\n\n        Instructions:\n        - Locker
 SUMMARY:Larsen
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:c5188d40-e42e-4c27-88cf-55eae4a88014
+DTSTAMP:20241109T002747Z
+UID:5db50055-bc43-427e-8f63-fe1d4f0a6a9f
 DTSTART;VALUE=DATE:20241215
 DTEND;VALUE=DATE:20241216
 DESCRIPTION:        LRM: Markfort\n\n        Instructions:\n        - Locke
@@ -234,8 +234,8 @@ DESCRIPTION:        LRM: Markfort\n\n        Instructions:\n        - Locke
 SUMMARY:Markfort
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:a7b7c259-bf03-463c-84b1-cde7f0e20a63
+DTSTAMP:20241109T002747Z
+UID:abb6cc8e-241c-44ee-bf6f-e2b8866b6e31
 DTSTART;VALUE=DATE:20250120
 DTEND;VALUE=DATE:20250121
 DESCRIPTION:        LRM: Marshall\n\n        Instructions:\n        - Locke
@@ -246,8 +246,8 @@ DESCRIPTION:        LRM: Marshall\n\n        Instructions:\n        - Locke
 SUMMARY:Marshall
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:1658daa4-927d-4fb7-88b3-c1de693b2eaf
+DTSTAMP:20241109T002747Z
+UID:b19ce002-d953-497f-bd0f-cfff4b4fccf0
 DTSTART;VALUE=DATE:20241220
 DTEND;VALUE=DATE:20241221
 DESCRIPTION:        LRM: Nanninga\n\n        Instructions:\n        - Locke
@@ -258,8 +258,8 @@ DESCRIPTION:        LRM: Nanninga\n\n        Instructions:\n        - Locke
 SUMMARY:Nanninga
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:b6d1f7ff-32e0-40dc-9954-2249d933c644
+DTSTAMP:20241109T002747Z
+UID:099739b7-b3fb-4636-b046-b732fea0662b
 DTSTART;VALUE=DATE:20241202
 DTEND;VALUE=DATE:20241203
 DESCRIPTION:        LRM: Orstad\n\n        Instructions:\n        - Locker 
@@ -270,8 +270,8 @@ DESCRIPTION:        LRM: Orstad\n\n        Instructions:\n        - Locker
 SUMMARY:Orstad
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:d960b1a0-b8ac-45e3-b7e5-ce593ed6c7ca
+DTSTAMP:20241109T002747Z
+UID:fff9100d-2b5a-42e5-934c-9c96ed8a613a
 DTSTART;VALUE=DATE:20241216
 DTEND;VALUE=DATE:20241217
 DESCRIPTION:        LRM: Willey\n\n        Instructions:\n        - Locker 
@@ -282,8 +282,8 @@ DESCRIPTION:        LRM: Willey\n\n        Instructions:\n        - Locker
 SUMMARY:Willey
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:533dc9dd-8791-4019-842b-e2ac5afade4f
+DTSTAMP:20241109T002747Z
+UID:f8d3128b-5fe9-40a8-8c7e-1d280042e781
 DTSTART;VALUE=DATE:20241223
 DTEND;VALUE=DATE:20241224
 DESCRIPTION:        LRM: Williamson\n\n        Instructions:\n        - Loc
@@ -294,8 +294,8 @@ DESCRIPTION:        LRM: Williamson\n\n        Instructions:\n        - Loc
 SUMMARY:Williamson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:c6141843-3834-4559-970f-a6f102ec6b2e
+DTSTAMP:20241109T002747Z
+UID:521f8890-c599-40e0-91f9-69c6abd66b8a
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
 DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
@@ -306,8 +306,8 @@ DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:c9c7b0a4-2595-417f-a07c-be40112d1467
+DTSTAMP:20241109T002747Z
+UID:91aedb84-3eea-441e-9b51-472667130e57
 DTSTART;VALUE=DATE:20250120
 DTEND;VALUE=DATE:20250121
 DESCRIPTION:        LRM: Bowman\n\n        Instructions:\n        - Locker 
@@ -318,8 +318,8 @@ DESCRIPTION:        LRM: Bowman\n\n        Instructions:\n        - Locker
 SUMMARY:Bowman
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:36183e94-d6b9-4ba1-b0ae-564d669197f9
+DTSTAMP:20241109T002747Z
+UID:f321836f-48ce-43c4-b4d6-ea3388c90f2a
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:        LRM: Hopper\n\n        Instructions:\n        - Locker 
@@ -330,8 +330,8 @@ DESCRIPTION:        LRM: Hopper\n\n        Instructions:\n        - Locker
 SUMMARY:Hopper
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:01196e2b-31b0-4b41-a1a1-7d1b1577cf89
+DTSTAMP:20241109T002747Z
+UID:3db220b4-788c-4e0d-bc2b-3f1b82b7cd0c
 DTSTART;VALUE=DATE:20250210
 DTEND;VALUE=DATE:20250211
 DESCRIPTION:        LRM: Houghtaling\n\n        Instructions:\n        - Lo
@@ -342,8 +342,8 @@ DESCRIPTION:        LRM: Houghtaling\n\n        Instructions:\n        - Lo
 SUMMARY:Houghtaling
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:ddcefb7c-7814-4679-8642-596e5c017259
+DTSTAMP:20241109T002747Z
+UID:00f76487-1b91-491d-85b0-51a74864bff7
 DTSTART;VALUE=DATE:20241210
 DTEND;VALUE=DATE:20241211
 DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
@@ -354,8 +354,8 @@ DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:dab77363-aae2-472f-85ef-f0c91ebe5be3
+DTSTAMP:20241109T002747Z
+UID:a121f0d7-edf4-43de-be6f-956b03266fdc
 DTSTART;VALUE=DATE:20241127
 DTEND;VALUE=DATE:20241128
 DESCRIPTION:        LRM: Larsen\n\n        Instructions:\n        - Locker 
@@ -366,8 +366,8 @@ DESCRIPTION:        LRM: Larsen\n\n        Instructions:\n        - Locker
 SUMMARY:Larsen
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:42154915-6719-492a-9bf4-307137d89ade
+DTSTAMP:20241109T002747Z
+UID:529c9bac-c357-435e-b1b0-0fb7116588b5
 DTSTART;VALUE=DATE:20241218
 DTEND;VALUE=DATE:20241219
 DESCRIPTION:        LRM: Markfort\n\n        Instructions:\n        - Locke
@@ -379,8 +379,8 @@ DESCRIPTION:        LRM: Markfort\n\n        Instructions:\n        - Locke
 SUMMARY:Markfort
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:af8a7deb-4af3-4580-a326-7da169468280
+DTSTAMP:20241109T002747Z
+UID:205930bf-a363-499b-b4f7-8cd7e3e54670
 DTSTART;VALUE=DATE:20241130
 DTEND;VALUE=DATE:20241201
 DESCRIPTION:        LRM: Marshall\n\n        Instructions:\n        - Locke
@@ -391,8 +391,8 @@ DESCRIPTION:        LRM: Marshall\n\n        Instructions:\n        - Locke
 SUMMARY:Marshall
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:045271aa-c4bb-4b17-9351-55afd1c1d311
+DTSTAMP:20241109T002747Z
+UID:660ab124-a6b5-4463-90a5-444394909be0
 DTSTART;VALUE=DATE:20241201
 DTEND;VALUE=DATE:20241202
 DESCRIPTION:        LRM: Nanninga\n\n        Instructions:\n        - Locke
@@ -404,8 +404,8 @@ DESCRIPTION:        LRM: Nanninga\n\n        Instructions:\n        - Locke
 SUMMARY:Nanninga
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:8a80b060-2d89-4f8f-ba30-109493de35ab
+DTSTAMP:20241109T002747Z
+UID:950ed0be-a032-464f-8f04-b0b8f7a1a26e
 DTSTART;VALUE=DATE:20241229
 DTEND;VALUE=DATE:20241230
 DESCRIPTION:        LRM: Orstad\n\n        Instructions:\n        - Locker 
@@ -416,8 +416,8 @@ DESCRIPTION:        LRM: Orstad\n\n        Instructions:\n        - Locker
 SUMMARY:Orstad
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:61faf7b4-4fb4-4cb5-99f8-9c27150e295b
+DTSTAMP:20241109T002747Z
+UID:d1fda833-3959-4fd7-ae69-282b453c6a75
 DTSTART;VALUE=DATE:20241204
 DTEND;VALUE=DATE:20241205
 DESCRIPTION:        LRM: Willey\n\n        Instructions:\n        - Locker 
@@ -428,8 +428,8 @@ DESCRIPTION:        LRM: Willey\n\n        Instructions:\n        - Locker
 SUMMARY:Willey
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:e2b5ae77-c5d4-42d0-9f9b-7e3b971258b2
+DTSTAMP:20241109T002747Z
+UID:3db4abdb-972d-45db-849c-66d52ad10b70
 DTSTART;VALUE=DATE:20241123
 DTEND;VALUE=DATE:20241124
 DESCRIPTION:        LRM: Williamson\n\n        Instructions:\n        - Loc
@@ -441,27 +441,15 @@ DESCRIPTION:        LRM: Williamson\n\n        Instructions:\n        - Loc
 SUMMARY:Williamson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:456ae162-ef02-46fe-b1d5-26e71a577fd6
-DTSTART;VALUE=DATE:20241108
-DTEND;VALUE=DATE:20241109
-DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
- oms should be monitored 30 minutes before and closed 15 minutes after the 
- scheduled practice/game.\n\n        Event: Mounds view Irondale at AC U10B
- 1\n        Location: New Hope South\n        Scheduled Event Time: Fri\, N
- ov 8\, 2024 at 6:15 PM to Fri\, Nov 8\, 2024 at 7:15 PM\n
-SUMMARY:Baer
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241108T121112Z
-UID:4b729af5-0c94-48c6-85cb-724d89b87d0d
+DTSTAMP:20241109T002747Z
+UID:3fe408d8-6b49-4282-8d88-3eade983f982
 DTSTART;VALUE=DATE:20241222
 DTEND;VALUE=DATE:20241223
-DESCRIPTION:        LRM: Bowman\n\n        Instructions:\n        - Locker 
- rooms should be monitored 30 minutes before and closed 15 minutes after th
- e scheduled practice/game.\n\n        Event: AC U10B1 - AC U10 B1 Solo\n  
-       Location: New Hope North\n        Scheduled Event Time: Sun\, Dec 22
- \, 2024 at 11:00 AM to Sun\, Dec 22\, 2024 at 12:00 PM\n
-SUMMARY:Bowman
+DESCRIPTION:        LRM: Baer\n\n        Instructions:\n        - Locker ro
+ oms should be monitored 30 minutes before and closed 15 minutes after the 
+ scheduled practice/game.\n\n        Event: AC U10B1 - AC U10 B1 Solo\n    
+     Location: New Hope North\n        Scheduled Event Time: Sun\, Dec 22\,
+  2024 at 11:00 AM to Sun\, Dec 22\, 2024 at 12:00 PM\n
+SUMMARY:Baer
 END:VEVENT
 END:VCALENDAR
