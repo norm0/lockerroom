@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:1fce4cb4-552b-4da3-bc14-bfa55b770454
+DTSTAMP:20241110T003043Z
+UID:c8ebd587-7a71-4081-9fe7-5b7ebd3ca105
 DTSTART;VALUE=DATE:20241205
 DTEND;VALUE=DATE:20241206
 DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
@@ -16,8 +16,8 @@ DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:cebe9b9f-3fa1-4ddb-ae06-ee01ba4d1ae5
+DTSTAMP:20241110T003043Z
+UID:0277031d-7d3e-4e69-bbbc-135b2949f572
 DTSTART;VALUE=DATE:20250116
 DTEND;VALUE=DATE:20250117
 DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
@@ -28,8 +28,8 @@ DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:a88c4363-3d4d-4a60-9cf4-c6169d6f1217
+DTSTAMP:20241110T003043Z
+UID:7ec00da2-f3da-49d4-b306-e82abae3b820
 DTSTART;VALUE=DATE:20241213
 DTEND;VALUE=DATE:20241214
 DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
@@ -41,8 +41,8 @@ DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:a7e27b56-3969-4ba8-b7e0-8913a52db036
+DTSTAMP:20241110T003043Z
+UID:c57176dd-0e5b-47d1-9ec9-3b263b0c4772
 DTSTART;VALUE=DATE:20241214
 DTEND;VALUE=DATE:20241215
 DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker 
@@ -53,8 +53,8 @@ DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:ad4852ba-8a75-409e-9352-933cb9491b64
+DTSTAMP:20241110T003043Z
+UID:6e839318-da00-4e1e-bf83-57b31ad1fe1b
 DTSTART;VALUE=DATE:20241118
 DTEND;VALUE=DATE:20241119
 DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
@@ -65,8 +65,8 @@ DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:0441725b-54e1-48b8-8d58-7207673753cc
+DTSTAMP:20241110T003043Z
+UID:e64c09b8-d006-4f37-ba58-c0987a070da1
 DTSTART;VALUE=DATE:20241125
 DTEND;VALUE=DATE:20241126
 DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
@@ -77,8 +77,8 @@ DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
 SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:af4ebdf6-edbd-42a0-8123-7141b6516216
+DTSTAMP:20241110T003043Z
+UID:a7cce562-cc37-4359-af2e-8d7c66877a9d
 DTSTART;VALUE=DATE:20241111
 DTEND;VALUE=DATE:20241112
 DESCRIPTION:        LRM: Oprenchak\n\n        Instructions:\n        - Lock
@@ -90,8 +90,8 @@ DESCRIPTION:        LRM: Oprenchak\n\n        Instructions:\n        - Lock
 SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:0a8eb942-88f1-47d2-b4da-de7bdc4fc774
+DTSTAMP:20241110T003043Z
+UID:3ea5dcbe-177f-4341-a81f-9d2f66708950
 DTSTART;VALUE=DATE:20241117
 DTEND;VALUE=DATE:20241118
 DESCRIPTION:        LRM: M-Reberg\n\n        Instructions:\n        - Locke
@@ -102,8 +102,8 @@ DESCRIPTION:        LRM: M-Reberg\n\n        Instructions:\n        - Locke
 SUMMARY:M-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:052afe98-e66f-42c2-8837-3e7687748220
+DTSTAMP:20241110T003043Z
+UID:1e67bc9f-f68d-41a4-8eff-fca05db834a6
 DTSTART;VALUE=DATE:20241120
 DTEND;VALUE=DATE:20241121
 DESCRIPTION:        LRM: B-Reberg\n\n        Instructions:\n        - Locke
@@ -114,8 +114,8 @@ DESCRIPTION:        LRM: B-Reberg\n\n        Instructions:\n        - Locke
 SUMMARY:B-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:662b5884-d8f6-4a13-9a92-fef1d3d044b9
+DTSTAMP:20241110T003043Z
+UID:eac982e0-0606-47ec-82ef-ab006e07baa6
 DTSTART;VALUE=DATE:20241122
 DTEND;VALUE=DATE:20241123
 DESCRIPTION:        LRM: Sauer\n\n        Instructions:\n        - Locker r
@@ -126,8 +126,8 @@ DESCRIPTION:        LRM: Sauer\n\n        Instructions:\n        - Locker r
 SUMMARY:Sauer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:1d99edb2-9ea2-4dad-b23c-e93e7b856981
+DTSTAMP:20241110T003043Z
+UID:9dc4c2e4-6f3a-469a-8175-0f998e70efd2
 DTSTART;VALUE=DATE:20241116
 DTEND;VALUE=DATE:20241117
 DESCRIPTION:        LRM: Smith\n\n        Instructions:\n        - Locker r
@@ -138,8 +138,8 @@ DESCRIPTION:        LRM: Smith\n\n        Instructions:\n        - Locker r
 SUMMARY:Smith
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:030c2c52-8d5e-4dcc-abee-dc8e117c1462
+DTSTAMP:20241110T003043Z
+UID:6b7aa1aa-2047-4a27-8827-5b40a65642cc
 DTSTART;VALUE=DATE:20241114
 DTEND;VALUE=DATE:20241115
 DESCRIPTION:        LRM: Woods\n\n        Instructions:\n        - Locker r
@@ -150,8 +150,8 @@ DESCRIPTION:        LRM: Woods\n\n        Instructions:\n        - Locker r
 SUMMARY:Woods
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:fd79f972-2783-40d6-a269-2de25224900f
+DTSTAMP:20241110T003043Z
+UID:7baa0c08-8923-4327-89b0-c91a2ca98aa1
 DTSTART;VALUE=DATE:20241123
 DTEND;VALUE=DATE:20241124
 DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
@@ -162,8 +162,8 @@ DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:f3639920-c25f-44f7-ad30-f261fa07677d
+DTSTAMP:20241110T003043Z
+UID:4ff2ff70-1159-4f73-ae64-73a02f4b3278
 DTSTART;VALUE=DATE:20241110
 DTEND;VALUE=DATE:20241111
 DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
@@ -174,8 +174,8 @@ DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:ae30d75d-91e6-44b9-a8f8-df590b196546
+DTSTAMP:20241110T003043Z
+UID:037954f6-0439-434a-92e5-ff96cb94a76c
 DTSTART;VALUE=DATE:20241130
 DTEND;VALUE=DATE:20241201
 DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
@@ -186,8 +186,8 @@ DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:ebb2dfe7-dee7-4cf2-8ad3-929da2599bfd
+DTSTAMP:20241110T003043Z
+UID:01fc8b5c-d350-43f9-b429-e96eea344ab9
 DTSTART;VALUE=DATE:20241124
 DTEND;VALUE=DATE:20241125
 DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker 
@@ -198,8 +198,8 @@ DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:bb2d2d67-8e8a-471c-bcfb-a9cc937ff2cc
+DTSTAMP:20241110T003043Z
+UID:cff2e518-c373-4def-bcfc-e41c667335b5
 DTSTART;VALUE=DATE:20250219
 DTEND;VALUE=DATE:20250220
 DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
@@ -210,8 +210,8 @@ DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:fe920dc6-90da-4188-a520-7a4e937f60c1
+DTSTAMP:20241110T003043Z
+UID:81d5371c-d072-4d8f-9607-4dd6126cc370
 DTSTART;VALUE=DATE:20250115
 DTEND;VALUE=DATE:20250116
 DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
@@ -222,8 +222,8 @@ DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
 SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:3ca6712d-beed-46c3-a6d9-e0bfec9c6fc2
+DTSTAMP:20241110T003043Z
+UID:8af8feeb-d733-4c46-a8cf-016cba0fb567
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
 DESCRIPTION:        LRM: Oprenchak\n\n        Instructions:\n        - Lock
@@ -234,8 +234,8 @@ DESCRIPTION:        LRM: Oprenchak\n\n        Instructions:\n        - Lock
 SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:7753c8c5-e603-4a3f-a261-32c918a4481b
+DTSTAMP:20241110T003043Z
+UID:7b94f958-bcc3-43a8-a3e4-1194e30e4fbf
 DTSTART;VALUE=DATE:20250125
 DTEND;VALUE=DATE:20250126
 DESCRIPTION:        LRM: M-Reberg\n\n        Instructions:\n        - Locke
@@ -246,8 +246,8 @@ DESCRIPTION:        LRM: M-Reberg\n\n        Instructions:\n        - Locke
 SUMMARY:M-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:b87387b9-0ee7-434c-affd-753da30cf982
+DTSTAMP:20241110T003043Z
+UID:5dc8a3e0-65b1-4776-bee5-a48ebcfc1375
 DTSTART;VALUE=DATE:20241215
 DTEND;VALUE=DATE:20241216
 DESCRIPTION:        LRM: B-Reberg\n\n        Instructions:\n        - Locke
@@ -258,8 +258,8 @@ DESCRIPTION:        LRM: B-Reberg\n\n        Instructions:\n        - Locke
 SUMMARY:B-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:09365ee3-4519-4239-a4f7-615670672eea
+DTSTAMP:20241110T003043Z
+UID:bb7fc602-c010-47a7-aa09-63ccf3d8a369
 DTSTART;VALUE=DATE:20250202
 DTEND;VALUE=DATE:20250203
 DESCRIPTION:        LRM: Sauer\n\n        Instructions:\n        - Locker r
@@ -270,8 +270,8 @@ DESCRIPTION:        LRM: Sauer\n\n        Instructions:\n        - Locker r
 SUMMARY:Sauer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:684a96ea-5dc4-48cc-a4a7-6351a6bb0826
+DTSTAMP:20241110T003043Z
+UID:30fcbbb0-06ce-47da-98e7-f11115cc3ada
 DTSTART;VALUE=DATE:20250112
 DTEND;VALUE=DATE:20250113
 DESCRIPTION:        LRM: Smith\n\n        Instructions:\n        - Locker r
@@ -282,8 +282,8 @@ DESCRIPTION:        LRM: Smith\n\n        Instructions:\n        - Locker r
 SUMMARY:Smith
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:b585cad8-354d-4585-afb0-2afcfd5e4e4e
+DTSTAMP:20241110T003043Z
+UID:a27539f1-94d2-40d6-b4ff-f2550f43278f
 DTSTART;VALUE=DATE:20250209
 DTEND;VALUE=DATE:20250210
 DESCRIPTION:        LRM: Woods\n\n        Instructions:\n        - Locker r
@@ -294,8 +294,8 @@ DESCRIPTION:        LRM: Woods\n\n        Instructions:\n        - Locker r
 SUMMARY:Woods
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:7675352a-82a9-404b-8c0c-c443a8a42911
+DTSTAMP:20241110T003043Z
+UID:d617481e-aabf-4dcc-ae0d-9ac2d5c5b2fc
 DTSTART;VALUE=DATE:20241202
 DTEND;VALUE=DATE:20241203
 DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
@@ -306,8 +306,8 @@ DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:a569adad-9f7b-45ca-b52b-0ed4de8ee60c
+DTSTAMP:20241110T003043Z
+UID:91bd9509-ca87-45c9-80ec-39cbd71d35dd
 DTSTART;VALUE=DATE:20241209
 DTEND;VALUE=DATE:20241210
 DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
@@ -318,8 +318,8 @@ DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:48a67100-3df6-4c81-9c8a-c45f961cfa4f
+DTSTAMP:20241110T003043Z
+UID:9c301f8e-a24d-421a-a029-f7a47237c74f
 DTSTART;VALUE=DATE:20241223
 DTEND;VALUE=DATE:20241224
 DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
@@ -330,8 +330,8 @@ DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:1b461b09-9dbc-48f7-a5ab-0428ccad291d
+DTSTAMP:20241110T003043Z
+UID:fc713522-4f51-45e7-ba58-164569d6e2b5
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
 DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker 
@@ -342,8 +342,8 @@ DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:f17d59d6-52ee-4202-820f-59c379910461
+DTSTAMP:20241110T003043Z
+UID:f45df5d6-6260-43e2-8b46-f638b0e1d5d4
 DTSTART;VALUE=DATE:20250127
 DTEND;VALUE=DATE:20250128
 DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
@@ -354,8 +354,8 @@ DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:bea061b1-22b9-44ea-a644-9181371213bc
+DTSTAMP:20241110T003043Z
+UID:f712e1ba-9596-481e-afdd-7592159ef202
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
@@ -366,8 +366,8 @@ DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
 SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:3567f371-f438-4718-9498-878578bc3ee0
+DTSTAMP:20241110T003043Z
+UID:666a22d1-fbe6-496f-876b-1cf95168db51
 DTSTART;VALUE=DATE:20241127
 DTEND;VALUE=DATE:20241128
 DESCRIPTION:        LRM: Oprenchak\n\n        Instructions:\n        - Lock
@@ -378,8 +378,8 @@ DESCRIPTION:        LRM: Oprenchak\n\n        Instructions:\n        - Lock
 SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:fd9dfb3e-9b50-4dfe-9de2-ff3c5e44e526
+DTSTAMP:20241110T003043Z
+UID:e3051f4d-8f94-4d40-8e22-5cec1b3f0dee
 DTSTART;VALUE=DATE:20241212
 DTEND;VALUE=DATE:20241213
 DESCRIPTION:        LRM: M-Reberg\n\n        Instructions:\n        - Locke
@@ -390,8 +390,8 @@ DESCRIPTION:        LRM: M-Reberg\n\n        Instructions:\n        - Locke
 SUMMARY:M-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:d6bb99a0-96e2-4f61-b24d-8bf002cdaf7e
+DTSTAMP:20241110T003043Z
+UID:4dd52337-3535-4104-be60-fa6d5963a19f
 DTSTART;VALUE=DATE:20241217
 DTEND;VALUE=DATE:20241218
 DESCRIPTION:        LRM: B-Reberg\n\n        Instructions:\n        - Locke
@@ -403,8 +403,8 @@ DESCRIPTION:        LRM: B-Reberg\n\n        Instructions:\n        - Locke
 SUMMARY:B-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:68112f97-b72b-45c6-8940-5320f19d191a
+DTSTAMP:20241110T003043Z
+UID:5b6dce49-5226-4df5-a32c-014b482ee9c2
 DTSTART;VALUE=DATE:20241201
 DTEND;VALUE=DATE:20241202
 DESCRIPTION:        LRM: Sauer\n\n        Instructions:\n        - Locker r
@@ -415,8 +415,8 @@ DESCRIPTION:        LRM: Sauer\n\n        Instructions:\n        - Locker r
 SUMMARY:Sauer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:10db65a3-2b15-4510-b6d3-07e1d7622b62
+DTSTAMP:20241110T003043Z
+UID:90520ba8-8e81-4a50-ae6c-43f19239c0f9
 DTSTART;VALUE=DATE:20241130
 DTEND;VALUE=DATE:20241201
 DESCRIPTION:        LRM: Smith\n\n        Instructions:\n        - Locker r
@@ -427,8 +427,8 @@ DESCRIPTION:        LRM: Smith\n\n        Instructions:\n        - Locker r
 SUMMARY:Smith
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:5681c4ac-aa13-4464-8116-a8e50db83447
+DTSTAMP:20241110T003043Z
+UID:c3495ef0-8a1a-4209-9f17-acf381df64d9
 DTSTART;VALUE=DATE:20241229
 DTEND;VALUE=DATE:20241230
 DESCRIPTION:        LRM: Woods\n\n        Instructions:\n        - Locker r
@@ -440,8 +440,8 @@ DESCRIPTION:        LRM: Woods\n\n        Instructions:\n        - Locker r
 SUMMARY:Woods
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:46c09dd8-11d4-443a-9b9c-12705db0446d
+DTSTAMP:20241110T003043Z
+UID:54c33208-c51f-4dfe-b549-7eb8f22f3989
 DTSTART;VALUE=DATE:20241204
 DTEND;VALUE=DATE:20241205
 DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
@@ -452,8 +452,8 @@ DESCRIPTION:        LRM: Curry\n\n        Instructions:\n        - Locker r
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:58da2c8e-b64e-4f9b-93e5-67f81ad5311b
+DTSTAMP:20241110T003043Z
+UID:0fcb96b4-7510-4757-bf1a-461636b1c10e
 DTSTART;VALUE=DATE:20241218
 DTEND;VALUE=DATE:20241219
 DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
@@ -465,8 +465,8 @@ DESCRIPTION:        LRM: Engholm\n\n        Instructions:\n        - Locker
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:b8dbe523-0331-40e0-9988-1b8589548a27
+DTSTAMP:20241110T003043Z
+UID:85e7858e-aae5-4704-8eb9-525e7ae73151
 DTSTART;VALUE=DATE:20241220
 DTEND;VALUE=DATE:20241221
 DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
@@ -478,8 +478,8 @@ DESCRIPTION:        LRM: Froberg\n\n        Instructions:\n        - Locker
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:d14eb318-924c-4782-84ba-da6fb8509665
+DTSTAMP:20241110T003043Z
+UID:fa3379ca-8da6-400a-8aa0-8eb66491f91e
 DTSTART;VALUE=DATE:20241220
 DTEND;VALUE=DATE:20241221
 DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker 
@@ -491,40 +491,28 @@ DESCRIPTION:        LRM: Harpel\n\n        Instructions:\n        - Locker
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:1fbc50f8-733c-4c74-bf5a-1029d9cd1f24
-DTSTART;VALUE=DATE:20241109
-DTEND;VALUE=DATE:20241110
+DTSTAMP:20241110T003043Z
+UID:f7284d2d-fd59-4c67-a69a-fddb98fd9d6e
+DTSTART;VALUE=DATE:20241123
+DTEND;VALUE=DATE:20241124
 DESCRIPTION:        LRM: Johnson\n\n        Instructions:\n        - Locker
   rooms should be monitored 30 minutes before and closed 15 minutes after t
- he scheduled practice/game.\n\n        Event: AC U10B2 at Edina\n        L
- ocation: Braemar South\n        Scheduled Event Time: Sat\, Nov 9\, 2024 a
- t 12:50 PM to Sat\, Nov 9\, 2024 at 1:50 PM\n
+ he scheduled practice/game.\n\n        Event: AC U10B2 - U10 B2 pictures\n
+         Location: New Hope Ice Arena\, Louisiana Avenue North\, New Hope\,
+  MN\, USA\n        Scheduled Event Time: Sat\, Nov 23\, 2024 at 11:45 AM t
+ o Sat\, Nov 23\, 2024 at 12:00 PM\n
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:60467627-08d0-4c1c-bce3-5f816af8621b
-DTSTART;VALUE=DATE:20241123
-DTEND;VALUE=DATE:20241124
-DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
- r rooms should be monitored 30 minutes before and closed 15 minutes after 
- the scheduled practice/game.\n\n        Event: AC U10B2 - U10 B2 pictures\
- n        Location: New Hope Ice Arena\, Louisiana Avenue North\, New Hope\
- , MN\, USA\n        Scheduled Event Time: Sat\, Nov 23\, 2024 at 11:45 AM 
- to Sat\, Nov 23\, 2024 at 12:00 PM\n
-SUMMARY:Mckinnon
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241109T120943Z
-UID:ebc5a922-34bc-46ad-bee6-ecc974d2db9e
+DTSTAMP:20241110T003043Z
+UID:8966cf6e-efae-4e6f-a420-0215eaf98765
 DTSTART;VALUE=DATE:20241222
 DTEND;VALUE=DATE:20241223
-DESCRIPTION:        LRM: Oprenchak\n\n        Instructions:\n        - Lock
- er rooms should be monitored 30 minutes before and closed 15 minutes after
-  the scheduled practice/game.\n\n        Event: AC U10B2 - AC U10 B2 Solo\
- n        Location: New Hope North\n        Scheduled Event Time: Sun\, Dec
-  22\, 2024 at 6:15 PM to Sun\, Dec 22\, 2024 at 7:15 PM\n
-SUMMARY:Oprenchak
+DESCRIPTION:        LRM: Mckinnon\n\n        Instructions:\n        - Locke
+ r rooms should be monitored 30 minutes before and closed 15 minutes after 
+ the scheduled practice/game.\n\n        Event: AC U10B2 - AC U10 B2 Solo\n
+         Location: New Hope North\n        Scheduled Event Time: Sun\, Dec 
+ 22\, 2024 at 6:15 PM to Sun\, Dec 22\, 2024 at 7:15 PM\n
+SUMMARY:Mckinnon
 END:VEVENT
 END:VCALENDAR
