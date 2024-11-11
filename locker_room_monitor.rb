@@ -143,7 +143,7 @@ def create_ical_event(start_time, end_time, summary, description)
   event
 end
 
-def create_locker_room_monitor_event(lrm_calendar, start_time, locker_room_monitor, event)
+def create_locker_room_monitor_event(lrm_calendar, start_time, end_time, locker_room_monitor, event)
   lrm_event = Icalendar::Event.new
   lrm_event.dtstart = Icalendar::Values::Date.new(start_time.to_date)
   lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1))
@@ -198,7 +198,10 @@ def process_events(calendar, team, assignment_counts, lrm_calendar)
     next if start_time < Time.now.in_time_zone('Central Time (US & Canada)')
 
     locker_room_monitor = assign_locker_room_monitor(team, event, assignment_counts)
-    create_locker_room_monitor_event(lrm_calendar, start_time, locker_room_monitor, event) if locker_room_monitor
+    if locker_room_monitor
+      create_locker_room_monitor_event(lrm_calendar, start_time, end_time, locker_room_monitor,
+                                       event)
+    end
 
     # Assign additional roles if it's a home game
     penalty_box, scorekeeper, timekeeper = assign_additional_roles(event, team, assignment_counts)
