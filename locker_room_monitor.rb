@@ -76,7 +76,7 @@ def sort_google_sheet_by_date(service, spreadsheet_id, sheet_id)
       {
         sort_range: {
           range: {
-            sheet_id:,
+            sheet_id: sheet_id,
             start_row_index: 1, # Skip header row
             start_column_index: 0,
             end_column_index: 6 # Assuming data goes up to column F
@@ -100,7 +100,7 @@ def write_team_data_to_individual_sheets(service, team, data)
   headers = ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
   values = [headers] + data
   range = 'Sheet1!A1:F'
-  value_range = Google::Apis::SheetsV4::ValueRange.new(values:)
+  value_range = Google::Apis::SheetsV4::ValueRange.new(values: values)
   service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
 end
 
@@ -114,8 +114,8 @@ exclusion_list = [
   'Meeting',
   'Goalie',
   'LRM',
-  'Tournament',
-  'pictures'
+  'tournament',
+  'picture'
 ]
 
 # Define teams and configurations
@@ -123,8 +123,7 @@ teams = [
   {
     name: '12A',
     ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603019',
-    family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
-                     Mulcahey],
+    family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad Mulcahey],
     spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
   },
   {
@@ -171,9 +170,7 @@ teams.each do |team|
 
   csv_data = calendar.events.each_with_index.map do |event, _index|
     # Skip events if summary, description, or location matches exclusion criteria
-    if exclusion_list.any? do |term|
-         event.summary&.downcase&.include?(term.downcase) || event.description&.downcase&.include?(term.downcase) || event.location&.downcase&.include?(term.downcase)
-       end
+    if exclusion_list.any? { |term| event.summary&.downcase&.include?(term.downcase) || event.description&.downcase&.include?(term.downcase) || event.location&.downcase&.include?(term.downcase) }
       puts "Excluding event: #{event.summary} at #{event.location}"
       next
     end
@@ -207,7 +204,7 @@ teams.each do |team|
       lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
       lrm_event.summary = locker_room_monitor.force_encoding('UTF-8') # Only the monitor's name
       lrm_event.description = <<-DESC.force_encoding('UTF-8')
-        LRM: #{locker_room_monitor}
+        Locker Room Monitor: #{locker_room_monitor}
 
         Instructions:
         - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
@@ -226,7 +223,7 @@ teams.each do |team|
 
     # Create additional roles for home games
     if event.summary.downcase.include?('game') && event.location.downcase.include?('home')
-      roles = %w[PB SK TK]
+      roles = ['Penalty Box', 'Scorekeeper', 'Timekeeper']
       roles.each do |role|
         role_event = Icalendar::Event.new
         role_event.dtstart = Icalendar::Values::DateTime.new(start_time) # Use the original start time
@@ -257,10 +254,8 @@ teams.each do |team|
   existing_data = fetch_existing_data(service, team[:spreadsheet_id], 'Sheet1!A2:F') # Skip header row
 
   # Merge existing data with new data
-  merged_data = # Assuming the first two columns (Event, Location) are unique identifiers
-    (existing_data + csv_data).uniq do |row|
-        row[0..1]
-    end
+  merged_data = (existing_data + csv_data).uniq { |row| row[0..1] } # Assuming the first two columns (Event, Location) are unique identifiers
+
   # Clear existing data and write merged data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, merged_data)
