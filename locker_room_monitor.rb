@@ -88,7 +88,7 @@ end
 
 # Define an exclusion list for events that do not require a locker room monitor
 EXCLUSION_LIST = [
-  'Skills Off Ice', 'Dryland', 'Goalie Training', 'Off Ice', 'Conditioning', 'Meeting', 'Goalie', 'LRM', 'Tournament', 'Pictures'
+  'Skills Off Ice', 'Dryland', 'Goalie Training', 'Off Ice', 'Conditioning', 'Meeting', 'Goalie', 'LRM', 'tournament', 'Tournament', 'Pictures'
 ]
 
 # Define teams and configurations
