@@ -187,11 +187,14 @@ teams.each do |team|
     formatted_date = start_time.strftime('%a %I:%M %p').capitalize
     duration_in_minutes = ((end_time - start_time) / 60).to_i
 
+    # Debugging output for duration
+    puts "Event: #{event.summary}, Start Time: #{start_time}, End Time: #{end_time}, Duration: #{duration_in_minutes} minutes"
+
     # Balanced random assignment of locker room monitor per team
-    locker_room_monitor = @assigned_events[team[:name]][event_id] || begin
+    locker_room_monitor = @assigned_events[team[:name]][event.uid] || begin
       family_with_fewest_assignments = team[:family_names].min_by { |family| assignment_counts[family] }
       assignment_counts[family_with_fewest_assignments] += 1
-      @assigned_events[team[:name]][event_id] = family_with_fewest_assignments
+      @assigned_events[team[:name]][event.uid] = family_with_fewest_assignments
       family_with_fewest_assignments
     end
 
@@ -202,7 +205,7 @@ teams.each do |team|
       lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
       lrm_event.summary = locker_room_monitor.force_encoding('UTF-8') # Only the monitor's name
       lrm_event.description = <<-DESC.force_encoding('UTF-8')
-        LRM: #{locker_room_monitor}
+        Locker Room Monitor: #{locker_room_monitor}
 
         Instructions:
         - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
@@ -256,7 +259,7 @@ teams.each do |team|
     (existing_data + csv_data).uniq do |row|
         row[0..1]
     end
-  # Clear existing data and write new data to Google Sheets
+  # Clear existing data and write merged data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, merged_data)
 
