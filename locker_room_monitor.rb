@@ -100,7 +100,7 @@ def write_team_data_to_individual_sheets(service, team, data)
   headers = ['Event', 'Location', 'Date', 'Time', 'Duration (minutes)', 'Locker Room Monitor']
   values = [headers] + data
   range = 'Sheet1!A1:F'
-  value_range = Google::Apis::SheetsV4::ValueRange.new(values: values)
+  value_range = Google::Apis::SheetsV4::ValueRange.new(values:)
   service.update_spreadsheet_value(team[:spreadsheet_id], range, value_range, value_input_option: 'RAW')
 end
 
@@ -115,6 +115,7 @@ exclusion_list = [
   'Goalie',
   'LRM',
   'tournament',
+  'Tournament',
   'picture'
 ]
 
@@ -123,7 +124,8 @@ teams = [
   {
     name: '12A',
     ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603019',
-    family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad Mulcahey],
+    family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
+                     Mulcahey],
     spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
   },
   {
@@ -170,7 +172,9 @@ teams.each do |team|
 
   csv_data = calendar.events.each_with_index.map do |event, _index|
     # Skip events if summary, description, or location matches exclusion criteria
-    if exclusion_list.any? { |term| event.summary&.downcase&.include?(term.downcase) || event.description&.downcase&.include?(term.downcase) || event.location&.downcase&.include?(term.downcase) }
+    if exclusion_list.any? do |term|
+         event.summary&.downcase&.include?(term.downcase) || event.description&.downcase&.include?(term.downcase) || event.location&.downcase&.include?(term.downcase)
+       end
       puts "Excluding event: #{event.summary} at #{event.location}"
       next
     end
@@ -254,8 +258,10 @@ teams.each do |team|
   existing_data = fetch_existing_data(service, team[:spreadsheet_id], 'Sheet1!A2:F') # Skip header row
 
   # Merge existing data with new data
-  merged_data = (existing_data + csv_data).uniq { |row| row[0..1] } # Assuming the first two columns (Event, Location) are unique identifiers
-
+  merged_data = # Assuming the first two columns (Event, Location) are unique identifiers
+    (existing_data + csv_data).uniq do |row|
+        row[0..1]
+    end
   # Clear existing data and write merged data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, merged_data)
