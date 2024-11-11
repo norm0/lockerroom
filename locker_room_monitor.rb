@@ -143,6 +143,24 @@ def create_ical_event(start_time, end_time, summary, description)
   event
 end
 
+def create_locker_room_monitor_event(lrm_calendar, start_time, locker_room_monitor, event)
+  lrm_event = Icalendar::Event.new
+  lrm_event.dtstart = Icalendar::Values::Date.new(start_time.to_date)
+  lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1))
+  lrm_event.summary = locker_room_monitor.force_encoding('UTF-8')
+  lrm_event.description = <<-DESC.force_encoding('UTF-8')
+    Locker Room Monitor: #{locker_room_monitor}
+
+    Instructions:
+    - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
+
+    Event: #{event.summary.force_encoding('UTF-8')}
+    Location: #{event.location.force_encoding('UTF-8')}
+    Scheduled Event Time: #{start_time.strftime('%a, %b %-d, %Y at %-I:%M %p').force_encoding('UTF-8')} to #{end_time.strftime('%a, %b %-d, %Y at %-I:%M %p').force_encoding('UTF-8')}
+  DESC
+  lrm_calendar.add_event(lrm_event)
+end
+
 def process_teams(service)
   TEAMS.each do |team|
     process_team(service, team)
