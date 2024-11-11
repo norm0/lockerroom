@@ -17,6 +17,30 @@ SCOPE = ['https://www.googleapis.com/auth/spreadsheets']
 @assignment_counts = Hash.new { |hash, key| hash[key] = Hash.new(0) }
 @assigned_events = Hash.new { |hash, key| hash[key] = {} }
 
+# Load assignment counts from file
+def load_assignment_counts
+  return unless File.exist?(@assignment_counts_file)
+
+  CSV.foreach(@assignment_counts_file, headers: true) do |row|
+    team_name = row['Team']
+    family = row['Family']
+    count = row['Count'].to_i
+    @assignment_counts[team_name][family] = count
+  end
+end
+
+# Load assigned events from file
+def load_assigned_events
+  return unless File.exist?(@assigned_events_file)
+
+  CSV.foreach(@assigned_events_file, headers: true) do |row|
+    team_name = row['Team']
+    event_id = row['EventID']
+    monitor = row['Locker Room Monitor']
+    @assigned_events[team_name][event_id] = monitor
+  end
+end
+
 load_assignment_counts
 load_assigned_events
 
@@ -89,31 +113,26 @@ TEAMS = [
     family_names: %w[Becker Hastings Opel Gorgos Larsen Anderson Campos Powell Tousignant Marshall Johnson Wulff Orstad
                      Mulcahey],
     spreadsheet_id: ENV['GOOGLE_SHEET_ID_12A']
+  },
+  {
+    name: '12B1',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603021',
+    family_names: %w[Baer Bimberg Chanthavongsa Hammerstrom Kremer Lane Oas Perpich Ray Reinke Silva-Hammer],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_12B1']
+  },
+  {
+    name: '10B1',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603022',
+    family_names: %w[Baer Bowman Hopper Houghtaling Johnson Larsen Markfort Marshall Nanninga Orstad Willey Williamson],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B1']
+  },
+  {
+    name: '10B2',
+    ical_feed_url: 'https://www.armstrongcooperhockey.org/ical_feed?tags=8603023',
+    family_names: %w[Curry Engholm Froberg Harpel Johnson Mckinnon Oprenchak M-Reberg B-Reberg Sauer Smith Woods],
+    spreadsheet_id: ENV['GOOGLE_SHEET_ID_10B2']
   }
-  # Other teams...
 ]
-
-def load_assignment_counts
-  return unless File.exist?(@assignment_counts_file)
-
-  CSV.foreach(@assignment_counts_file, headers: true) do |row|
-    team_name = row['Team']
-    family = row['Family']
-    count = row['Count'].to_i
-    @assignment_counts[team_name][family] = count
-  end
-end
-
-def load_assigned_events
-  return unless File.exist?(@assigned_events_file)
-
-  CSV.foreach(@assigned_events_file, headers: true) do |row|
-    team_name = row['Team']
-    event_id = row['EventID']
-    monitor = row['Locker Room Monitor']
-    @assigned_events[team_name][event_id] = monitor
-  end
-end
 
 def create_ical_event(start_time, end_time, summary, description)
   event = Icalendar::Event.new
