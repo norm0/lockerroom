@@ -113,7 +113,9 @@ exclusion_list = [
   'Conditioning',
   'Meeting',
   'Goalie',
-  'LRM'
+  'LRM',
+  'Tournament',
+  'pictures'
 ]
 
 # Define teams and configurations
@@ -205,7 +207,7 @@ teams.each do |team|
       lrm_event.dtend = Icalendar::Values::Date.new((start_time.to_date + 1)) # End date is the next day (to mark all-day event)
       lrm_event.summary = locker_room_monitor.force_encoding('UTF-8') # Only the monitor's name
       lrm_event.description = <<-DESC.force_encoding('UTF-8')
-        Locker Room Monitor: #{locker_room_monitor}
+        LRM: #{locker_room_monitor}
 
         Instructions:
         - Locker rooms should be monitored 30 minutes before and closed 15 minutes after the scheduled practice/game.
@@ -224,7 +226,7 @@ teams.each do |team|
 
     # Create additional roles for home games
     if event.summary.downcase.include?('game') && event.location.downcase.include?('home')
-      roles = ['Penalty Box', 'Scorekeeper', 'Timekeeper']
+      roles = %w[PB SK TK]
       roles.each do |role|
         role_event = Icalendar::Event.new
         role_event.dtstart = Icalendar::Values::DateTime.new(start_time) # Use the original start time
