@@ -76,7 +76,7 @@ def sort_google_sheet_by_date(service, spreadsheet_id, sheet_id)
       {
         sort_range: {
           range: {
-            sheet_id: sheet_id,
+            sheet_id:,
             start_row_index: 1, # Skip header row
             start_column_index: 0,
             end_column_index: 6 # Assuming data goes up to column F
@@ -257,11 +257,14 @@ teams.each do |team|
   # Fetch existing data from Google Sheets
   existing_data = fetch_existing_data(service, team[:spreadsheet_id], 'Sheet1!A2:F') # Skip header row
 
-  # Merge existing data with new data
-  merged_data = # Assuming the first two columns (Event, Location) are unique identifiers
-    (existing_data + csv_data).uniq do |row|
-        row[0..1]
-    end
+  # Merge existing data with new data, giving priority to Google Sheets data
+  existing_data_hash = existing_data.to_h { |row| [[row[0], row[1]], row] }
+  csv_data.each do |row|
+    key = [row[0], row[1]]
+    existing_data_hash[key] = row
+  end
+  merged_data = existing_data_hash.values
+
   # Clear existing data and write merged data to Google Sheets
   clear_google_sheet_data(service, team[:spreadsheet_id], 'Sheet1!A1:F')
   write_team_data_to_individual_sheets(service, team, merged_data)
