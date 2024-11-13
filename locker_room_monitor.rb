@@ -201,12 +201,11 @@ def process_events(calendar, team, assignment_counts, lrm_calendar)
 
     start_time, end_time, duration_in_minutes = calculate_event_times(event)
     next if start_time < Time.now.in_time_zone('Central Time (US & Canada)')
-    next if event.dtstart.is_a?(Icalendar::Values::Date) # Skip all-day events
+    next if duration_in_minutes == 1440 # Skip all-day events
 
     locker_room_monitor = assign_locker_room_monitor(team, event, assignment_counts)
     if locker_room_monitor
-      create_locker_room_monitor_event(lrm_calendar, start_time, end_time, locker_room_monitor,
-                                       event)
+      create_locker_room_monitor_event(lrm_calendar, start_time, end_time, locker_room_monitor, event)
     end
 
     # Assign additional roles if it's a home game
@@ -274,6 +273,8 @@ def merge_data(existing_data, csv_data)
   existing_data_hash = existing_data.to_h { |row| [[row[0], row[1]], row] }
   csv_data.each do |row|
     key = [row[0], row[1]]
+    next if row[4].to_i == 1440 # Skip all-day events
+
     existing_data_hash[key] = row
   end
   existing_data_hash.values
