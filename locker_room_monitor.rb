@@ -201,6 +201,7 @@ def process_events(calendar, team, assignment_counts, lrm_calendar)
 
     start_time, end_time, duration_in_minutes = calculate_event_times(event)
     next if start_time < Time.now.in_time_zone('Central Time (US & Canada)')
+    next if event.dtstart.is_a?(Icalendar::Values::Date) # Skip all-day events
 
     locker_room_monitor = assign_locker_room_monitor(team, event, assignment_counts)
     if locker_room_monitor
