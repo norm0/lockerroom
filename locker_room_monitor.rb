@@ -69,6 +69,11 @@ def fetch_existing_data(service, spreadsheet_id, range)
   response.values || []
 end
 
+def get_sheet_id(service, spreadsheet_id)
+  spreadsheet = service.get_spreadsheet(spreadsheet_id)
+  spreadsheet.sheets.first.properties.sheet_id # Assumes only one sheet
+end
+
 def sort_google_sheet_by_date(service, spreadsheet_id, sheet_id)
   sort_request = Google::Apis::SheetsV4::BatchUpdateSpreadsheetRequest.new(
     requests: [
