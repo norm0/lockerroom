@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:8e70c857-f981-46c4-b082-819761b71123
+DTSTAMP:20241216T003256Z
+UID:43352c90-3844-4077-8146-2e092220ef8b
 DTSTART;VALUE=DATE:20250121
 DTEND;VALUE=DATE:20250122
 DESCRIPTION:    Locker Room Monitor: Baer\n\n    Instructions:\n    - Locke
@@ -16,8 +16,8 @@ DESCRIPTION:    Locker Room Monitor: Baer\n\n    Instructions:\n    - Locke
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:c0c4ed2d-473c-4d19-b3d0-e94b1fb7885c
+DTSTAMP:20241216T003256Z
+UID:5156c793-a331-47aa-97fc-f8649df4ddf5
 DTSTART;VALUE=DATE:20250109
 DTEND;VALUE=DATE:20250110
 DESCRIPTION:    Locker Room Monitor: Bimberg\n\n    Instructions:\n    - Lo
@@ -28,8 +28,8 @@ DESCRIPTION:    Locker Room Monitor: Bimberg\n\n    Instructions:\n    - Lo
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:3cae2ec3-5a2e-4b1b-b634-5b97448862b1
+DTSTAMP:20241216T003256Z
+UID:e74e4a8c-ba78-488f-94bf-5cb18d33cbfa
 DTSTART;VALUE=DATE:20250128
 DTEND;VALUE=DATE:20250129
 DESCRIPTION:    Locker Room Monitor: Chanthavongsa\n\n    Instructions:\n  
@@ -40,8 +40,8 @@ DESCRIPTION:    Locker Room Monitor: Chanthavongsa\n\n    Instructions:\n
 SUMMARY:Chanthavongsa
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:05bf0f14-8f5d-4cbe-ae15-354785f5148b
+DTSTAMP:20241216T003256Z
+UID:df917c75-a16a-4bba-bea3-d93f5e51ef71
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
 DESCRIPTION:    Locker Room Monitor: Hammerstrom\n\n    Instructions:\n    
@@ -52,8 +52,8 @@ DESCRIPTION:    Locker Room Monitor: Hammerstrom\n\n    Instructions:\n
 SUMMARY:Hammerstrom
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:d2084933-2537-4b0b-814e-ba8e4d18d812
+DTSTAMP:20241216T003256Z
+UID:ecf778f5-25d0-4589-88b0-8886d7caee9a
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
 DESCRIPTION:    Locker Room Monitor: Kremer\n\n    Instructions:\n    - Loc
@@ -64,8 +64,8 @@ DESCRIPTION:    Locker Room Monitor: Kremer\n\n    Instructions:\n    - Loc
 SUMMARY:Kremer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:d907a10f-1d03-4038-a2e2-07b2bb5f6668
+DTSTAMP:20241216T003256Z
+UID:521d8375-7623-49e3-9be6-fd04060479cd
 DTSTART;VALUE=DATE:20250108
 DTEND;VALUE=DATE:20250109
 DESCRIPTION:    Locker Room Monitor: Lane\n\n    Instructions:\n    - Locke
@@ -76,8 +76,8 @@ DESCRIPTION:    Locker Room Monitor: Lane\n\n    Instructions:\n    - Locke
 SUMMARY:Lane
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:bbde650d-5b69-4497-b9f8-a6e4bd711a67
+DTSTAMP:20241216T003256Z
+UID:75fd691c-cabb-4b01-a5dd-c1c42491e688
 DTSTART;VALUE=DATE:20241216
 DTEND;VALUE=DATE:20241217
 DESCRIPTION:    Locker Room Monitor: Oas\n\n    Instructions:\n    - Locker
@@ -88,8 +88,8 @@ DESCRIPTION:    Locker Room Monitor: Oas\n\n    Instructions:\n    - Locker
 SUMMARY:Oas
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:ccd0b50f-60ae-4255-86bf-593fc7d1118d
+DTSTAMP:20241216T003256Z
+UID:476ba3fb-fd94-49be-ac65-a770b43c1c94
 DTSTART;VALUE=DATE:20250113
 DTEND;VALUE=DATE:20250114
 DESCRIPTION:    Locker Room Monitor: Perpich\n\n    Instructions:\n    - Lo
@@ -100,8 +100,8 @@ DESCRIPTION:    Locker Room Monitor: Perpich\n\n    Instructions:\n    - Lo
 SUMMARY:Perpich
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:79e9b260-4db0-49e3-a68f-2acd25eb2bde
+DTSTAMP:20241216T003256Z
+UID:8dbda087-3613-46ec-896f-80dce1ee2be0
 DTSTART;VALUE=DATE:20250127
 DTEND;VALUE=DATE:20250128
 DESCRIPTION:    Locker Room Monitor: Ray\n\n    Instructions:\n    - Locker
@@ -112,8 +112,8 @@ DESCRIPTION:    Locker Room Monitor: Ray\n\n    Instructions:\n    - Locker
 SUMMARY:Ray
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:6041f075-eb9b-4b57-bee3-d835b819c2fe
+DTSTAMP:20241216T003256Z
+UID:284c7400-1f30-40b0-a0d2-53c542135cc6
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:    Locker Room Monitor: Reinke\n\n    Instructions:\n    - Loc
@@ -124,8 +124,8 @@ DESCRIPTION:    Locker Room Monitor: Reinke\n\n    Instructions:\n    - Loc
 SUMMARY:Reinke
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:f455d28a-dbc7-412d-abb6-ed64fdcfc470
+DTSTAMP:20241216T003256Z
+UID:4982d409-8d98-4517-a456-c46083091adb
 DTSTART;VALUE=DATE:20250210
 DTEND;VALUE=DATE:20250211
 DESCRIPTION:    Locker Room Monitor: Silva-Hammer\n\n    Instructions:\n   
@@ -136,8 +136,8 @@ DESCRIPTION:    Locker Room Monitor: Silva-Hammer\n\n    Instructions:\n
 SUMMARY:Silva-Hammer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:fa36f548-b57d-41c0-a8cc-66b81b5cbb4c
+DTSTAMP:20241216T003256Z
+UID:155c2ef8-b91c-44fd-8c44-ebf3cebcbd60
 DTSTART;VALUE=DATE:20241223
 DTEND;VALUE=DATE:20241224
 DESCRIPTION:    Locker Room Monitor: Baer\n\n    Instructions:\n    - Locke
@@ -148,247 +148,235 @@ DESCRIPTION:    Locker Room Monitor: Baer\n\n    Instructions:\n    - Locke
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:813f8eda-4c6b-4699-ac64-1c54706e0043
-DTSTART;VALUE=DATE:20241215
-DTEND;VALUE=DATE:20241216
+DTSTAMP:20241216T003256Z
+UID:839a436c-fe35-4e9e-805e-3f9526d392aa
+DTSTART;VALUE=DATE:20241217
+DTEND;VALUE=DATE:20241218
 DESCRIPTION:    Locker Room Monitor: Bimberg\n\n    Instructions:\n    - Lo
  cker rooms should be monitored 30 minutes before and closed 15 minutes aft
  er the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared-S
- olo w/ U12 A\n    Location: New Hope South\n    Scheduled Event Time: Sun\
- , Dec 15\, 2024 at 3:30 PM to Sun\, Dec 15\, 2024 at 4:30 PM\n
+ olo w/ AC Peewee A\n    Location: New Hope South\n    Scheduled Event Time
+ : Tue\, Dec 17\, 2024 at 8:00 PM to Tue\, Dec 17\, 2024 at 9:00 PM\n
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:f77f1a83-6d49-47e3-a381-074d15bab2ad
-DTSTART;VALUE=DATE:20241217
-DTEND;VALUE=DATE:20241218
+DTSTAMP:20241216T003256Z
+UID:e1705159-9f1b-4854-a00e-f86e6f29beae
+DTSTART;VALUE=DATE:20241222
+DTEND;VALUE=DATE:20241223
 DESCRIPTION:    Locker Room Monitor: Chanthavongsa\n\n    Instructions:\n  
    - Locker rooms should be monitored 30 minutes before and closed 15 minut
  es after the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Sh
- ared-Solo w/ AC Peewee A\n    Location: New Hope South\n    Scheduled Even
- t Time: Tue\, Dec 17\, 2024 at 8:00 PM to Tue\, Dec 17\, 2024 at 9:00 PM\n
+ ared-Solo w/ AC Squirt C RED\n    Location: New Hope South\n    Scheduled 
+ Event Time: Sun\, Dec 22\, 2024 at 2:15 PM to Sun\, Dec 22\, 2024 at 3:15 
+ PM\n
 SUMMARY:Chanthavongsa
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:98fd03a1-a4d4-4b7d-b87f-c12e4244bef6
-DTSTART;VALUE=DATE:20241222
-DTEND;VALUE=DATE:20241223
+DTSTAMP:20241216T003256Z
+UID:48d7a3a3-4b1e-41ae-aa62-3ba4c89c26f5
+DTSTART;VALUE=DATE:20241228
+DTEND;VALUE=DATE:20241229
 DESCRIPTION:    Locker Room Monitor: Hammerstrom\n\n    Instructions:\n    
  - Locker rooms should be monitored 30 minutes before and closed 15 minutes
   after the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shar
- ed-Solo w/ AC Squirt C RED\n    Location: New Hope South\n    Scheduled Ev
- ent Time: Sun\, Dec 22\, 2024 at 2:15 PM to Sun\, Dec 22\, 2024 at 3:15 PM
- \n
+ ed-Solo w/ U12 A\n    Location: New Hope North\n    Scheduled Event Time: 
+ Sat\, Dec 28\, 2024 at 9:00 PM to Sat\, Dec 28\, 2024 at 10:00 PM\n
 SUMMARY:Hammerstrom
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:ad13a095-889e-4f71-9cf6-4595d0f91a33
-DTSTART;VALUE=DATE:20241228
-DTEND;VALUE=DATE:20241229
+DTSTAMP:20241216T003256Z
+UID:3b7d0d08-c010-4f28-b06e-65a0649c8376
+DTSTART;VALUE=DATE:20250122
+DTEND;VALUE=DATE:20250123
 DESCRIPTION:    Locker Room Monitor: Kremer\n\n    Instructions:\n    - Loc
  ker rooms should be monitored 30 minutes before and closed 15 minutes afte
- r the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared-So
- lo w/ U12 A\n    Location: New Hope North\n    Scheduled Event Time: Sat\,
-  Dec 28\, 2024 at 9:00 PM to Sat\, Dec 28\, 2024 at 10:00 PM\n
+ r the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared w/
+  AC Squirt C RED\n    Location: New Hope North\n    Scheduled Event Time: 
+ Wed\, Jan 22\, 2025 at 6:00 PM to Wed\, Jan 22\, 2025 at 7:00 PM\n
 SUMMARY:Kremer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:2e7875c0-5f69-41dd-92ab-83a8a6dc3fe8
-DTSTART;VALUE=DATE:20250122
-DTEND;VALUE=DATE:20250123
+DTSTAMP:20241216T003256Z
+UID:6b49040c-6e37-44c4-83ec-fb1f5cb169e3
+DTSTART;VALUE=DATE:20250202
+DTEND;VALUE=DATE:20250203
 DESCRIPTION:    Locker Room Monitor: Lane\n\n    Instructions:\n    - Locke
  r rooms should be monitored 30 minutes before and closed 15 minutes after 
- the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared w/ A
- C Squirt C RED\n    Location: New Hope North\n    Scheduled Event Time: We
- d\, Jan 22\, 2025 at 6:00 PM to Wed\, Jan 22\, 2025 at 7:00 PM\n
+ the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo\n    L
+ ocation: Breck\n    Scheduled Event Time: Sun\, Feb 2\, 2025 at 9:15 AM to
+  Sun\, Feb 2\, 2025 at 10:15 AM\n
 SUMMARY:Lane
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:2a88a306-856e-4e34-8b94-5679f60b5f05
-DTSTART;VALUE=DATE:20250202
-DTEND;VALUE=DATE:20250203
+DTSTAMP:20241216T003256Z
+UID:b3c8eb46-6fd7-4b0c-833b-f8b382cdae55
+DTSTART;VALUE=DATE:20250115
+DTEND;VALUE=DATE:20250116
 DESCRIPTION:    Locker Room Monitor: Oas\n\n    Instructions:\n    - Locker
   rooms should be monitored 30 minutes before and closed 15 minutes after t
- he scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo\n    Lo
- cation: Breck\n    Scheduled Event Time: Sun\, Feb 2\, 2025 at 9:15 AM to 
- Sun\, Feb 2\, 2025 at 10:15 AM\n
+ he scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo-Shared 
+ w/ AC Peewee B1\n    Location: New Hope South\n    Scheduled Event Time: W
+ ed\, Jan 15\, 2025 at 8:45 PM to Wed\, Jan 15\, 2025 at 9:45 PM\n
 SUMMARY:Oas
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:702c88c6-b7f3-4798-92e6-ba4719a5d238
-DTSTART;VALUE=DATE:20250115
-DTEND;VALUE=DATE:20250116
+DTSTAMP:20241216T003256Z
+UID:57a7aa6e-213b-4823-bc97-fc633101dc0f
+DTSTART;VALUE=DATE:20250125
+DTEND;VALUE=DATE:20250126
 DESCRIPTION:    Locker Room Monitor: Perpich\n\n    Instructions:\n    - Lo
  cker rooms should be monitored 30 minutes before and closed 15 minutes aft
- er the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo-Sha
- red w/ AC Peewee B1\n    Location: New Hope South\n    Scheduled Event Tim
- e: Wed\, Jan 15\, 2025 at 8:45 PM to Wed\, Jan 15\, 2025 at 9:45 PM\n
+ er the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo\n  
+   Location: New Hope South\n    Scheduled Event Time: Sat\, Jan 25\, 2025 
+ at 3:30 PM to Sat\, Jan 25\, 2025 at 4:30 PM\n
 SUMMARY:Perpich
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:15325c78-1f40-47cd-8322-bd7e51528878
-DTSTART;VALUE=DATE:20250125
-DTEND;VALUE=DATE:20250126
+DTSTAMP:20241216T003256Z
+UID:95367f80-2120-4d67-942d-eba3d8bbc605
+DTSTART;VALUE=DATE:20250129
+DTEND;VALUE=DATE:20250130
 DESCRIPTION:    Locker Room Monitor: Ray\n\n    Instructions:\n    - Locker
   rooms should be monitored 30 minutes before and closed 15 minutes after t
- he scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo\n    Lo
- cation: New Hope South\n    Scheduled Event Time: Sat\, Jan 25\, 2025 at 3
- :30 PM to Sat\, Jan 25\, 2025 at 4:30 PM\n
+ he scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo-Shared 
+ w/ AC PeeWee B2\n    Location: New Hope North\n    Scheduled Event Time: W
+ ed\, Jan 29\, 2025 at 8:30 PM to Wed\, Jan 29\, 2025 at 9:30 PM\n
 SUMMARY:Ray
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:5aa0c2b8-a5b6-43be-be5d-18e9eeda01d9
-DTSTART;VALUE=DATE:20250129
-DTEND;VALUE=DATE:20250130
+DTSTAMP:20241216T003256Z
+UID:ddfc447c-2ece-439f-9a33-c0355bbc1228
+DTSTART;VALUE=DATE:20250101
+DTEND;VALUE=DATE:20250102
 DESCRIPTION:    Locker Room Monitor: Reinke\n\n    Instructions:\n    - Loc
  ker rooms should be monitored 30 minutes before and closed 15 minutes afte
- r the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo-Shar
- ed w/ AC PeeWee B2\n    Location: New Hope North\n    Scheduled Event Time
- : Wed\, Jan 29\, 2025 at 8:30 PM to Wed\, Jan 29\, 2025 at 9:30 PM\n
+ r the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared w/
+  U12 A\n    Location: New Hope South\n    Scheduled Event Time: Wed\, Jan 
+ 1\, 2025 at 8:00 PM to Wed\, Jan 1\, 2025 at 9:00 PM\n
 SUMMARY:Reinke
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:5ea6a6bb-58b1-4a29-9c1b-9089433d27aa
-DTSTART;VALUE=DATE:20250101
-DTEND;VALUE=DATE:20250102
+DTSTAMP:20241216T003256Z
+UID:0f8ea7ab-4bf4-4a00-9bc5-3f99f4c87396
+DTSTART;VALUE=DATE:20241231
+DTEND;VALUE=DATE:20250101
 DESCRIPTION:    Locker Room Monitor: Silva-Hammer\n\n    Instructions:\n   
   - Locker rooms should be monitored 30 minutes before and closed 15 minute
- s after the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Sha
- red w/ U12 A\n    Location: New Hope South\n    Scheduled Event Time: Wed\
- , Jan 1\, 2025 at 8:00 PM to Wed\, Jan 1\, 2025 at 9:00 PM\n
+ s after the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Sol
+ o\n    Location: New Hope South\n    Scheduled Event Time: Tue\, Dec 31\, 
+ 2024 at 6:30 PM to Tue\, Dec 31\, 2024 at 7:30 PM\n
 SUMMARY:Silva-Hammer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:e62358e2-1b29-472b-9591-7926749c10e9
-DTSTART;VALUE=DATE:20241231
-DTEND;VALUE=DATE:20250101
+DTSTAMP:20241216T003256Z
+UID:373c304d-5a5f-4360-a08e-48e9b6430d13
+DTSTART;VALUE=DATE:20250201
+DTEND;VALUE=DATE:20250202
 DESCRIPTION:    Locker Room Monitor: Baer\n\n    Instructions:\n    - Locke
  r rooms should be monitored 30 minutes before and closed 15 minutes after 
  the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo\n    L
- ocation: New Hope South\n    Scheduled Event Time: Tue\, Dec 31\, 2024 at 
- 6:30 PM to Tue\, Dec 31\, 2024 at 7:30 PM\n
+ ocation: New Hope South\n    Scheduled Event Time: Sat\, Feb 1\, 2025 at 1
+ :00 PM to Sat\, Feb 1\, 2025 at 2:00 PM\n
 SUMMARY:Baer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:84bc7edd-ba42-48f3-a6ba-1b9c93ac46ba
-DTSTART;VALUE=DATE:20250201
-DTEND;VALUE=DATE:20250202
+DTSTAMP:20241216T003256Z
+UID:664b53d9-f610-4e33-9ae3-cb016760ab0f
+DTSTART;VALUE=DATE:20241218
+DTEND;VALUE=DATE:20241219
 DESCRIPTION:    Locker Room Monitor: Bimberg\n\n    Instructions:\n    - Lo
  cker rooms should be monitored 30 minutes before and closed 15 minutes aft
  er the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo\n  
-   Location: New Hope South\n    Scheduled Event Time: Sat\, Feb 1\, 2025 a
- t 1:00 PM to Sat\, Feb 1\, 2025 at 2:00 PM\n
+   Location: New Hope North\n    Scheduled Event Time: Wed\, Dec 18\, 2024 
+ at 8:45 PM to Wed\, Dec 18\, 2024 at 10:00 PM\n
 SUMMARY:Bimberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:e50172b4-8ad8-4351-be92-dcd739b3168f
-DTSTART;VALUE=DATE:20241218
-DTEND;VALUE=DATE:20241219
+DTSTAMP:20241216T003256Z
+UID:9ef5ee51-0071-4da9-939f-19a57d555fd5
+DTSTART;VALUE=DATE:20241229
+DTEND;VALUE=DATE:20241230
 DESCRIPTION:    Locker Room Monitor: Chanthavongsa\n\n    Instructions:\n  
    - Locker rooms should be monitored 30 minutes before and closed 15 minut
  es after the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 So
- lo\n    Location: New Hope North\n    Scheduled Event Time: Wed\, Dec 18\,
-  2024 at 8:45 PM to Wed\, Dec 18\, 2024 at 10:00 PM\n
+ lo\n    Location: New Hope South\n    Scheduled Event Time: Sun\, Dec 29\,
+  2024 at 1:45 PM to Sun\, Dec 29\, 2024 at 2:45 PM\n
 SUMMARY:Chanthavongsa
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:cf94652f-1948-47fc-82ce-c4a555f7bcde
-DTSTART;VALUE=DATE:20241229
-DTEND;VALUE=DATE:20241230
+DTSTAMP:20241216T003256Z
+UID:527eebc0-c899-465c-8e96-866c0402c650
+DTSTART;VALUE=DATE:20250102
+DTEND;VALUE=DATE:20250103
 DESCRIPTION:    Locker Room Monitor: Hammerstrom\n\n    Instructions:\n    
  - Locker rooms should be monitored 30 minutes before and closed 15 minutes
   after the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo
- \n    Location: New Hope South\n    Scheduled Event Time: Sun\, Dec 29\, 2
- 024 at 1:45 PM to Sun\, Dec 29\, 2024 at 2:45 PM\n
+ \n    Location: Brooklyn Park 2\n    Scheduled Event Time: Thu\, Jan 2\, 2
+ 025 at 2:30 PM to Thu\, Jan 2\, 2025 at 3:45 PM\n
 SUMMARY:Hammerstrom
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:17c65279-ec66-4071-bdbe-ca8f721c5b5c
-DTSTART;VALUE=DATE:20250102
-DTEND;VALUE=DATE:20250103
+DTSTAMP:20241216T003256Z
+UID:1a9077c5-a8c1-483b-b2f0-b5427ab106c0
+DTSTART;VALUE=DATE:20250111
+DTEND;VALUE=DATE:20250112
 DESCRIPTION:    Locker Room Monitor: Kremer\n\n    Instructions:\n    - Loc
  ker rooms should be monitored 30 minutes before and closed 15 minutes afte
- r the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Solo\n   
-  Location: Brooklyn Park 2\n    Scheduled Event Time: Thu\, Jan 2\, 2025 a
- t 2:30 PM to Thu\, Jan 2\, 2025 at 3:45 PM\n
+ r the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared-So
+ lo w/ AC Squirt C RED\n    Location: Brooklyn Park 1\n    Scheduled Event 
+ Time: Sat\, Jan 11\, 2025 at 4:00 PM to Sat\, Jan 11\, 2025 at 5:00 PM\n
 SUMMARY:Kremer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:18bc235a-ee8c-4a5e-962e-9a9fa46c9699
-DTSTART;VALUE=DATE:20250111
-DTEND;VALUE=DATE:20250112
+DTSTAMP:20241216T003256Z
+UID:081a57fa-3876-480f-bad1-7eb737798bab
+DTSTART;VALUE=DATE:20250112
+DTEND;VALUE=DATE:20250113
 DESCRIPTION:    Locker Room Monitor: Lane\n\n    Instructions:\n    - Locke
  r rooms should be monitored 30 minutes before and closed 15 minutes after 
- the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared-Solo
-  w/ AC Squirt C RED\n    Location: Brooklyn Park 1\n    Scheduled Event Ti
- me: Sat\, Jan 11\, 2025 at 4:00 PM to Sat\, Jan 11\, 2025 at 5:00 PM\n
+ the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared w/ A
+ C Squirt A\n    Location: Brooklyn Park 1\n    Scheduled Event Time: Sun\,
+  Jan 12\, 2025 at 8:45 PM to Sun\, Jan 12\, 2025 at 10:00 PM\n
 SUMMARY:Lane
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:8a633733-927f-4194-b52a-6404cee949cb
-DTSTART;VALUE=DATE:20250112
-DTEND;VALUE=DATE:20250113
+DTSTAMP:20241216T003256Z
+UID:a44ab960-2eeb-42cc-be42-c27616c14a48
+DTSTART;VALUE=DATE:20241220
+DTEND;VALUE=DATE:20241221
 DESCRIPTION:    Locker Room Monitor: Oas\n\n    Instructions:\n    - Locker
   rooms should be monitored 30 minutes before and closed 15 minutes after t
- he scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Shared w/ AC
-  Squirt A\n    Location: Brooklyn Park 1\n    Scheduled Event Time: Sun\, 
- Jan 12\, 2025 at 8:45 PM to Sun\, Jan 12\, 2025 at 10:00 PM\n
+ he scheduled practice/game.\n\n    Event: AC U12B1 - Wild Program Fundrais
+ er\n    Location: Xcel Energy Center\, West Kellogg Boulevard\, Saint Paul
+ \, MN\, USA\n    Scheduled Event Time: Fri\, Dec 20\, 2024 at 5:00 PM to F
+ ri\, Dec 20\, 2024 at 9:00 PM\n
 SUMMARY:Oas
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:3fa8b56f-b23c-4cad-84f4-13129163148a
-DTSTART;VALUE=DATE:20241220
-DTEND;VALUE=DATE:20241221
+DTSTAMP:20241216T003256Z
+UID:d1d858b5-0478-453e-8c65-e9f4da7d98c2
+DTSTART;VALUE=DATE:20250107
+DTEND;VALUE=DATE:20250108
 DESCRIPTION:    Locker Room Monitor: Perpich\n\n    Instructions:\n    - Lo
  cker rooms should be monitored 30 minutes before and closed 15 minutes aft
- er the scheduled practice/game.\n\n    Event: AC U12B1 - Wild Program Fund
- raiser\n    Location: Xcel Energy Center\, West Kellogg Boulevard\, Saint 
- Paul\, MN\, USA\n    Scheduled Event Time: Fri\, Dec 20\, 2024 at 5:00 PM 
- to Fri\, Dec 20\, 2024 at 9:00 PM\n
+ er the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Away Scr
+ immage at Moundsview-Irondale U12 B1 Green\n    Location: Mariucci Arena\n
+     Scheduled Event Time: Tue\, Jan 7\, 2025 at 5:00 PM to Tue\, Jan 7\, 2
+ 025 at 6:00 PM\n
 SUMMARY:Perpich
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:f53e5ecd-f7da-427a-9a3a-5dba43bb848c
-DTSTART;VALUE=DATE:20250107
-DTEND;VALUE=DATE:20250108
+DTSTAMP:20241216T003256Z
+UID:f2a30c29-6134-4dea-b55f-23b8c188dcd1
+DTSTART;VALUE=DATE:20241222
+DTEND;VALUE=DATE:20241223
 DESCRIPTION:    Locker Room Monitor: Ray\n\n    Instructions:\n    - Locker
   rooms should be monitored 30 minutes before and closed 15 minutes after t
  he scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Away Scrimma
- ge at Moundsview-Irondale U12 B1 Green\n    Location: Mariucci Arena\n    
- Scheduled Event Time: Tue\, Jan 7\, 2025 at 5:00 PM to Tue\, Jan 7\, 2025 
- at 6:00 PM\n
+ ge at Mound View/Irondale U12 B1\n    Location: Mounds View\n    Scheduled
+  Event Time: Sun\, Dec 22\, 2024 at 4:20 PM to Sun\, Dec 22\, 2024 at 5:20
+  PM\n
 SUMMARY:Ray
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20241215T121054Z
-UID:20303ea8-9c2e-464e-b532-a83365afd909
-DTSTART;VALUE=DATE:20241222
-DTEND;VALUE=DATE:20241223
-DESCRIPTION:    Locker Room Monitor: Reinke\n\n    Instructions:\n    - Loc
- ker rooms should be monitored 30 minutes before and closed 15 minutes afte
- r the scheduled practice/game.\n\n    Event: AC U12B1 - AC U12B1 Away Scri
- mmage at Mound View/Irondale U12 B1\n    Location: Mounds View\n    Schedu
- led Event Time: Sun\, Dec 22\, 2024 at 4:20 PM to Sun\, Dec 22\, 2024 at 5
- :20 PM\n
-SUMMARY:Reinke
 END:VEVENT
 END:VCALENDAR
