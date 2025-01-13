@@ -92,6 +92,10 @@ Team,EventID,Locker_Room_Monitor
 12A,event_571039018_ngin.com,Opel
 12A,event_571039060_ngin.com,Gorgos
 12A,event_571252176_ngin.com,Larsen
+12A,event_571621801_ngin.com,Anderson
+12A,event_571621802_ngin.com,Campos
+12A,event_571621806_ngin.com,Powell
+12A,event_571621814_ngin.com,Tousignant
 12B1,event_559350123_ngin.com,
 12B1,event_559350132_ngin.com,
 12B1,event_561729011_ngin.com,
@@ -177,6 +181,11 @@ Team,EventID,Locker_Room_Monitor
 12B1,event_571353351_ngin.com,Kremer
 12B1,event_571353365_ngin.com,Lane
 12B1,event_571398670_ngin.com,Oas
+12B1,event_571621784_ngin.com,Perpich
+12B1,event_571621800_ngin.com,Ray
+12B1,event_571621812_ngin.com,Reinke
+12B1,event_571621821_ngin.com,Silva-Hammer
+12B1,event_571621823_ngin.com,Baer
 10B1,event_559350132_ngin.com,
 10B1,event_563104050_ngin.com,
 10B1,event_565145226_ngin.com,
@@ -252,7 +261,12 @@ Team,EventID,Locker_Room_Monitor
 10B1,event_570853854_ngin.com,Baer
 10B1,event_570853933_ngin.com,
 10B1,event_570853955_ngin.com,Bowman
-10B1,event_571033873_ngin.com,Hopper
+10B1,event_571033873_ngin.com,
+10B1,event_571621778_ngin.com,Hopper
+10B1,event_571621787_ngin.com,Houghtaling
+10B1,event_571621789_ngin.com,Johnson
+10B1,event_571621816_ngin.com,Larsen
+10B1,event_571621824_ngin.com,Markfort
 10B2,event_559350132_ngin.com,
 10B2,event_563103957_ngin.com,
 10B2,event_565145224_ngin.com,
@@ -330,3 +344,6 @@ Team,EventID,Locker_Room_Monitor
 10B2,event_571123894_ngin.com,Johnson
 10B2,event_571276918_ngin.com,Mckinnon
 10B2,event_571371200_ngin.com,Oprenchak
+10B2,event_571621780_ngin.com,M-Reberg
+10B2,event_571621786_ngin.com,B-Reberg
+10B2,event_571621803_ngin.com,Sauer
