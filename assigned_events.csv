@@ -166,7 +166,7 @@ Team,EventID,Locker_Room_Monitor
 12B1,event_569056343_ngin.com,
 12B1,event_569056390_ngin.com,
 12B1,event_569056450_ngin.com,
-12B1,event_569056472_ngin.com,Hammerstrom
+12B1,event_569056472_ngin.com,
 12B1,event_569059645_ngin.com,
 12B1,event_569064242_ngin.com,
 12B1,event_569109394_ngin.com,
@@ -178,14 +178,14 @@ Team,EventID,Locker_Room_Monitor
 12B1,event_570521660_ngin.com,
 12B1,event_571023022_ngin.com,
 12B1,event_569022423_ngin.com,Ray
-12B1,event_571353351_ngin.com,Kremer
-12B1,event_571353365_ngin.com,Lane
-12B1,event_571398670_ngin.com,Oas
-12B1,event_571621784_ngin.com,Perpich
-12B1,event_571621800_ngin.com,Ray
-12B1,event_571621812_ngin.com,Reinke
-12B1,event_571621821_ngin.com,Silva-Hammer
-12B1,event_571621823_ngin.com,Baer
+12B1,event_571353351_ngin.com,Hammerstrom
+12B1,event_571353365_ngin.com,Kremer
+12B1,event_571398670_ngin.com,Lane
+12B1,event_571621784_ngin.com,Oas
+12B1,event_571621800_ngin.com,Perpich
+12B1,event_571621812_ngin.com,Ray
+12B1,event_571621821_ngin.com,Reinke
+12B1,event_571621823_ngin.com,Silva-Hammer
 10B1,event_559350132_ngin.com,
 10B1,event_563104050_ngin.com,
 10B1,event_565145226_ngin.com,
@@ -347,3 +347,4 @@ Team,EventID,Locker_Room_Monitor
 10B2,event_571621780_ngin.com,M-Reberg
 10B2,event_571621786_ngin.com,B-Reberg
 10B2,event_571621803_ngin.com,Sauer
+10B2,event_571636542_ngin.com,Smith
