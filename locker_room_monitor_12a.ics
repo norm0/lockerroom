@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:f6b3cc05-c642-4cd4-883d-fa123ced3187
+DTSTAMP:20250118T002712Z
+UID:0bfaa809-7914-433e-a0e5-3dcd3e1abdda
 DTSTART;VALUE=DATE:20250206
 DTEND;VALUE=DATE:20250207
 DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
@@ -16,8 +16,8 @@ DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
 SUMMARY:Becker
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:6f103fc5-7516-4d77-8b98-1bb7ef54edaf
+DTSTAMP:20250118T002712Z
+UID:7850a637-4767-422d-8f76-15edb6fc966f
 DTSTART;VALUE=DATE:20250201
 DTEND;VALUE=DATE:20250202
 DESCRIPTION:    Locker Room Monitor: Hastings\n\n    Instructions:\n    - L
@@ -28,8 +28,8 @@ DESCRIPTION:    Locker Room Monitor: Hastings\n\n    Instructions:\n    - L
 SUMMARY:Hastings
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:34ab67d0-b9d2-4dec-89b6-dd4f60932d73
+DTSTAMP:20250118T002712Z
+UID:07464074-f82c-425c-9c46-23436dee80c5
 DTSTART;VALUE=DATE:20250209
 DTEND;VALUE=DATE:20250210
 DESCRIPTION:    Locker Room Monitor: Opel\n\n    Instructions:\n    - Locke
@@ -40,8 +40,8 @@ DESCRIPTION:    Locker Room Monitor: Opel\n\n    Instructions:\n    - Locke
 SUMMARY:Opel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:de8345b0-9017-4abf-aeed-77602838a81a
+DTSTAMP:20250118T002712Z
+UID:8db65115-6521-4635-8837-c5e7ea093700
 DTSTART;VALUE=DATE:20250202
 DTEND;VALUE=DATE:20250203
 DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
@@ -52,8 +52,8 @@ DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
 SUMMARY:Gorgos
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:69a10e7c-c02e-4459-a8dc-5894ffe74913
+DTSTAMP:20250118T002712Z
+UID:9f4c5e54-a8b9-4325-8af5-2dbda721e1f5
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
 DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
@@ -64,8 +64,8 @@ DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
 SUMMARY:Larsen
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:cfa882b6-c9a6-4550-a94a-3b592e038725
+DTSTAMP:20250118T002712Z
+UID:b700050a-8420-4427-a4f9-9d7a16e01cdd
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:    Locker Room Monitor: Anderson\n\n    Instructions:\n    - L
@@ -76,8 +76,8 @@ DESCRIPTION:    Locker Room Monitor: Anderson\n\n    Instructions:\n    - L
 SUMMARY:Anderson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:573c56cc-1a0c-4f92-a4dd-1594f7489bd3
+DTSTAMP:20250118T002712Z
+UID:b6f374b4-5f64-4c3f-b3f3-f38b201b0a0c
 DTSTART;VALUE=DATE:20250117
 DTEND;VALUE=DATE:20250118
 DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
@@ -89,8 +89,8 @@ DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
 SUMMARY:Campos
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:f822aa04-86eb-41a7-9e27-6570846fb604
+DTSTAMP:20250118T002712Z
+UID:19ffee9b-7454-4ad7-934b-98d064acbee5
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
 DESCRIPTION:    Locker Room Monitor: Powell\n\n    Instructions:\n    - Loc
@@ -101,8 +101,8 @@ DESCRIPTION:    Locker Room Monitor: Powell\n\n    Instructions:\n    - Loc
 SUMMARY:Powell
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:e04776ce-8135-4295-b35b-632818b0b3b8
+DTSTAMP:20250118T002712Z
+UID:2bd0eff3-b19e-4afb-becb-613f203b78e0
 DTSTART;VALUE=DATE:20250131
 DTEND;VALUE=DATE:20250201
 DESCRIPTION:    Locker Room Monitor: Tousignant\n\n    Instructions:\n    -
@@ -113,8 +113,8 @@ DESCRIPTION:    Locker Room Monitor: Tousignant\n\n    Instructions:\n    -
 SUMMARY:Tousignant
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:e11da52c-a2b7-4f76-bb44-2312d7017d78
+DTSTAMP:20250118T002712Z
+UID:43d1dca2-147c-4576-b03b-d987b39fdf30
 DTSTART;VALUE=DATE:20250125
 DTEND;VALUE=DATE:20250126
 DESCRIPTION:    Locker Room Monitor: Marshall\n\n    Instructions:\n    - L
@@ -125,8 +125,8 @@ DESCRIPTION:    Locker Room Monitor: Marshall\n\n    Instructions:\n    - L
 SUMMARY:Marshall
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:90009e04-1451-440b-8805-1c43c6ea253c
+DTSTAMP:20250118T002712Z
+UID:642ca0f3-8ecc-4af8-aea7-193500d057a2
 DTSTART;VALUE=DATE:20250122
 DTEND;VALUE=DATE:20250123
 DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
@@ -137,8 +137,8 @@ DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:dab99171-7973-4fff-b3dc-71476d1e4b8a
+DTSTAMP:20250118T002712Z
+UID:a56f9030-8401-4851-b47a-c7ca2e20fd61
 DTSTART;VALUE=DATE:20250128
 DTEND;VALUE=DATE:20250129
 DESCRIPTION:    Locker Room Monitor: Wulff\n\n    Instructions:\n    - Lock
@@ -149,8 +149,8 @@ DESCRIPTION:    Locker Room Monitor: Wulff\n\n    Instructions:\n    - Lock
 SUMMARY:Wulff
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:221d75df-f140-43a9-8323-3122d4b661b0
+DTSTAMP:20250118T002712Z
+UID:97810307-5eff-43f8-8783-9842a3d82b2b
 DTSTART;VALUE=DATE:20250129
 DTEND;VALUE=DATE:20250130
 DESCRIPTION:    Locker Room Monitor: Orstad\n\n    Instructions:\n    - Loc
@@ -161,8 +161,8 @@ DESCRIPTION:    Locker Room Monitor: Orstad\n\n    Instructions:\n    - Loc
 SUMMARY:Orstad
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:b8ca09d1-7832-4070-9249-57d4301f4801
+DTSTAMP:20250118T002712Z
+UID:b1e18636-2ae7-4d0c-af4a-fe02f5cab512
 DTSTART;VALUE=DATE:20250124
 DTEND;VALUE=DATE:20250125
 DESCRIPTION:    Locker Room Monitor: Mulcahey\n\n    Instructions:\n    - L
@@ -173,8 +173,8 @@ DESCRIPTION:    Locker Room Monitor: Mulcahey\n\n    Instructions:\n    - L
 SUMMARY:Mulcahey
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:082959f8-f039-4c1e-8b78-6fff346ebd3d
+DTSTAMP:20250118T002712Z
+UID:5e0a85cc-a0d3-4b8a-9ada-97bc3d413622
 DTSTART;VALUE=DATE:20250118
 DTEND;VALUE=DATE:20250119
 DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
@@ -186,8 +186,8 @@ DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
 SUMMARY:Becker
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:debb7297-ad8b-4fa1-a99e-42312f726d81
+DTSTAMP:20250118T002712Z
+UID:ad9b96ff-4333-48ed-b5d6-b6b48481dac1
 DTSTART;VALUE=DATE:20250118
 DTEND;VALUE=DATE:20250119
 DESCRIPTION:    Locker Room Monitor: Hastings\n\n    Instructions:\n    - L
@@ -199,8 +199,8 @@ DESCRIPTION:    Locker Room Monitor: Hastings\n\n    Instructions:\n    - L
 SUMMARY:Hastings
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:f2edee74-9c4e-4d71-a3cb-17a3912ca2a9
+DTSTAMP:20250118T002712Z
+UID:00f47ed6-d4fd-4e8a-9350-d2de537740a3
 DTSTART;VALUE=DATE:20250118
 DTEND;VALUE=DATE:20250119
 DESCRIPTION:    Locker Room Monitor: Opel\n\n    Instructions:\n    - Locke
@@ -212,8 +212,8 @@ DESCRIPTION:    Locker Room Monitor: Opel\n\n    Instructions:\n    - Locke
 SUMMARY:Opel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:19c74de0-1f06-4cec-a95b-0cf281ddb9d6
+DTSTAMP:20250118T002712Z
+UID:b652d471-520b-4dc8-b74f-724b7a215c67
 DTSTART;VALUE=DATE:20250204
 DTEND;VALUE=DATE:20250205
 DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
@@ -224,8 +224,8 @@ DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
 SUMMARY:Gorgos
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:3b12fb2b-1649-4417-8a9d-af2db0f8cd15
+DTSTAMP:20250118T002712Z
+UID:d25a6a8d-9d19-4966-90b4-6abd5e4f8687
 DTSTART;VALUE=DATE:20250213
 DTEND;VALUE=DATE:20250214
 DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
@@ -236,8 +236,8 @@ DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
 SUMMARY:Larsen
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:6e02287f-c53b-4b3f-a0a4-1673edf8032a
+DTSTAMP:20250118T002712Z
+UID:6102c077-518b-463a-bf04-d23fd3b585b1
 DTSTART;VALUE=DATE:20250211
 DTEND;VALUE=DATE:20250212
 DESCRIPTION:    Locker Room Monitor: Anderson\n\n    Instructions:\n    - L
@@ -248,8 +248,8 @@ DESCRIPTION:    Locker Room Monitor: Anderson\n\n    Instructions:\n    - L
 SUMMARY:Anderson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250117T002812Z
-UID:aac59987-8d6d-4c2d-8c0b-4fb57d58575f
+DTSTAMP:20250118T002712Z
+UID:85ec98b9-a07b-41c9-8def-717bbbcdaff2
 DTSTART;VALUE=DATE:20250212
 DTEND;VALUE=DATE:20250213
 DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
@@ -258,5 +258,17 @@ DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
  / AC Peewee A\n    Location: New Hope North\n    Scheduled Event Time: Wed
  \, Feb 12\, 2025 at 9:00 PM to Wed\, Feb 12\, 2025 at 10:00 PM\n
 SUMMARY:Campos
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20250118T002712Z
+UID:ba1bcd90-cf43-4f76-ae96-f767c214cd23
+DTSTART;VALUE=DATE:20250118
+DTEND;VALUE=DATE:20250119
+DESCRIPTION:    Locker Room Monitor: Powell\n\n    Instructions:\n    - Loc
+ ker rooms should be monitored 30 minutes before and closed 15 minutes afte
+ r the scheduled practice/game.\n\n    Event: AC U12A - SKATE Study Time\n 
+    Location: Magnolia Room\n    Scheduled Event Time: Sat\, Jan 18\, 2025 
+ at 9:00 AM to Sat\, Jan 18\, 2025 at 9:30 AM\n
+SUMMARY:Powell
 END:VEVENT
 END:VCALENDAR
