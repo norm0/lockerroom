@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:44b3c789-2400-4012-8585-c6d532aa88a7
+DTSTAMP:20250126T120944Z
+UID:bec75fc9-8791-4c60-9f72-a7ae75fd5025
 DTSTART;VALUE=DATE:20250219
 DTEND;VALUE=DATE:20250220
 DESCRIPTION:    Locker Room Monitor: Curry\n\n    Instructions:\n    - Lock
@@ -16,8 +16,8 @@ DESCRIPTION:    Locker Room Monitor: Curry\n\n    Instructions:\n    - Lock
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:ceb9ab48-70ae-45e1-a078-f80ccaeea06c
+DTSTAMP:20250126T120944Z
+UID:bb9c7db1-da5f-499c-9f8e-bca704cd7807
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
 DESCRIPTION:    Locker Room Monitor: Engholm\n\n    Instructions:\n    - Lo
@@ -28,8 +28,8 @@ DESCRIPTION:    Locker Room Monitor: Engholm\n\n    Instructions:\n    - Lo
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:16288ab9-3830-4d9a-be98-f33c89ced68b
+DTSTAMP:20250126T120944Z
+UID:df426c93-ef36-4928-926a-73433e096197
 DTSTART;VALUE=DATE:20250202
 DTEND;VALUE=DATE:20250203
 DESCRIPTION:    Locker Room Monitor: Froberg\n\n    Instructions:\n    - Lo
@@ -40,8 +40,8 @@ DESCRIPTION:    Locker Room Monitor: Froberg\n\n    Instructions:\n    - Lo
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:ea9f4fa4-654d-4926-9cf6-8ec0b1df6f7a
+DTSTAMP:20250126T120944Z
+UID:145e787f-08db-4820-bcc1-0721eaba92e2
 DTSTART;VALUE=DATE:20250209
 DTEND;VALUE=DATE:20250210
 DESCRIPTION:    Locker Room Monitor: Harpel\n\n    Instructions:\n    - Loc
@@ -52,8 +52,8 @@ DESCRIPTION:    Locker Room Monitor: Harpel\n\n    Instructions:\n    - Loc
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:d6964b8d-53c0-4e70-8b0e-e5b7871185eb
+DTSTAMP:20250126T120944Z
+UID:246ca9cc-10d3-490b-92a1-4383aa912312
 DTSTART;VALUE=DATE:20250127
 DTEND;VALUE=DATE:20250128
 DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
@@ -64,8 +64,8 @@ DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:bce5f7f4-89a6-4644-8f2e-b6c58d2618ff
+DTSTAMP:20250126T120944Z
+UID:7d4b8c36-89cf-4c3c-8b4a-c8461aceda8d
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:    Locker Room Monitor: Mckinnon\n\n    Instructions:\n    - L
@@ -76,8 +76,8 @@ DESCRIPTION:    Locker Room Monitor: Mckinnon\n\n    Instructions:\n    - L
 SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:d6934fee-227e-41ac-9f10-71d5d0ed5341
+DTSTAMP:20250126T120944Z
+UID:a8f4be12-62b7-4b41-a782-e32e6546203d
 DTSTART;VALUE=DATE:20250129
 DTEND;VALUE=DATE:20250130
 DESCRIPTION:    Locker Room Monitor: Oprenchak\n\n    Instructions:\n    - 
@@ -88,8 +88,8 @@ DESCRIPTION:    Locker Room Monitor: Oprenchak\n\n    Instructions:\n    -
 SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:b3a3dca0-4acc-4d15-ac42-1c66edd75021
+DTSTAMP:20250126T120944Z
+UID:540e3608-0b05-4cb3-9908-262642fd2003
 DTSTART;VALUE=DATE:20250201
 DTEND;VALUE=DATE:20250202
 DESCRIPTION:    Locker Room Monitor: M-Reberg\n\n    Instructions:\n    - L
@@ -100,8 +100,8 @@ DESCRIPTION:    Locker Room Monitor: M-Reberg\n\n    Instructions:\n    - L
 SUMMARY:M-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:118429bd-7a8e-434d-bb91-d8483941342a
+DTSTAMP:20250126T120944Z
+UID:21df64b2-9639-4bca-a5a9-ff47b303ca05
 DTSTART;VALUE=DATE:20250131
 DTEND;VALUE=DATE:20250201
 DESCRIPTION:    Locker Room Monitor: B-Reberg\n\n    Instructions:\n    - L
@@ -113,8 +113,8 @@ DESCRIPTION:    Locker Room Monitor: B-Reberg\n\n    Instructions:\n    - L
 SUMMARY:B-Reberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:6ae5e63e-892f-4369-8d29-79751df10ad8
+DTSTAMP:20250126T120944Z
+UID:40dcd264-314f-46e2-a8a1-903853d03333
 DTSTART;VALUE=DATE:20250208
 DTEND;VALUE=DATE:20250209
 DESCRIPTION:    Locker Room Monitor: Sauer\n\n    Instructions:\n    - Lock
@@ -126,21 +126,21 @@ DESCRIPTION:    Locker Room Monitor: Sauer\n\n    Instructions:\n    - Lock
 SUMMARY:Sauer
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:4acd23a6-5641-42a1-b555-2a6da4a81625
+DTSTAMP:20250126T120944Z
+UID:0b368114-4051-4031-90a4-e61ad8c1c94a
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
 DESCRIPTION:    Locker Room Monitor: Smith\n\n    Instructions:\n    - Lock
  er rooms should be monitored 30 minutes before and closed 15 minutes after
   the scheduled practice/game.\n\n    Event: AC U10B2 - AC U10 B2 Coach Led
-  Scrimmage vs Northern Tier Stars\n    Location: East Bethel\, MN\, US\n  
-   Scheduled Event Time: Sun\, Jan 26\, 2025 at 2:10 PM to Sun\, Jan 26\, 2
- 025 at 3:10 PM\n
+  Scrimmage vs Northern Tier Stars\n    Location: 20675 MN-65\, East Bethel
+ \, MN\, 55011\, US\n    Scheduled Event Time: Sun\, Jan 26\, 2025 at 2:10 
+ PM to Sun\, Jan 26\, 2025 at 3:10 PM\n
 SUMMARY:Smith
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:19b13a84-7694-4a0f-9736-1db7081eef13
+DTSTAMP:20250126T120944Z
+UID:bce5fa40-b068-484a-992d-55f7172f6f63
 DTSTART;VALUE=DATE:20250210
 DTEND;VALUE=DATE:20250211
 DESCRIPTION:    Locker Room Monitor: Woods\n\n    Instructions:\n    - Lock
@@ -151,8 +151,8 @@ DESCRIPTION:    Locker Room Monitor: Woods\n\n    Instructions:\n    - Lock
 SUMMARY:Woods
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:35c83d3d-565c-4878-bbfc-c360ab3b2a05
+DTSTAMP:20250126T120944Z
+UID:66713ecb-2870-43d4-a2e0-85735d1cf72f
 DTSTART;VALUE=DATE:20250204
 DTEND;VALUE=DATE:20250205
 DESCRIPTION:    Locker Room Monitor: Curry\n\n    Instructions:\n    - Lock
@@ -163,8 +163,8 @@ DESCRIPTION:    Locker Room Monitor: Curry\n\n    Instructions:\n    - Lock
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:6a9abce1-00a3-4a9c-a543-0125ed1d1683
+DTSTAMP:20250126T120944Z
+UID:bbc36371-4448-4113-91d9-090f5185fc84
 DTSTART;VALUE=DATE:20250213
 DTEND;VALUE=DATE:20250214
 DESCRIPTION:    Locker Room Monitor: Engholm\n\n    Instructions:\n    - Lo
@@ -175,8 +175,8 @@ DESCRIPTION:    Locker Room Monitor: Engholm\n\n    Instructions:\n    - Lo
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250126T002912Z
-UID:5843b9b3-490c-47b6-9b98-88edbb780ca0
+DTSTAMP:20250126T120944Z
+UID:f152e51c-0bb0-4fc5-9def-5665fa673f53
 DTSTART;VALUE=DATE:20250226
 DTEND;VALUE=DATE:20250227
 DESCRIPTION:    Locker Room Monitor: Froberg\n\n    Instructions:\n    - Lo
