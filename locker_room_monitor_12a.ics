@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:1daa4787-62c5-426d-9bfe-874201b15415
+DTSTAMP:20250202T003023Z
+UID:b10b59ea-a878-4f4e-950d-9b90c398a815
 DTSTART;VALUE=DATE:20250206
 DTEND;VALUE=DATE:20250207
 DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
@@ -16,124 +16,125 @@ DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
 SUMMARY:Becker
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:6d2f954a-3ebc-4bc9-a5c3-7b9b7a342113
-DTSTART;VALUE=DATE:20250201
-DTEND;VALUE=DATE:20250202
+DTSTAMP:20250202T003023Z
+UID:6876ceee-82cd-4019-b855-8f889fe2a3b7
+DTSTART;VALUE=DATE:20250209
+DTEND;VALUE=DATE:20250210
 DESCRIPTION:    Locker Room Monitor: Hastings\n\n    Instructions:\n    - L
  ocker rooms should be monitored 30 minutes before and closed 15 minutes af
- ter the scheduled practice/game.\n\n    Event: Orono-Westonka 12UA at AC U
- 12A\n    Location: New Hope North\n    Scheduled Event Time: Sat\, Feb 1\,
-  2025 at 1:30 PM to Sat\, Feb 1\, 2025 at 2:45 PM\n
+ ter the scheduled practice/game.\n\n    Event: AC U12A at Wayzata 12UA\n  
+   Location: PIC C (ag)\n    Scheduled Event Time: Sun\, Feb 9\, 2025 at 3:
+ 00 PM to Sun\, Feb 9\, 2025 at 4:15 PM\n
 SUMMARY:Hastings
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:fc85e79b-df30-45c1-9cc9-214703561072
-DTSTART;VALUE=DATE:20250209
-DTEND;VALUE=DATE:20250210
+DTSTAMP:20250202T003023Z
+UID:c9bc4145-db2c-47d7-b169-57f6bdb601e3
+DTSTART;VALUE=DATE:20250202
+DTEND;VALUE=DATE:20250203
 DESCRIPTION:    Locker Room Monitor: Opel\n\n    Instructions:\n    - Locke
  r rooms should be monitored 30 minutes before and closed 15 minutes after 
- the scheduled practice/game.\n\n    Event: AC U12A at Wayzata 12UA\n    Lo
- cation: PIC C (ag)\n    Scheduled Event Time: Sun\, Feb 9\, 2025 at 3:00 P
- M to Sun\, Feb 9\, 2025 at 4:15 PM\n
+ the scheduled practice/game.\n\n    Event: AC U12A at Hopkins Park 12U A\n
+     Location: Hopkins Pavilion (ag)\n    Scheduled Event Time: Sun\, Feb 2
+ \, 2025 at 5:45 PM to Sun\, Feb 2\, 2025 at 7:00 PM\n
 SUMMARY:Opel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:57eada87-030a-43cd-b523-8f36bbba1ffa
-DTSTART;VALUE=DATE:20250202
-DTEND;VALUE=DATE:20250203
-DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
- ker rooms should be monitored 30 minutes before and closed 15 minutes afte
- r the scheduled practice/game.\n\n    Event: AC U12A at Hopkins Park 12U A
- \n    Location: Hopkins Pavilion (ag)\n    Scheduled Event Time: Sun\, Feb
-  2\, 2025 at 5:45 PM to Sun\, Feb 2\, 2025 at 7:00 PM\n
-SUMMARY:Gorgos
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:94869c40-4848-4cd9-bfad-c3d1224b3949
+DTSTAMP:20250202T003023Z
+UID:e4719b6e-5823-4654-b862-dcf365055985
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
-DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
+DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
  ker rooms should be monitored 30 minutes before and closed 15 minutes afte
  r the scheduled practice/game.\n\n    Event: Orono-Westonka 12UA at AC U12
  A\n    Location: New Hope North\n    Scheduled Event Time: Wed\, Feb 5\, 2
  025 at 8:30 PM to Wed\, Feb 5\, 2025 at 9:45 PM\n
+SUMMARY:Gorgos
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20250202T003023Z
+UID:31b02f3e-d8a0-493f-8d65-0e27205f2b0a
+DTSTART;VALUE=DATE:20250203
+DTEND;VALUE=DATE:20250204
+DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
+ ker rooms should be monitored 30 minutes before and closed 15 minutes afte
+ r the scheduled practice/game.\n\n    Event: AC U12A - U12 A Skills w/ AC 
+ Peewee B1\n    Location: New Hope North\n    Scheduled Event Time: Mon\, F
+ eb 3\, 2025 at 8:30 PM to Mon\, Feb 3\, 2025 at 9:15 PM\n
 SUMMARY:Larsen
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:3c8a874f-a516-44e5-a50e-12d63b2137fe
-DTSTART;VALUE=DATE:20250203
-DTEND;VALUE=DATE:20250204
+DTSTAMP:20250202T003023Z
+UID:eb64ee9c-2e9b-456e-b5f4-56fef3a4bd39
+DTSTART;VALUE=DATE:20250204
+DTEND;VALUE=DATE:20250205
 DESCRIPTION:    Locker Room Monitor: Anderson\n\n    Instructions:\n    - L
  ocker rooms should be monitored 30 minutes before and closed 15 minutes af
- ter the scheduled practice/game.\n\n    Event: AC U12A - U12 A Skills w/ A
- C Peewee B1\n    Location: New Hope North\n    Scheduled Event Time: Mon\,
-  Feb 3\, 2025 at 8:30 PM to Mon\, Feb 3\, 2025 at 9:15 PM\n
+ ter the scheduled practice/game.\n\n    Event: AC U12A - U12 A Shared w/ A
+ C U12B1\n    Location: Breck\n    Scheduled Event Time: Tue\, Feb 4\, 2025
+  at 8:00 PM to Tue\, Feb 4\, 2025 at 9:15 PM\n
 SUMMARY:Anderson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:33c27165-16ef-4615-a0c0-7fc81d9a7c20
-DTSTART;VALUE=DATE:20250204
-DTEND;VALUE=DATE:20250205
-DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
- ker rooms should be monitored 30 minutes before and closed 15 minutes afte
- r the scheduled practice/game.\n\n    Event: AC U12A - U12 A Shared w/ AC 
- U12B1\n    Location: Breck\n    Scheduled Event Time: Tue\, Feb 4\, 2025 a
- t 8:00 PM to Tue\, Feb 4\, 2025 at 9:15 PM\n
-SUMMARY:Campos
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:c40c573f-24bb-4e60-ab43-9e4f7a950fb8
+DTSTAMP:20250202T003023Z
+UID:bc633bcb-8486-49e8-a8ec-a71743d9fa2f
 DTSTART;VALUE=DATE:20250213
 DTEND;VALUE=DATE:20250214
-DESCRIPTION:    Locker Room Monitor: Powell\n\n    Instructions:\n    - Loc
+DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
  ker rooms should be monitored 30 minutes before and closed 15 minutes afte
  r the scheduled practice/game.\n\n    Event: AC U12A - U12 A Solo\n    Loc
  ation: New Hope South\n    Scheduled Event Time: Thu\, Feb 13\, 2025 at 6:
  30 PM to Thu\, Feb 13\, 2025 at 7:30 PM\n
+SUMMARY:Campos
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20250202T003023Z
+UID:55c4d9b4-61a9-43c1-89e9-b8ca7fd89a00
+DTSTART;VALUE=DATE:20250211
+DTEND;VALUE=DATE:20250212
+DESCRIPTION:    Locker Room Monitor: Powell\n\n    Instructions:\n    - Loc
+ ker rooms should be monitored 30 minutes before and closed 15 minutes afte
+ r the scheduled practice/game.\n\n    Event: AC U12A - U12 A Shared-Solo w
+ / AC PeeWee B2\n    Location: New Hope North\n    Scheduled Event Time: Tu
+ e\, Feb 11\, 2025 at 8:15 PM to Tue\, Feb 11\, 2025 at 9:15 PM\n
 SUMMARY:Powell
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:a635530d-7355-405c-a996-5279b08466cd
-DTSTART;VALUE=DATE:20250211
-DTEND;VALUE=DATE:20250212
+DTSTAMP:20250202T003023Z
+UID:1cb7ab2a-2c1f-4813-addb-0133db642022
+DTSTART;VALUE=DATE:20250212
+DTEND;VALUE=DATE:20250213
 DESCRIPTION:    Locker Room Monitor: Tousignant\n\n    Instructions:\n    -
   Locker rooms should be monitored 30 minutes before and closed 15 minutes 
  after the scheduled practice/game.\n\n    Event: AC U12A - U12 A Shared-So
- lo w/ AC PeeWee B2\n    Location: New Hope North\n    Scheduled Event Time
- : Tue\, Feb 11\, 2025 at 8:15 PM to Tue\, Feb 11\, 2025 at 9:15 PM\n
+ lo w/ AC Peewee A\n    Location: New Hope North\n    Scheduled Event Time:
+  Wed\, Feb 12\, 2025 at 9:00 PM to Wed\, Feb 12\, 2025 at 10:00 PM\n
 SUMMARY:Tousignant
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:5080bdf2-8d44-4429-83ff-963a2ed43c94
-DTSTART;VALUE=DATE:20250212
-DTEND;VALUE=DATE:20250213
+DTSTAMP:20250202T003023Z
+UID:202a87cb-41f7-4f2e-9c4e-ca2dab51baf0
+DTSTART;VALUE=DATE:20250214
+DTEND;VALUE=DATE:20250215
 DESCRIPTION:    Locker Room Monitor: Marshall\n\n    Instructions:\n    - L
  ocker rooms should be monitored 30 minutes before and closed 15 minutes af
- ter the scheduled practice/game.\n\n    Event: AC U12A - U12 A Shared-Solo
-  w/ AC Peewee A\n    Location: New Hope North\n    Scheduled Event Time: W
- ed\, Feb 12\, 2025 at 9:00 PM to Wed\, Feb 12\, 2025 at 10:00 PM\n
+ ter the scheduled practice/game.\n\n    Event: AC U12A - Gopher Womens Hoc
+ key Game\n    Location: Ridder Arena\, 2007\, 1815 4th St SE\, Minneapolis
+ \, MN 55455\n    Scheduled Event Time: Fri\, Feb 14\, 2025 at 6:00 PM to F
+ ri\, Feb 14\, 2025 at 8:30 PM\n
 SUMMARY:Marshall
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250201T120946Z
-UID:cc11cc1a-2cb2-432e-bf0e-fa6507556772
-DTSTART;VALUE=DATE:20250214
-DTEND;VALUE=DATE:20250215
+DTSTAMP:20250202T003023Z
+UID:22c3c03e-9e7c-4cce-81a2-4273b7668eb5
+DTSTART;VALUE=DATE:20250208
+DTEND;VALUE=DATE:20250209
 DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
  cker rooms should be monitored 30 minutes before and closed 15 minutes aft
- er the scheduled practice/game.\n\n    Event: AC U12A - Gopher Womens Hock
- ey Game\n    Location: Ridder Arena\, 2007\, 1815 4th St SE\, Minneapolis\
- , MN 55455\n    Scheduled Event Time: Fri\, Feb 14\, 2025 at 6:00 PM to Fr
- i\, Feb 14\, 2025 at 8:30 PM\n
+ er the scheduled practice/game.\n\n    Event: AC U12A - Scrimmage vs. Dodg
+ e County\n    Location: St. Louis Park Rec Center\, Monterey Drive\, St. L
+ ouis Park\, MN\, USA\n    Scheduled Event Time: Sat\, Feb 8\, 2025 at 6:00
+  PM to Sat\, Feb 8\, 2025 at 7:15 PM\n
 SUMMARY:Johnson
 END:VEVENT
 END:VCALENDAR
