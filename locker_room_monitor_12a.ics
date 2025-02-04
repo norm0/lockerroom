@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:38eb6cd1-fe89-463e-bc9b-1ceec28a22a5
+DTSTAMP:20250204T002818Z
+UID:553c28cf-081b-4389-aa11-705282a41faf
 DTSTART;VALUE=DATE:20250206
 DTEND;VALUE=DATE:20250207
 DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
@@ -16,8 +16,8 @@ DESCRIPTION:    Locker Room Monitor: Becker\n\n    Instructions:\n    - Loc
 SUMMARY:Becker
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:fc8b6d4e-4110-4e97-8abf-4a4ce2ace505
+DTSTAMP:20250204T002818Z
+UID:43535db9-9693-4940-ac9b-c4607552bafc
 DTSTART;VALUE=DATE:20250209
 DTEND;VALUE=DATE:20250210
 DESCRIPTION:    Locker Room Monitor: Hastings\n\n    Instructions:\n    - L
@@ -28,8 +28,8 @@ DESCRIPTION:    Locker Room Monitor: Hastings\n\n    Instructions:\n    - L
 SUMMARY:Hastings
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:0b1198ed-def8-4814-b79c-85ef69d8f766
+DTSTAMP:20250204T002818Z
+UID:be67d940-8931-47ce-b3b6-9b7576514af3
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
 DESCRIPTION:    Locker Room Monitor: Opel\n\n    Instructions:\n    - Locke
@@ -40,8 +40,8 @@ DESCRIPTION:    Locker Room Monitor: Opel\n\n    Instructions:\n    - Locke
 SUMMARY:Opel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:7af1d136-96de-4350-bc42-a59b6d0686c7
+DTSTAMP:20250204T002818Z
+UID:38033dbf-1aba-49ae-aa45-4ecc4e5c888e
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
 DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
@@ -52,8 +52,8 @@ DESCRIPTION:    Locker Room Monitor: Gorgos\n\n    Instructions:\n    - Loc
 SUMMARY:Gorgos
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:ef61c5d9-033b-4871-94fe-525f412bfd09
+DTSTAMP:20250204T002818Z
+UID:58bcda89-dab1-4527-a85e-003dcdb51e1a
 DTSTART;VALUE=DATE:20250204
 DTEND;VALUE=DATE:20250205
 DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
@@ -64,8 +64,8 @@ DESCRIPTION:    Locker Room Monitor: Larsen\n\n    Instructions:\n    - Loc
 SUMMARY:Larsen
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:7a6ea425-877f-4641-a812-517573714e5f
+DTSTAMP:20250204T002818Z
+UID:0c63b668-2046-4ccf-a9bc-5d5014a5ba69
 DTSTART;VALUE=DATE:20250213
 DTEND;VALUE=DATE:20250214
 DESCRIPTION:    Locker Room Monitor: Anderson\n\n    Instructions:\n    - L
@@ -76,8 +76,8 @@ DESCRIPTION:    Locker Room Monitor: Anderson\n\n    Instructions:\n    - L
 SUMMARY:Anderson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:665a6753-2060-435c-9ece-1a53c19ac32f
+DTSTAMP:20250204T002818Z
+UID:cc153258-5269-4c0f-ad41-6b61ea7b18d1
 DTSTART;VALUE=DATE:20250211
 DTEND;VALUE=DATE:20250212
 DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
@@ -88,8 +88,8 @@ DESCRIPTION:    Locker Room Monitor: Campos\n\n    Instructions:\n    - Loc
 SUMMARY:Campos
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:927220e4-56f7-4d8b-a69f-fd0907c77a4d
+DTSTAMP:20250204T002818Z
+UID:e87dac7f-b6a5-4e2c-b458-05f1780c1042
 DTSTART;VALUE=DATE:20250212
 DTEND;VALUE=DATE:20250213
 DESCRIPTION:    Locker Room Monitor: Powell\n\n    Instructions:\n    - Loc
@@ -100,8 +100,8 @@ DESCRIPTION:    Locker Room Monitor: Powell\n\n    Instructions:\n    - Loc
 SUMMARY:Powell
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:30f7ddee-bf0e-4c8a-9847-3462e674d70e
+DTSTAMP:20250204T002818Z
+UID:d6826f20-80c5-4afb-bd38-065c4016ea76
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
 DESCRIPTION:    Locker Room Monitor: Tousignant\n\n    Instructions:\n    -
@@ -113,21 +113,21 @@ DESCRIPTION:    Locker Room Monitor: Tousignant\n\n    Instructions:\n    -
 SUMMARY:Tousignant
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:c25cdc70-692e-4c6d-9a70-43bf2d50a3e7
+DTSTAMP:20250204T002818Z
+UID:a874cb82-33c6-41d1-bf0a-609ef0dea717
 DTSTART;VALUE=DATE:20250208
 DTEND;VALUE=DATE:20250209
 DESCRIPTION:    Locker Room Monitor: Marshall\n\n    Instructions:\n    - L
  ocker rooms should be monitored 30 minutes before and closed 15 minutes af
  ter the scheduled practice/game.\n\n    Event: AC U12A - Scrimmage vs. Dod
- ge County\n    Location: St. Louis Park Rec Center\, Monterey Drive\, St. 
- Louis Park\, MN\, USA\n    Scheduled Event Time: Sat\, Feb 8\, 2025 at 6:0
- 0 PM to Sat\, Feb 8\, 2025 at 7:15 PM\n
+ ge County\n    Location: Recreation Outdoor Center (Roc)\, 3700 Monterey D
+ rive\, St. Louis Park\, MN\, USA\n    Scheduled Event Time: Sat\, Feb 8\, 
+ 2025 at 6:00 PM to Sat\, Feb 8\, 2025 at 7:15 PM\n
 SUMMARY:Marshall
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250203T121105Z
-UID:f92f4255-86cb-4b69-b57f-e54098da59a5
+DTSTAMP:20250204T002818Z
+UID:f6f3b864-f337-49a0-9d41-df677ff4c862
 DTSTART;VALUE=DATE:20250215
 DTEND;VALUE=DATE:20250216
 DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
