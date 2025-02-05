@@ -4,8 +4,8 @@ PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:b1778116-68bb-43c7-a4ed-80fe8a60bbc5
+DTSTAMP:20250205T121127Z
+UID:46fe8dd7-1836-4a4f-ab9f-02464a64e325
 DTSTART;VALUE=DATE:20250219
 DTEND;VALUE=DATE:20250220
 DESCRIPTION:    Locker Room Monitor: Curry\n\n    Instructions:\n    - Lock
@@ -16,8 +16,8 @@ DESCRIPTION:    Locker Room Monitor: Curry\n\n    Instructions:\n    - Lock
 SUMMARY:Curry
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:bb83a58f-0c3b-4385-96f9-3d94c7856e7f
+DTSTAMP:20250205T121127Z
+UID:267d4a61-1545-4acf-aa23-550c0e37bd9a
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
 DESCRIPTION:    Locker Room Monitor: Engholm\n\n    Instructions:\n    - Lo
@@ -28,8 +28,8 @@ DESCRIPTION:    Locker Room Monitor: Engholm\n\n    Instructions:\n    - Lo
 SUMMARY:Engholm
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:10968ae4-5483-4637-9339-36b994a12aa9
+DTSTAMP:20250205T121127Z
+UID:a362d1b4-2780-4484-a1a5-e2c5cb2c7caa
 DTSTART;VALUE=DATE:20250209
 DTEND;VALUE=DATE:20250210
 DESCRIPTION:    Locker Room Monitor: Froberg\n\n    Instructions:\n    - Lo
@@ -40,8 +40,8 @@ DESCRIPTION:    Locker Room Monitor: Froberg\n\n    Instructions:\n    - Lo
 SUMMARY:Froberg
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:50bbee13-e1d6-4b22-abc7-2d84ec6efc82
+DTSTAMP:20250205T121127Z
+UID:1ba977e9-bd91-4be8-b836-f314481a8620
 DTSTART;VALUE=DATE:20250208
 DTEND;VALUE=DATE:20250209
 DESCRIPTION:    Locker Room Monitor: Harpel\n\n    Instructions:\n    - Loc
@@ -53,8 +53,8 @@ DESCRIPTION:    Locker Room Monitor: Harpel\n\n    Instructions:\n    - Loc
 SUMMARY:Harpel
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:b6456436-3558-4b0f-96c3-8f1be1b9a3fe
+DTSTAMP:20250205T121127Z
+UID:860776e9-6449-4051-8468-149ae3911c94
 DTSTART;VALUE=DATE:20250210
 DTEND;VALUE=DATE:20250211
 DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
@@ -65,53 +65,41 @@ DESCRIPTION:    Locker Room Monitor: Johnson\n\n    Instructions:\n    - Lo
 SUMMARY:Johnson
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:0a3723ed-e374-42bb-a7aa-a9b3a284289b
-DTSTART;VALUE=DATE:20250204
-DTEND;VALUE=DATE:20250205
+DTSTAMP:20250205T121127Z
+UID:4ba1507a-7bf0-447c-b627-4006b677a29d
+DTSTART;VALUE=DATE:20250213
+DTEND;VALUE=DATE:20250214
 DESCRIPTION:    Locker Room Monitor: Mckinnon\n\n    Instructions:\n    - L
  ocker rooms should be monitored 30 minutes before and closed 15 minutes af
  ter the scheduled practice/game.\n\n    Event: AC U10B2 - AC U10 B2 Shared
-  w/ AC Squirt B2\n    Location: Breck\n    Scheduled Event Time: Tue\, Feb
-  4\, 2025 at 6:45 PM to Tue\, Feb 4\, 2025 at 7:45 PM\n
+  w/ AC Squirt C RED\n    Location: New Hope South\n    Scheduled Event Tim
+ e: Thu\, Feb 13\, 2025 at 7:45 PM to Thu\, Feb 13\, 2025 at 8:45 PM\n
 SUMMARY:Mckinnon
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:45f228b8-ce3c-422b-ad47-8c4af5fa5c07
-DTSTART;VALUE=DATE:20250213
-DTEND;VALUE=DATE:20250214
+DTSTAMP:20250205T121127Z
+UID:576905b5-d13d-4396-b54c-1b2329f46089
+DTSTART;VALUE=DATE:20250226
+DTEND;VALUE=DATE:20250227
 DESCRIPTION:    Locker Room Monitor: Oprenchak\n\n    Instructions:\n    - 
  Locker rooms should be monitored 30 minutes before and closed 15 minutes a
- fter the scheduled practice/game.\n\n    Event: AC U10B2 - AC U10 B2 Share
- d w/ AC Squirt C RED\n    Location: New Hope South\n    Scheduled Event Ti
- me: Thu\, Feb 13\, 2025 at 7:45 PM to Thu\, Feb 13\, 2025 at 8:45 PM\n
+ fter the scheduled practice/game.\n\n    Event: AC U10B2 - AC U10 B2 Scrim
+ mage with Edina\n    Location: 3600 West 98th Street\, Bloomington\, MN 55
+ 431\, US\n    Scheduled Event Time: Wed\, Feb 26\, 2025 at 5:30 PM to Wed\
+ , Feb 26\, 2025 at 6:30 PM\n
 SUMMARY:Oprenchak
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:205f320e-aec3-4480-82af-a75a3c5d9910
-DTSTART;VALUE=DATE:20250226
-DTEND;VALUE=DATE:20250227
-DESCRIPTION:    Locker Room Monitor: M-Reberg\n\n    Instructions:\n    - L
- ocker rooms should be monitored 30 minutes before and closed 15 minutes af
- ter the scheduled practice/game.\n\n    Event: AC U10B2 - AC U10 B2 Scrimm
- age with Edina\n    Location: 3600 West 98th Street\, Bloomington\, MN 554
- 31\, US\n    Scheduled Event Time: Wed\, Feb 26\, 2025 at 5:30 PM to Wed\,
-  Feb 26\, 2025 at 6:30 PM\n
-SUMMARY:M-Reberg
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20250205T002901Z
-UID:f975e541-4621-40e7-8aa3-5748a463d74f
+DTSTAMP:20250205T121127Z
+UID:d5a95c09-6f54-4c26-a93e-00f4542d21fc
 DTSTART;VALUE=DATE:20250222
 DTEND;VALUE=DATE:20250223
-DESCRIPTION:    Locker Room Monitor: B-Reberg\n\n    Instructions:\n    - L
+DESCRIPTION:    Locker Room Monitor: M-Reberg\n\n    Instructions:\n    - L
  ocker rooms should be monitored 30 minutes before and closed 15 minutes af
  ter the scheduled practice/game.\n\n    Event: AC U10B2 - AC U10B2 Scrimma
  ge vs Cottage Grove Black\n    Location: 8020 80th St S\, Cottage Grove\, 
  MN\, 55016\, US\n    Scheduled Event Time: Sat\, Feb 22\, 2025 at 9:15 AM 
  to Sat\, Feb 22\, 2025 at 10:15 AM\n
-SUMMARY:B-Reberg
+SUMMARY:M-Reberg
 END:VEVENT
 END:VCALENDAR
